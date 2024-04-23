@@ -14,3 +14,7 @@
 ul {
   list-style-image: url('./Assets/check.svg')
 }
+
+p {
+  font-size: 14px
+}

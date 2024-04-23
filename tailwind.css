@@ -595,6 +595,10 @@ video {
   margin-top: 0.5rem;
 }
 
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
 .mt-4 {
   margin-top: 1rem;
 }
@@ -639,8 +643,8 @@ video {
   height: 6px;
 }
 
-.h-6 {
-  height: 1.5rem;
+.h-\[90vh\] {
+  height: 90vh;
 }
 
 .w-\[100px\] {
@@ -663,6 +667,14 @@ video {
   width: 16px;
 }
 
+.w-\[23px\] {
+  width: 23px;
+}
+
+.w-\[27px\] {
+  width: 27px;
+}
+
 .w-\[32px\] {
   width: 32px;
 }
@@ -675,6 +687,10 @@ video {
   width: 40px;
 }
 
+.w-\[56px\] {
+  width: 56px;
+}
+
 .w-\[67px\] {
   width: 67px;
 }
@@ -683,18 +699,16 @@ video {
   width: 100%;
 }
 
-.w-6 {
-  width: 1.5rem;
-}
-
-.appearance-none {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+.flex-col {
+  flex-direction: column;
 }
 
 .flex-wrap {
   flex-wrap: wrap;
+}
+
+.items-start {
+  align-items: flex-start;
 }
 
 .items-end {
@@ -761,8 +775,8 @@ video {
   border-radius: 0.75rem;
 }
 
-.rounded-md {
-  border-radius: 0.375rem;
+.rounded-2xl {
+  border-radius: 1rem;
 }
 
 .rounded-bl-lg {
@@ -785,6 +799,11 @@ video {
   border-width: 1px;
 }
 
+.bg-\[red\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 0 0 / var(--tw-bg-opacity));
+}
+
 .bg-\[white\] {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -793,6 +812,11 @@ video {
 .bg-background {
   --tw-bg-opacity: 1;
   background-color: rgb(250 250 250 / var(--tw-bg-opacity));
+}
+
+.bg-green {
+  --tw-bg-opacity: 1;
+  background-color: rgb(9 133 67 / var(--tw-bg-opacity));
 }
 
 .bg-greyish_blue {
@@ -830,9 +854,17 @@ video {
   background-color: rgb(217 217 217 / var(--tw-bg-opacity));
 }
 
-.bg-\[red\] {
+.bg-soft_sky_blue {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 0 0 / var(--tw-bg-opacity));
+  background-color: rgb(230 237 241 / var(--tw-bg-opacity));
+}
+
+.p-16 {
+  padding: 16px;
+}
+
+.p-2 {
+  padding: 0.5rem;
 }
 
 .p-4 {
@@ -845,18 +877,6 @@ video {
 
 .p-\[14px\] {
   padding: 14px;
-}
-
-.p-3 {
-  padding: 0.75rem;
-}
-
-.p-1 {
-  padding: 0.25rem;
-}
-
-.p-2 {
-  padding: 0.5rem;
 }
 
 .px-16 {
@@ -872,6 +892,11 @@ video {
 .px-\[24px\] {
   padding-left: 24px;
   padding-right: 24px;
+}
+
+.px-\[8px\] {
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 .py-16 {
@@ -899,6 +924,11 @@ video {
   padding-bottom: 24px;
 }
 
+.py-\[6px\] {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
 .pt-16 {
   padding-top: 16px;
 }
@@ -917,6 +947,14 @@ video {
 
 .text-\[14px\] {
   font-size: 14px;
+}
+
+.text-\[16px\] {
+  font-size: 16px;
+}
+
+.text-\[18px\] {
+  font-size: 18px;
 }
 
 .text-\[28px\] {
@@ -945,6 +983,10 @@ video {
 
 .font-bold {
   font-weight: 700;
+}
+
+.font-light {
+  font-weight: 300;
 }
 
 .font-semibold {
@@ -995,10 +1037,6 @@ video {
   color: rgb(255 135 31 / var(--tw-text-opacity));
 }
 
-.accent-cibil {
-  accent-color: #06addc;
-}
-
 .shadow-md {
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
@@ -1016,6 +1054,10 @@ video {
   outline-offset: 2px;
 }
 
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
 @font-face {
   font-family: 'Intro';
 
@@ -1030,8 +1072,8 @@ ul {
   list-style-image: url('./Assets/check.svg')
 }
 
-.checked\:bg-\[red-500\]:checked {
-  background-color: red-500;
+p {
+  font-size: 14px
 }
 
 .checked\:bg-\[red\]:checked {

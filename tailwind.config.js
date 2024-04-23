@@ -35,6 +35,7 @@ module.exports = {
       'greyish_blue': '#F2F2FC ',
       'light_grey': '#F2F2F2',
       'pale_rose': '#FBE8EC',
+      'soft_sky_blue':'#E6EDF1'
     },
     fontFamily: {
       intro: ['Intro', 'sans-serif'],
