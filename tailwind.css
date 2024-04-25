@@ -1157,7 +1157,8 @@ video {
 }
 
 ul {
-  list-style-image: url('./Assets/check.svg')
+  list-style-image: url('./Assets/check.svg');
+  padding-left: 25px !important;
 }
 
 p {
