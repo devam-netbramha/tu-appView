@@ -5,14 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./tailwind.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const color = localStorage.getItem('color')
+        document.getElementById('submit_button').style.backgroundColor = color
+        document.getElementById('singe_click_text').style.color = color
+        document.getElementById('download_svg').style.fill = color
+        document.getElementById('carousel_button').style.backgroundColor = color
+
+      })
+    </script>
     <title>Credit Score</title>
   </head>
 
   <body class="bg-background">
     <div class="bg-[white] flex items-center px-16 py-[12px]">
-      <a href="./mobile_verification.html">
+      <a href="./mobile_verification.html" class="no-underline">
         <img class="w-[32px]" src="./Assets/back.svg" alt="back" />
       </a>
       <p class="text-dark_charcoal mb-0">Credit Score</p>
@@ -25,8 +38,12 @@
           <img class="w-[343px]" src="./Assets/Credit Score.svg" alt="Credit Score" />
         </div>
         <div class="flex justify-center gap-1 items-center">
-          <img class="w-[16px]" src="./Assets/download.svg" alt="download" />
-          <p class="text-orange mb-0">Download your credit report</p>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+            <path
+              d="M0.796211 7.48931C0.797945 5.94642 1.29428 4.44472 2.21234 3.20469C3.1304 1.96466 4.42183 1.05161 5.89703 0.599603V2.09591C4.57965 2.60979 3.49553 3.58747 2.84874 4.84494C2.20194 6.1024 2.03707 7.55291 2.38517 8.92345C2.73327 10.294 3.57032 11.49 4.73877 12.2865C5.90721 13.0829 7.32647 13.4247 8.7294 13.2477C10.1323 13.0707 11.4222 12.3869 12.3561 11.3252C13.2901 10.2635 13.8038 8.897 13.8005 7.48295C13.7972 6.0689 13.2772 4.70481 12.3383 3.64745C11.3994 2.59009 10.1063 1.91237 8.70261 1.74188V7.72578L10.088 6.34704L11.0847 7.34369L8.89766 9.53071C8.66046 9.76746 8.33902 9.90043 8.00388 9.90043C7.66875 9.90043 7.34731 9.76746 7.11011 9.53071L4.92309 7.34369L5.91974 6.34704L7.29848 7.72578V0.32038C7.52961 0.297668 7.76341 0.285645 7.99988 0.285645C9.42674 0.285645 10.8216 0.708759 12.008 1.50148C13.1944 2.29421 14.119 3.42093 14.6651 4.73919C15.2111 6.05744 15.354 7.508 15.0756 8.90745C14.7972 10.3069 14.1101 11.5924 13.1012 12.6013C12.0922 13.6103 10.8068 14.2974 9.40733 14.5757C8.00788 14.8541 6.55731 14.7112 5.23906 14.1652C3.92081 13.6192 2.79408 12.6945 2.00136 11.5081C1.20864 10.3217 0.785522 8.92686 0.785522 7.5L0.796211 7.48931Z"
+              id="download_svg" />
+          </svg>
+          <p id="singe_click_text" class="text-orange mb-0">Download your credit report</p>
         </div>
       </div>
       <p class="p-[10px] bg-light_green shadow-sm rounded-br-lg rounded-bl-lg text-center">Your score is in the top
@@ -37,7 +54,8 @@
       <div id="carouselExampleDark" class="carousel carousel-dark slide">
         <div class="carousel-inner">
           <div class="carousel-item active" data-bs-interval="10000">
-            <a href="./offers_for_you.html" class="text-black no-underline px-16 py-[12px] rounded-lg shadow-md flex justify-between bg-[white]">
+            <a href="./offers_for_you.html"
+              class="text-black no-underline px-16 py-[12px] rounded-lg shadow-md flex justify-between bg-[white]">
               <div>
                 <p class="font-semibold mt-4 mb-3">Instant loans without any <br /> paperwork</p>
                 <p class="text-dark_grey text-[12px] mb-1">Credit Limit</p>
@@ -47,7 +65,8 @@
             </a>
           </div>
           <div class="carousel-item" data-bs-interval="2000">
-            <a href="./offers_for_you.html" class="text-black	no-underline px-16 py-[12px] rounded-lg shadow-md flex justify-between bg-[white]">
+            <a href="./offers_for_you.html"
+              class="text-black	no-underline px-16 py-[12px] rounded-lg shadow-md flex justify-between bg-[white]">
               <div>
                 <p class="font-semibold mt-4 mb-3">Get your credit card now <br /> for free!</p>
                 <p class="text-dark_grey text-[12px] mb-1">Credit Limit</p>
@@ -57,7 +76,8 @@
             </a>
           </div>
           <div class="carousel-item">
-            <a href="./offers_for_you.html" class="text-black no-underline px-16 py-[12px] rounded-lg shadow-md flex justify-between bg-[white]">
+            <a href="./offers_for_you.html"
+              class="text-black no-underline px-16 py-[12px] rounded-lg shadow-md flex justify-between bg-[white]">
               <div>
                 <p class="font-semibold mt-4 mb-3">Instant house loan in a<br /> single click</p>
                 <p class="text-dark_grey text-[12px] mb-1">Credit Limit</p>
@@ -68,15 +88,19 @@
           </div>
         </div>
         <div class="carousel-indicators" style="position: unset;">
-          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active w-[12px] h-[6px] rounded-lg" aria-current="true" aria-label="Slide 1" style="background-color: #F26842 ;width:12px; height: 6px;border-radius: 44%;"></button>
-          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2" style="background-color: #F26842 ;width:12px; height: 6px;border-radius: 44%;"></button>
-          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3" style="background-color: #F26842 ;width:12px; height: 6px;border-radius: 44%;"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0"
+            class="active w-[12px] h-[6px] rounded-lg" aria-current="true" aria-label="Slide 1"
+            style="width:12px; height: 6px;border-radius: 44%;" id="carousel_button"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"
+            style="width:12px; height: 6px;border-radius: 44%;" id="carousel_button"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"
+            style="width:12px; height: 6px;border-radius: 44%;" id="carousel_button"></button>
         </div>
       </div>
       <p class="font-semibold mt-4">What’s impacting your score</p>
 
       <div class="bg-[white] px-[12px] py-16 rounded-lg">
-        <a href="./payment_history.html" class="text-black flex gap-6 ">
+        <a href="./payment_history.html" class="text-black flex gap-6 no-underline">
           <img src="./Assets/time.svg" />
           <div>
             <p class="mb-1 font-semibold">payment history</p>
@@ -89,7 +113,7 @@
           <img src="./Assets/right_arrow.svg" />
         </a>
         <hr />
-        <a href="#" class="text-black flex gap-6">
+        <a href="#" class="text-black flex gap-6 no-underline">
           <img src="./Assets/credit.svg" />
           <div>
             <p class="mb-1 font-semibold">Credit utilisation</p>
@@ -102,9 +126,9 @@
           <img src="./Assets/right_arrow.svg" />
         </a>
         <hr />
-        <a href="#" class="text-black flex gap-6">
+        <a href="#" class="text-black flex gap-6 no-underline">
           <img src="./Assets/wallet.svg" />
-          <div class="mr-12">
+          <div class="mr-11">
             <p class="mb-1 font-semibold">Credit mix</p>
             <p class="mb-1 text-[12px] text-dim_grey">2 cards and 2 loans</p>
           </div>
@@ -115,9 +139,9 @@
           <img src="./Assets/right_arrow.svg" />
         </a>
         <hr />
-        <a href="#" class="text-black flex gap-6">
+        <a href="#" class="text-black flex gap-6 no-underline">
           <img src="./Assets/headset.svg" />
-          <div class="mr-4">
+          <div class="mr-6">
             <p class="mb-1 font-semibold">Credit enquiries</p>
             <p class="mb-1 text-[12px] text-dim_grey">4 new enquiries</p>
           </div>
@@ -132,15 +156,18 @@
       <p class="font-semibold mt-4">See how your score changes</p>
       <div class="overflow-auto">
         <div class="inline-flex gap-3 ">
-          <a href="#" class="text-black bg-light_sky_blue px-[12px] pt-16 rounded-lg w-[150px] grid gap-2 justify-items-center">
+          <a href="# "
+            class="text-black bg-light_sky_blue px-[12px] pt-16 rounded-lg w-[150px] grid gap-2 justify-items-center no-underline">
             <img src="./Assets/fund.svg" />
             <p class="font-semibold text-center text-[14px]">Add a new loan or credit card</p>
           </a>
-          <a href="./predict_score.html" class="text-black bg-greyish_blue px-[12px] pt-16 rounded-lg w-[150px] grid gap-2 justify-items-center">
+          <a href="./predict_score.html"
+            class="text-black bg-greyish_blue px-[12px] pt-16 rounded-lg w-[150px] grid gap-2 justify-items-center no-underline">
             <img src="./Assets/bill.svg" />
             <p class="font-semibold text-center text-[14px]">Miss a payment</p>
           </a>
-          <a href="#" class="text-black bg-light_grey px-[12px] pt-16 rounded-lg w-[150px] grid gap-2 justify-items-center">
+          <a href="#"
+            class="text-black bg-light_grey px-[12px] pt-16 rounded-lg w-[150px] grid gap-2 justify-items-center no-underline">
             <img src="./Assets/card_board.svg" />
             <p class="font-semibold text-center text-[14px]">Add a new enquiry</p>
           </a>
@@ -149,8 +176,9 @@
     </div>
     <div class="bg-pale_rose px-16 py-[24px] mt-[32px] flex justify-between">
       <div>
-        <p class="font-semibold">Do you know what it really <br /> takes to achieve a high <br /> <b style="font-feature-settings: 'ss01'">CIBIL</b> score?</p>
-        <button class="bg-orange text-[white] py-[12px] px-[24px] rounded-[40px]">Play Now </button>
+        <p class="font-semibold">Do you know what it really <br /> takes to achieve a high <br /> <b
+            style="font-feature-settings: 'ss01'">CIBIL</b> score?</p>
+        <button id="submit_button" class="bg-orange text-[white] py-[12px] px-[24px] rounded-[40px]">Play Now </button>
       </div>
       <img src="./Assets/man_with_credit_score.svg" />
     </div>
