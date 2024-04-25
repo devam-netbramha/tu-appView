@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./tailwind.css" rel="stylesheet">
+    <script>
+      function onSubmit(e) {
+        e.preventDefault()
+        console.log(e)
+      }
+
+      function onClientSelection(e) {
+        document.getElementById("client_logo").innerHTML = `<img src="./Assets/Logos/${e.target.value}.png" alt="client_logo" style="max-width:200px;max-height:80px" />`
+      }
+    </script>
     <title>Client Selection</title>
   </head>
   <body class="bg-background">
@@ -15,9 +25,10 @@
       </p>
     </div>
 
-    <div class="mt-[24px] px-16 grid gap-6">
-      <select class="form-select px-[12px] py-[10px] border rounded-lg w-full">
-        <option disabled selected>Select client name</option>
+    <form class="mt-[24px] px-16 grid gap-6" onsubmit="onSubmit(event)">
+      <select required class="form-select px-[12px] py-[10px] border rounded-lg w-full"
+        onchange="onClientSelection(event)">
+        <!-- <option disabled selected>Select client name</option> -->
         <option value="SBI Bank">SBI Bank</option>
         <option value="Axis Bank">Axis Bank</option>
         <option value="HDFC Bank">HDFC Bank</option>
@@ -54,7 +65,8 @@
         <option value="Federal Bank">Federal Bank</option>
       </select>
 
-      <div class="border rounded-xl px-[12px] py-[20px] flex items-center justify-center h-[96px] gap-2">
+      <div class="border rounded-xl px-[12px] py-[20px] flex items-center justify-center h-[96px] gap-2"
+        id="client_logo">
         <p class="text-dark_grey">Upload Client's logo</p>
         <svg xmlns="http://www.w3.org/2000/svg" width="27" height="20" viewBox="0 0 27 20" fill="none">
           <path
@@ -80,6 +92,6 @@
       <input type="text" class="form-control border px-[12px] py-[10px] rounded-lg" id="color"
         placeholder="Enter HEX code (Ex. 5968696)">
       <button type="submit" class="bg-orange text-[white] py-[12px] px-[24px] rounded-[40px] w-full">Start Demo</button>
-    </div>
+    </form>
   </body>
 </html>
