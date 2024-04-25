@@ -632,6 +632,10 @@ video {
   margin-top: 32px;
 }
 
+.ms-auto {
+  margin-inline-start: auto;
+}
+
 .block {
   display: block;
 }
@@ -722,6 +726,14 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-\[517\] {
+  width: 517;
+}
+
+.w-\[517px\] {
+  width: 517px;
 }
 
 .transform {
@@ -1163,4 +1175,10 @@ p {
 .checked\:bg-\[red\]:checked {
   --tw-bg-opacity: 1;
   background-color: rgb(255 0 0 / var(--tw-bg-opacity));
+}
+
+@media (min-width: 976px) {
+  .lg\:hidden {
+    display: none;
+  }
 }
