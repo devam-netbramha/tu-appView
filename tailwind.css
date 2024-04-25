@@ -1107,8 +1107,6 @@ video {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
-/* Regular */
-
 @font-face {
   font-family: 'Intro';
 
@@ -1118,8 +1116,6 @@ video {
 
   font-style: normal;
 }
-
-/* Bold */
 
 @font-face {
   font-family: 'Intro';
@@ -1131,16 +1127,12 @@ video {
   font-style: normal;
 }
 
-/* bold */
-
 @font-face {
   font-family: 'Intro';
 
   src: url('./Assets/Font/IntroSemiBold.ttf') format('truetype');
 
   font-weight: 600;
-
-  /* 600 is commonly used for bold */
 
   font-style: normal;
 }
@@ -1151,8 +1143,6 @@ video {
   src: url('./Assets/Font/IntroRegularItalic.ttf') format('truetype');
 
   font-weight: normal;
-
-  /* 600 is commonly used for bold */
 
   font-style: italic;
 }
