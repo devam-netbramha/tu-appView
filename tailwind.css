@@ -562,9 +562,18 @@ video {
   position: relative;
 }
 
+.m-0 {
+  margin: 0px;
+}
+
 .mx-\[10px\] {
   margin-left: 10px;
   margin-right: 10px;
+}
+
+.my-16 {
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 .mb-0 {
