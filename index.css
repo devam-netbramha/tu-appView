@@ -2,13 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Regular */
 @font-face {
   font-family: 'Intro';
-  src: url('./Assets/Font/Intro.otf') format('otf');
+  src: url('./Assets/Font/IntroRegular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Bold */
+@font-face {
+  font-family: 'Intro';
+  src: url('./Assets/Font/Intro-Bold.otf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* bold */
+@font-face {
+  font-family: 'Intro';
+  src: url('./Assets/Font/IntroSemiBold.ttf') format('truetype');
+  font-weight: 600;
+  /* 600 is commonly used for bold */
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Intro';
+  src: url('./Assets/Font/IntroRegularItalic.ttf') format('truetype');
+    font-weight: normal;
+    /* 600 is commonly used for bold */
+    font-style: italic;
 }
 
 * {
-  font-family: 'Intro', sans-serif;
+  font-family: 'Intro';
 }
 
 ul {

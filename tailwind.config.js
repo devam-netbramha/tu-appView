@@ -37,9 +37,6 @@ module.exports = {
       'pale_rose': '#FBE8EC',
       'soft_sky_blue':'#E6EDF1'
     },
-    fontFamily: {
-      intro: ['Intro', 'sans-serif'],
-    },
     extend: {
       spacing: {
         128: '32rem',
