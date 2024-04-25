@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +16,40 @@
       }
     </script>
     <title>Client Selection</title>
+    <style>
+      .custom-radio input {
+        display: none;
+      }
+
+      input[type="radio"]:checked+label {
+        outline: 3px solid rgba(0, 109, 245, 0.5);
+      }
+
+      input[type="radio"]:checked+label:before {
+        display: block;
+      }
+
+      .custom-radio label {
+        position: relative;
+      }
+
+      .custom-radio label:before {
+        display: none;
+        content: '';
+        position: absolute;
+        width: 12px;
+        height: 8px;
+        background-image: url('./Assets/white-tick.svg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
   </head>
+
   <body class="bg-background">
     <div class="rounded-3xl shadow-md p-4">
       <p style="font-feature-settings: 'ss01'" class="text-cibil text-[28px] leading-none">CIBIL</p>
@@ -25,73 +59,84 @@
       </p>
     </div>
 
-    <form class="mt-[24px] px-16 grid gap-6" onsubmit="onSubmit(event)">
-      <select required class="form-select px-[12px] py-[10px] border rounded-lg w-full"
-        onchange="onClientSelection(event)">
-        <!-- <option disabled selected>Select client name</option> -->
-        <option value="SBI Bank">SBI Bank</option>
-        <option value="Axis Bank">Axis Bank</option>
-        <option value="HDFC Bank">HDFC Bank</option>
-        <option value="Bajaj Finance">Bajaj Finance</option>
-        <option value="ICICI Bank">ICICI Bank</option>
-        <option value="SBI Cards">SBI Cards</option>
-        <option value="Krazybee">Krazybee</option>
-        <option value="Navi Finserv">Navi Finserv</option>
-        <option value="Airtel">Airtel</option>
-        <option value="BharatPe">BharatPe</option>
-        <option value="Fibe">Fibe</option>
-        <option value="InCred">InCred</option>
-        <option value="Axio">Axio</option>
-        <option value="Vodafone">Vodafone</option>
-        <option value="Jupiter">Jupiter</option>
-        <option value="Piramal Finance">Piramal Finance</option>
-        <option value="Kotak Mahindra Bank">Kotak Mahindra Bank</option>
-        <option value="IDFC First Bank">IDFC First Bank</option>
-        <option value="Tata Capital">Tata Capital</option>
-        <option value="AU SFB">AU SFB</option>
-        <option value="LIC Housing">LIC Housing</option>
-        <option value="Union Bank">Union Bank</option>
-        <option value="INDUSIND Bank">INDUSIND Bank</option>
-        <option value="BANK OF INDIA">BANK OF INDIA</option>
-        <option value="PNB">PNB</option>
-        <option value="CENTRAL BANK OF INDIA">CENTRAL BANK OF INDIA</option>
-        <option value="UCO BANK">UCO BANK</option>
-        <option value="IIFL Finance">IIFL Finance</option>
-        <option value="Poonawalla Fincorp">Poonawalla Fincorp</option>
-        <option value="Aditya Birla Finance Limited">Aditya Birla Finance Limited</option>
-        <option value="L&T Finance">L&T Finance</option>
-        <option value="TVS Credit">TVS Credit</option>
-        <option value="City Union Bank Limited">City Union Bank Limited</option>
-        <option value="Federal Bank">Federal Bank</option>
-      </select>
+    <div>
+      <form action="./dashboard_preview.html" class="mt-[24px] px-16 grid gap-6">
+        <select class="form-select px-[12px] py-[10px] border rounded-lg w-full">
+          <option disabled selected>Select client name</option>
+          <option value="SBI Bank">SBI Bank</option>
+          <option value="Axis Bank">Axis Bank</option>
+          <option value="HDFC Bank">HDFC Bank</option>
+          <option value="Bajaj Finance">Bajaj Finance</option>
+          <option value="ICICI Bank">ICICI Bank</option>
+          <option value="SBI Cards">SBI Cards</option>
+          <option value="Krazybee">Krazybee</option>
+          <option value="Navi Finserv">Navi Finserv</option>
+          <option value="Airtel">Airtel</option>
+          <option value="BharatPe">BharatPe</option>
+          <option value="Fibe">Fibe</option>
+          <option value="InCred">InCred</option>
+          <option value="Axio">Axio</option>
+          <option value="Vodafone">Vodafone</option>
+          <option value="Jupiter">Jupiter</option>
+          <option value="Piramal Finance">Piramal Finance</option>
+          <option value="Kotak Mahindra Bank">Kotak Mahindra Bank</option>
+          <option value="IDFC First Bank">IDFC First Bank</option>
+          <option value="Tata Capital">Tata Capital</option>
+          <option value="AU SFB">AU SFB</option>
+          <option value="LIC Housing">LIC Housing</option>
+          <option value="Union Bank">Union Bank</option>
+          <option value="INDUSIND Bank">INDUSIND Bank</option>
+          <option value="BANK OF INDIA">BANK OF INDIA</option>
+          <option value="PNB">PNB</option>
+          <option value="CENTRAL BANK OF INDIA">CENTRAL BANK OF INDIA</option>
+          <option value="UCO BANK">UCO BANK</option>
+          <option value="IIFL Finance">IIFL Finance</option>
+          <option value="Poonawalla Fincorp">Poonawalla Fincorp</option>
+          <option value="Aditya Birla Finance Limited">Aditya Birla Finance Limited</option>
+          <option value="L&T Finance">L&T Finance</option>
+          <option value="TVS Credit">TVS Credit</option>
+          <option value="City Union Bank Limited">City Union Bank Limited</option>
+          <option value="Federal Bank">Federal Bank</option>
+        </select>
 
-      <div class="border rounded-xl px-[12px] py-[20px] flex items-center justify-center h-[96px] gap-2"
-        id="client_logo">
-        <p class="text-dark_grey">Upload Client's logo</p>
-        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="20" viewBox="0 0 27 20" fill="none">
-          <path
-            d="M13.7804 7.93088C13.5338 7.68346 13.1997 7.54449 12.8513 7.54449C12.5029 7.54449 12.1687 7.68346 11.9221 7.93088L9.64849 10.2165L10.6846 11.2581L12.1179 9.8186V16.0626H7.51794C6.86568 16.0624 6.22814 15.8678 5.68588 15.5034C5.14362 15.139 4.72099 14.6212 4.47141 14.0154C4.22183 13.4096 4.15651 12.743 4.2837 12.0999C4.41089 11.4568 4.72488 10.866 5.18599 10.4022C5.23738 10.3506 5.29016 10.3017 5.34433 10.2542C5.76526 9.88119 6.27468 9.62345 6.82349 9.50584C7.30192 9.40278 7.79712 9.40755 8.27349 9.5198L8.61377 9.17773L9.42627 8.36093C8.82462 8.09595 8.17479 7.9595 7.51794 7.96021C7.39432 7.96021 7.27071 7.96021 7.14988 7.97556C7.47343 7.05651 8.01289 6.22956 8.72241 5.56496C9.43193 4.90036 10.2906 4.41776 11.2253 4.15816C12.1601 3.89856 13.1434 3.86964 14.0916 4.07384C15.0399 4.27804 15.9251 4.70934 16.6721 5.33109C17.2497 5.1504 17.8483 5.0462 18.4527 5.02113C17.5365 3.97525 16.3495 3.20544 15.024 2.79737C13.6985 2.38931 12.2863 2.35898 10.9446 2.70978C9.60298 3.06057 8.38445 3.77872 7.42466 4.78432C6.46486 5.78991 5.80144 7.04351 5.50821 8.40561C4.52499 8.86546 3.72732 9.64887 3.24709 10.6263C2.76686 11.6038 2.63283 12.7167 2.86717 13.7811C3.1015 14.8455 3.69017 15.7976 4.53583 16.4801C5.38149 17.1625 6.43351 17.5344 7.51794 17.5342H13.5846V9.8186L15.0179 11.2595L16.0554 10.2165L13.7804 7.93088Z"
-            fill="#00A6CA" />
-          <path
-            d="M22.6348 8.10374C21.7047 7.16849 20.4717 6.59973 19.1599 6.50083C17.8481 6.40193 16.5446 6.77945 15.4862 7.56479L16.5362 8.62034C17.0609 8.27626 17.6583 8.05999 18.2809 7.98873C18.9034 7.91747 19.5339 7.9932 20.1221 8.20988C20.7104 8.42656 21.2404 8.77822 21.6697 9.23691C22.0991 9.6956 22.4161 10.2487 22.5956 10.8521C22.775 11.4556 22.8119 12.0928 22.7034 12.7132C22.5949 13.3335 22.3439 13.9198 21.9704 14.4255C21.5969 14.9313 21.1112 15.3424 20.5519 15.6263C19.9927 15.9102 19.3752 16.059 18.7487 16.0609H15.05V17.5339H18.75C19.8373 17.5349 20.9003 17.2115 21.8046 16.6048C22.709 15.9981 23.4139 15.1354 23.8303 14.1257C24.2467 13.1161 24.3557 12.005 24.1436 10.933C23.9316 9.86101 23.4079 8.87639 22.6389 8.10374H22.6348Z"
-            fill="#00A6CA" />
-        </svg>
-      </div>
-
-      <div>
-        <p class="text-[12px] text-dark_grey font-semibold">Select primary colour</p>
-        <div class="flex justify-between mt-16">
-          <div class="w-[48px] h-[48px] rounded-lg bg-orange"></div>
-          <div class="w-[48px] h-[48px] rounded-lg bg-pink"></div>
-          <div class="w-[48px] h-[48px] rounded-lg bg-dark-yellow"></div>
-          <div class="w-[48px] h-[48px] rounded-lg bg-green"></div>
-          <div class="w-[48px] h-[48px] rounded-lg bg-purple"></div>
+        <div class="border rounded-xl px-[12px] py-[20px] flex items-center justify-center h-[96px] gap-2">
+          <p class="text-dark_grey">Upload Client's logo</p>
+          <svg xmlns="http://www.w3.org/2000/svg" width="27" height="20" viewBox="0 0 27 20" fill="none">
+            <path d="M13.7804 7.93088C13.5338 7.68346 13.1997 7.54449 12.8513 7.54449C12.5029 7.54449 12.1687 7.68346 11.9221 7.93088L9.64849 10.2165L10.6846 11.2581L12.1179 9.8186V16.0626H7.51794C6.86568 16.0624 6.22814 15.8678 5.68588 15.5034C5.14362 15.139 4.72099 14.6212 4.47141 14.0154C4.22183 13.4096 4.15651 12.743 4.2837 12.0999C4.41089 11.4568 4.72488 10.866 5.18599 10.4022C5.23738 10.3506 5.29016 10.3017 5.34433 10.2542C5.76526 9.88119 6.27468 9.62345 6.82349 9.50584C7.30192 9.40278 7.79712 9.40755 8.27349 9.5198L8.61377 9.17773L9.42627 8.36093C8.82462 8.09595 8.17479 7.9595 7.51794 7.96021C7.39432 7.96021 7.27071 7.96021 7.14988 7.97556C7.47343 7.05651 8.01289 6.22956 8.72241 5.56496C9.43193 4.90036 10.2906 4.41776 11.2253 4.15816C12.1601 3.89856 13.1434 3.86964 14.0916 4.07384C15.0399 4.27804 15.9251 4.70934 16.6721 5.33109C17.2497 5.1504 17.8483 5.0462 18.4527 5.02113C17.5365 3.97525 16.3495 3.20544 15.024 2.79737C13.6985 2.38931 12.2863 2.35898 10.9446 2.70978C9.60298 3.06057 8.38445 3.77872 7.42466 4.78432C6.46486 5.78991 5.80144 7.04351 5.50821 8.40561C4.52499 8.86546 3.72732 9.64887 3.24709 10.6263C2.76686 11.6038 2.63283 12.7167 2.86717 13.7811C3.1015 14.8455 3.69017 15.7976 4.53583 16.4801C5.38149 17.1625 6.43351 17.5344 7.51794 17.5342H13.5846V9.8186L15.0179 11.2595L16.0554 10.2165L13.7804 7.93088Z" fill="#00A6CA" />
+            <path d="M22.6348 8.10374C21.7047 7.16849 20.4717 6.59973 19.1599 6.50083C17.8481 6.40193 16.5446 6.77945 15.4862 7.56479L16.5362 8.62034C17.0609 8.27626 17.6583 8.05999 18.2809 7.98873C18.9034 7.91747 19.5339 7.9932 20.1221 8.20988C20.7104 8.42656 21.2404 8.77822 21.6697 9.23691C22.0991 9.6956 22.4161 10.2487 22.5956 10.8521C22.775 11.4556 22.8119 12.0928 22.7034 12.7132C22.5949 13.3335 22.3439 13.9198 21.9704 14.4255C21.5969 14.9313 21.1112 15.3424 20.5519 15.6263C19.9927 15.9102 19.3752 16.059 18.7487 16.0609H15.05V17.5339H18.75C19.8373 17.5349 20.9003 17.2115 21.8046 16.6048C22.709 15.9981 23.4139 15.1354 23.8303 14.1257C24.2467 13.1161 24.3557 12.005 24.1436 10.933C23.9316 9.86101 23.4079 8.87639 22.6389 8.10374H22.6348Z" fill="#00A6CA" />
+          </svg>
         </div>
-      </div>
-      <p class="text-dark_grey text-center">or</p>
-      <input type="text" class="form-control border px-[12px] py-[10px] rounded-lg" id="color"
-        placeholder="Enter HEX code (Ex. 5968696)">
-      <button type="submit" class="bg-orange text-[white] py-[12px] px-[24px] rounded-[40px] w-full">Start Demo</button>
-    </form>
+
+        <div>
+          <p class="text-[12px] text-dark_grey font-semibold">Select primary colour</p>
+          <div class="flex justify-between mt-16">
+            <div class="flex custom-radio">
+              <input type="radio" name="theme-select" id="orange" checked>
+              <label class="w-[48px] h-[48px] rounded-lg bg-orange" for="orange"></label>
+            </div>
+            <div class="flex custom-radio">
+              <input type="radio" name="theme-select" id="pink">
+              <label class="w-[48px] h-[48px] rounded-lg bg-pink" for="pink"></label>
+            </div>
+            <div class="flex custom-radio">
+              <input type="radio" name="theme-select" id="dark-yellow">
+              <label class="w-[48px] h-[48px] rounded-lg bg-dark-yellow" for="dark-yellow"></label>
+            </div>
+            <div class="flex custom-radio">
+              <input type="radio" name="theme-select" id="green">
+              <label class="block w-[48px] h-[48px] rounded-lg bg-green" for="green"></label>
+            </div>
+            <div class="flex custom-radio">
+              <input type="radio" name="theme-select" id="purple">
+              <label class="w-[48px] h-[48px] rounded-lg bg-purple" for="purple"></label>
+            </div>
+          </div>
+        </div>
+        <p class="text-dark_grey text-center">or</p>
+        <input type="text" class="form-control border px-[12px] py-[10px] rounded-lg" id="color" placeholder="Enter HEX code (Ex. 5968696)">
+        <button type="submit" formaction="./dashboard_preview.html" class="bg-orange text-[white] py-[12px] px-[24px] rounded-[40px] w-full">Start Demo</button>
+      </form>
+    </div>
   </body>
+
 </html>
