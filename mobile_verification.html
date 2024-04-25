@@ -21,6 +21,9 @@
 
         document.getElementById('submit_button').style.backgroundColor = color
         document.getElementById('singe_click_text').style.color = color
+        document.getElementById('toggleButton').style.color = color
+        document.getElementById('privacy').style.color = color
+        document.getElementById('tnc_text').style.color = color
       });
 
       function moveToNext(currentInput, nextInputId) {
@@ -53,14 +56,14 @@
 
       function toggleContent() {
         if (isOpen) {
-          document.getElementById('tnc').innerHTML = `I hereby declare that I am Indian National. I agree to Piramal Finance’s ,<span id='singe_click_text' class="text-orange">Privacy
-          Policy</span> and <span id='singe_click_text' span class="text-orange">T&Cs</span> and authorize
+          document.getElementById('tnc').innerHTML = `I hereby declare that I am Indian National. I agree to Piramal Finance’s ,<span style='color:${color}' >Privacy
+          Policy</span> and <span style='color:${color}'>T&Cs</span> and authorize
         Piramal Finance to receive my credit information from Credit Bureaus on my behalf.I also authorize Piramal
-        Finance to <span id='singe_click_text' type="button" onclick="toggleContent()" id="toggleButton"
-            class="text-orange text-[12px]">View More</span>`
+        Finance to <span style='color:${color}' type="button" onclick="toggleContent()"
+            class="text-[12px]">View More</span>`
         } else {
-          document.getElementById('tnc').innerHTML = `I hereby declare that I am Indian National. I agree to Piramal Finance’s ,<span id='singe_click_text' class="text-orange">Privacy
-          Policy</span> and <span id='singe_click_text' class="text-orange">T&Cs</span> and authorize
+          document.getElementById('tnc').innerHTML = `I hereby declare that I am Indian National. I agree to Piramal Finance’s ,<span style='color:${color}' >Privacy
+          Policy</span> and <span style='color:${color}'>T&Cs</span> and authorize
         Piramal Finance to receive my credit information from Credit Bureaus on my behalf. I also authorize Piramal
         Finance to
         retrieve credit report on my behalf from CRIF Highmark Private Limited, Experian Credit Information Company of
@@ -69,8 +72,8 @@
         including but not limited to SMS, e-mails, phone calls, whatsapp from us and/or our partners, including Banks
         and NBFCs, with
         respect to your transaction on the website or for any other purpose. This consent will override any registration
-        for DNC/NDNC. <span id='singe_click_text' type="button" onclick="toggleContent()" id="toggleButton"
-            class="text-orange text-[12px]">View Less</span>`
+        for DNC/NDNC. <span style='color:${color}' type="button" onclick="toggleContent()"
+            class="text-[12px]">View Less</span>`
         }
         isOpen = !isOpen;
       }
@@ -99,7 +102,7 @@
       <p class="text-lg font-bold mb-2">Mobile Verification</p>
       <div class="flex justify-between">
         <p class="text-dark_grey text-[14px]">OTP sent to mobile number <b>9876543210</b></p>
-        <p class="text-orange font-bold text-[14px]">Edit</p>
+        <p class="font-bold text-[14px]" id="singe_click_text">Edit</p>
       </div>
       <div class="flex justify-center items-center">
         <input required type="text" maxlength="1"
@@ -127,16 +130,16 @@
         <input required class="form-check-input p-2 bg-[red] checked:bg-[red]" type="checkbox" value=""
           id="flexCheckDefault">
         <p class="form-check-label text-[12px] text-dark_grey" for="flexCheckDefault" id="tnc">
-          I hereby declare that I am Indian National. I agree to Piramal Finance’s ,<span id='singe_click_text' class="text-orange">Privacy
-            Policy</span> and <span id='singe_click_text' class="text-orange">T&Cs</span> and authorize
+          I hereby declare that I am Indian National. I agree to Piramal Finance’s ,<span id='privacy'>Privacy
+            Policy</span> and <span id='tnc_text'>T&Cs</span> and authorize
           Piramal Finance to receive my credit information from Credit Bureaus on my behalf. I also authorize Piramal
-          Finance to <span id='singe_click_text' type="button" onclick="toggleContent()" id="toggleButton"
-            class="text-orange text-[12px]">View More</span>
+          Finance to <span type="button" onclick="toggleContent()" id="toggleButton"
+            class="text-[12px]">View More</span>
         </p>
       </div>
 
       <button id="submit_button" type="submit"
-        class="bg-orange text-[white] py-[12px] px-[24px] rounded-[40px] w-full">Verify</button>
+        class="text-[white] py-[12px] px-[24px] rounded-[40px] w-full">Verify</button>
     </form>
   </body>
 
