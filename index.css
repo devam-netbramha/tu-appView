@@ -42,3 +42,9 @@ ul {
 p {
   font-size: 14px
 }
+
+@media screen and (max-width: 550px) {
+  header {
+    display: none !important;
+  }
+}
