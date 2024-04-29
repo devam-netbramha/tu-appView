@@ -35,62 +35,64 @@
       </div>
       <button style="border: 1px solid #F26842;" class="text-orange rounded-full px-[24px] py-[5px]">Exit Demo</button>
     </header>
-    <div class="bg-[white] py-[15px]">
-      <a href="./dashboard_preview.html">
-        <img class="w-[32px]" src="./Assets/back.svg" alt="back" />
-      </a>
-      <div class="flex justify-center">
-        <img class="w-[114px]" id="client_logo" alt="back" />
-      </div>
-      <div class="flex gap-1 items-end mt-2 justify-center">
-        <p class="text-dim_grey text-[12px]">Credit score powered by</p>
-        <div>
-          <p style="font-feature-settings: 'ss01'" class="text-cibil text-[12px] leading-none mb-0 ">CIBIL</p>
-          <p class="text-dark_grey text-[4px] leading-none">Part of TransUnion</p>
+    <div class="max-w-[414px] m-auto mobile-frame">
+      <div class="bg-[white] py-[15px]">
+        <a href="./dashboard_preview.html">
+          <img class="w-[32px]" src="./Assets/back.svg" alt="back" />
+        </a>
+        <div class="flex justify-center">
+          <img class="w-[114px]" id="client_logo" alt="back" />
         </div>
-      </div>
-      <div class="flex justify-center mt-[10px]">
-        <img src="./Assets/profile_image.svg" alt="img" />
-      </div>
-      <div class="px-16">
-        <p class="text-lg text-dark_grey mb-1">Get your credit score for</p>
-        <p id="singe_click_text" class="text-lg font-bold text-orange">free in just a single click</p>
+        <div class="flex gap-1 items-end mt-2 justify-center">
+          <p class="text-dim_grey text-[12px]">Credit score powered by</p>
+          <div>
+            <p style="font-feature-settings: 'ss01'" class="text-cibil text-[12px] leading-none mb-0 ">CIBIL</p>
+            <p class="text-dark_grey text-[4px] leading-none">Part of TransUnion</p>
+          </div>
+        </div>
+        <div class="flex justify-center mt-[10px]">
+          <img src="./Assets/profile_image.svg" alt="img" />
+        </div>
+        <div class="px-16">
+          <p class="text-lg text-dark_grey mb-1">Get your credit score for</p>
+          <p id="singe_click_text" class="text-lg font-bold text-orange">free in just a single click</p>
 
-        <ul class="profile_ul_image grid gap-[8px]">
-          <li>
-            <b>Reduce rates</b> on your existing loans.
-          </li>
-          <li>
-            Suggest better <b>rewards</b> credit cards.
-          </li>
-          <li>
-            <b>Tips</b> on improving credit score.
-          </li>
-        </ul>
+          <ul class="profile_ul_image grid gap-[8px]">
+            <li>
+              <b>Reduce rates</b> on your existing loans.
+            </li>
+            <li>
+              Suggest better <b>rewards</b> credit cards.
+            </li>
+            <li>
+              <b>Tips</b> on improving credit score.
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-    <div class="px-16 mt-[24px]">
-      <p>Get instant detailed <b>CIBIL report</b> now</p>
-      <form class="grid gap-4" action="./mobile_verification.html">
-        <div class="flex gap-4">
-          <input required type="text" class="form-control" placeholder="First name" aria-label="First name">
-          <input required type="text" class="form-control" placeholder="Last name" aria-label="Last name">
-        </div>
-        <input required type="number" class="form-control" placeholder="Mobile Number" aria-label="Mobile Number">
-        <input required type="email" class="form-control" placeholder="Email" aria-label="Email">
-        <input required type="date" class="form-control" placeholder="Date of Birth" aria-label="Date of Birth" >
-        <input required type="text" class="form-control" placeholder="PAN Number" aria-label="PAN Number">
+      <div class="px-16 mt-[24px]">
+        <p>Get instant detailed <b>CIBIL report</b> now</p>
+        <form class="grid gap-4" action="./mobile_verification.html">
+          <div class="flex gap-4">
+            <input required type="text" class="form-control" placeholder="First name" aria-label="First name">
+            <input required type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+          </div>
+          <input required type="number" class="form-control" placeholder="Mobile Number" aria-label="Mobile Number">
+          <input required type="email" class="form-control" placeholder="Email" aria-label="Email">
+          <input required type="date" class="form-control" placeholder="Date of Birth" aria-label="Date of Birth" >
+          <input required type="text" class="form-control" placeholder="PAN Number" aria-label="PAN Number">
 
-        <button type="submit" class="bg-orange text-[white] py-[12px] px-[24px] rounded-[40px] w-full" id="submit_button">Submit</button>
-        <div class="flex gap-2">
-          <svg xmlns="http://www.w3.org/2000/svg" width="21" height="19" viewBox="0 0 21 19" fill="none">
-            <path
-              d="M19.3813 0.592677H4.08501V2.22076H18.5509C18.3356 9.20687 15.3086 12.9847 10.4954 16.5726C5.84793 13.0958 2.44756 9.14978 2.44756 0.584961H0.802368L0.811663 1.38897C1.00995 9.35039 4.6396 14.3288 10.0182 18.2439C10.1582 18.3461 10.3272 18.4012 10.5008 18.4012C10.6743 18.4012 10.8434 18.3461 10.9834 18.2439C16.5138 14.2238 20.1977 9.81799 20.1977 1.40595C20.1973 1.19038 20.1111 0.983759 19.9581 0.831329C19.8051 0.678899 19.5977 0.593085 19.3813 0.592677ZM6.96797 10.6451C6.96838 11.0162 7.11654 11.372 7.37996 11.6344C7.64337 11.8968 8.00052 12.0444 8.37304 12.0448H12.627C12.9995 12.0444 13.3567 11.8968 13.6201 11.6344C13.8835 11.372 14.0317 11.0162 14.0321 10.6451C14.0326 10.0731 13.8932 9.5096 13.626 9.00329C13.3587 8.49698 12.9717 8.06314 12.4984 7.73928C12.7699 7.37146 12.9338 6.93584 12.9717 6.48084C13.0096 6.02584 12.9202 5.56927 12.7133 5.16187C12.5064 4.75447 12.1901 4.41219 11.7997 4.17307C11.4092 3.93396 10.9599 3.80737 10.5016 3.80737C10.0432 3.80737 9.59389 3.93396 9.20345 4.17307C8.81301 4.41219 8.49676 4.75447 8.28986 5.16187C8.08296 5.56927 7.99351 6.02584 8.03144 6.48084C8.06937 6.93584 8.23319 7.37146 8.50472 7.73928C8.03082 8.0628 7.64322 8.49649 7.37545 9.00282C7.10768 9.50914 6.96782 10.0729 6.96797 10.6451ZM10.5 5.43218C10.6676 5.43218 10.8314 5.48169 10.9708 5.57445C11.1101 5.6672 11.2188 5.79904 11.2829 5.95328C11.347 6.10753 11.3638 6.27726 11.3311 6.441C11.2984 6.60475 11.2177 6.75516 11.0992 6.87321C10.9807 6.99127 10.8297 7.07166 10.6653 7.10423C10.501 7.13681 10.3306 7.12009 10.1757 7.0562C10.0209 6.99231 9.88856 6.88411 9.79545 6.7453C9.70233 6.60648 9.65263 6.44327 9.65263 6.27632C9.65304 6.05257 9.74245 5.83809 9.90128 5.67988C10.0601 5.52166 10.2754 5.43259 10.5 5.43218ZM10.5 8.75008C10.9648 8.75032 11.4133 8.92046 11.7605 9.22823C12.1078 9.536 12.3295 9.96001 12.3838 10.4198H8.61626C8.67048 9.96027 8.89202 9.53648 9.23892 9.22874C9.58581 8.92101 10.034 8.7507 10.4985 8.75008H10.5Z"
-              fill="#00A6CA" />
-          </svg>
-          <p class="text-[12px] text-dark_grey">Checking your CIBIL score will not reduce your score</p>
-        </div>
-      </form>
+          <button type="submit" class="bg-orange text-[white] py-[12px] px-[24px] rounded-[40px] w-full" id="submit_button">Submit</button>
+          <div class="flex gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="19" viewBox="0 0 21 19" fill="none">
+              <path
+                d="M19.3813 0.592677H4.08501V2.22076H18.5509C18.3356 9.20687 15.3086 12.9847 10.4954 16.5726C5.84793 13.0958 2.44756 9.14978 2.44756 0.584961H0.802368L0.811663 1.38897C1.00995 9.35039 4.6396 14.3288 10.0182 18.2439C10.1582 18.3461 10.3272 18.4012 10.5008 18.4012C10.6743 18.4012 10.8434 18.3461 10.9834 18.2439C16.5138 14.2238 20.1977 9.81799 20.1977 1.40595C20.1973 1.19038 20.1111 0.983759 19.9581 0.831329C19.8051 0.678899 19.5977 0.593085 19.3813 0.592677ZM6.96797 10.6451C6.96838 11.0162 7.11654 11.372 7.37996 11.6344C7.64337 11.8968 8.00052 12.0444 8.37304 12.0448H12.627C12.9995 12.0444 13.3567 11.8968 13.6201 11.6344C13.8835 11.372 14.0317 11.0162 14.0321 10.6451C14.0326 10.0731 13.8932 9.5096 13.626 9.00329C13.3587 8.49698 12.9717 8.06314 12.4984 7.73928C12.7699 7.37146 12.9338 6.93584 12.9717 6.48084C13.0096 6.02584 12.9202 5.56927 12.7133 5.16187C12.5064 4.75447 12.1901 4.41219 11.7997 4.17307C11.4092 3.93396 10.9599 3.80737 10.5016 3.80737C10.0432 3.80737 9.59389 3.93396 9.20345 4.17307C8.81301 4.41219 8.49676 4.75447 8.28986 5.16187C8.08296 5.56927 7.99351 6.02584 8.03144 6.48084C8.06937 6.93584 8.23319 7.37146 8.50472 7.73928C8.03082 8.0628 7.64322 8.49649 7.37545 9.00282C7.10768 9.50914 6.96782 10.0729 6.96797 10.6451ZM10.5 5.43218C10.6676 5.43218 10.8314 5.48169 10.9708 5.57445C11.1101 5.6672 11.2188 5.79904 11.2829 5.95328C11.347 6.10753 11.3638 6.27726 11.3311 6.441C11.2984 6.60475 11.2177 6.75516 11.0992 6.87321C10.9807 6.99127 10.8297 7.07166 10.6653 7.10423C10.501 7.13681 10.3306 7.12009 10.1757 7.0562C10.0209 6.99231 9.88856 6.88411 9.79545 6.7453C9.70233 6.60648 9.65263 6.44327 9.65263 6.27632C9.65304 6.05257 9.74245 5.83809 9.90128 5.67988C10.0601 5.52166 10.2754 5.43259 10.5 5.43218ZM10.5 8.75008C10.9648 8.75032 11.4133 8.92046 11.7605 9.22823C12.1078 9.536 12.3295 9.96001 12.3838 10.4198H8.61626C8.67048 9.96027 8.89202 9.53648 9.23892 9.22874C9.58581 8.92101 10.034 8.7507 10.4985 8.75008H10.5Z"
+                fill="#00A6CA" />
+            </svg>
+            <p class="text-[12px] text-dark_grey">Checking your CIBIL score will not reduce your score</p>
+          </div>
+        </form>
+      </div>
     </div>
   </body>
 

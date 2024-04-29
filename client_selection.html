@@ -68,104 +68,106 @@
         <p class="text-dark_grey text-[15px] leading-none mb-0">Part of TransUnion</p>
       </div>
     </header>
-    <div class="rounded-3xl shadow-md p-4">
-      <p style="font-feature-settings: 'ss01'" class="text-cibil text-[28px] leading-none font-bold mb-0">CIBIL</p>
-      <p class="text-dark_grey text-[9px] leading-none mb-0">Part of TransUnion</p>
-      <h3 class="font-bold text-lg mt-3 mb-0">Personalise Your Experience</h3>
-      <p class="text-dark_grey text-[14px] mb-0">Please fill the following details to personalise the walkthrough
-        experience
-      </p>
-    </div>
-    <div>
-      <form class="mt-[24px] px-16 grid gap-6" onsubmit="onSubmit(event)">
-        <select required class="form-select px-[12px] py-[10px] border rounded-lg w-full"
-          onchange="onClientSelection(event)" aria-placeholder="sddsc">
-          <option disabled selected value="">Select client name</option>
-          <option value="SBI Bank">SBI Bank</option>
-          <option value="Axis Bank">Axis Bank</option>
-          <option value="HDFC Bank">HDFC Bank</option>
-          <option value="Bajaj Finance">Bajaj Finance</option>
-          <option value="ICICI Bank">ICICI Bank</option>
-          <option value="SBI Cards">SBI Cards</option>
-          <option value="Krazybee">Krazybee</option>
-          <option value="Navi Finserv">Navi Finserv</option>
-          <option value="Airtel">Airtel</option>
-          <option value="BharatPe">BharatPe</option>
-          <option value="Fibe">Fibe</option>
-          <option value="InCred">InCred</option>
-          <option value="Axio">Axio</option>
-          <option value="Vodafone">Vodafone</option>
-          <option value="Jupiter">Jupiter</option>
-          <option value="Piramal Finance">Piramal Finance</option>
-          <option value="Kotak Mahindra Bank">Kotak Mahindra Bank</option>
-          <option value="IDFC First Bank">IDFC First Bank</option>
-          <option value="Tata Capital">Tata Capital</option>
-          <option value="AU SFB">AU SFB</option>
-          <option value="LIC Housing">LIC Housing</option>
-          <option value="Union Bank">Union Bank</option>
-          <option value="INDUSIND Bank">INDUSIND Bank</option>
-          <option value="BANK OF INDIA">BANK OF INDIA</option>
-          <option value="PNB">PNB</option>
-          <option value="CENTRAL BANK OF INDIA">CENTRAL BANK OF INDIA</option>
-          <option value="UCO BANK">UCO BANK</option>
-          <option value="IIFL Finance">IIFL Finance</option>
-          <option value="Poonawalla Fincorp">Poonawalla Fincorp</option>
-          <option value="Aditya Birla Finance Limited">Aditya Birla Finance Limited</option>
-          <option value="L&T Finance">L&T Finance</option>
-          <option value="TVS Credit">TVS Credit</option>
-          <option value="City Union Bank Limited">City Union Bank Limited</option>
-          <option value="Federal Bank">Federal Bank</option>
-        </select>
+    <div class="max-w-[414px] m-auto mobile-frame pb-16">
+      <div class="rounded-3xl shadow-md p-4">
+        <p style="font-feature-settings: 'ss01'" class="text-cibil text-[28px] leading-none font-bold mb-0">CIBIL</p>
+        <p class="text-dark_grey text-[9px] leading-none mb-0">Part of TransUnion</p>
+        <h3 class="font-bold text-lg mt-3 mb-0">Personalise Your Experience</h3>
+        <p class="text-dark_grey text-[14px] mb-0">Please fill the following details to personalise the walkthrough
+          experience
+        </p>
+      </div>
+      <div>
+        <form class="mt-[24px] px-16 grid gap-6" onsubmit="onSubmit(event)">
+          <select required class="form-select px-[12px] py-[10px] border rounded-lg w-full"
+            onchange="onClientSelection(event)" aria-placeholder="sddsc">
+            <option disabled selected value="">Select client name</option>
+            <option value="SBI Bank">SBI Bank</option>
+            <option value="Axis Bank">Axis Bank</option>
+            <option value="HDFC Bank">HDFC Bank</option>
+            <option value="Bajaj Finance">Bajaj Finance</option>
+            <option value="ICICI Bank">ICICI Bank</option>
+            <option value="SBI Cards">SBI Cards</option>
+            <option value="Krazybee">Krazybee</option>
+            <option value="Navi Finserv">Navi Finserv</option>
+            <option value="Airtel">Airtel</option>
+            <option value="BharatPe">BharatPe</option>
+            <option value="Fibe">Fibe</option>
+            <option value="InCred">InCred</option>
+            <option value="Axio">Axio</option>
+            <option value="Vodafone">Vodafone</option>
+            <option value="Jupiter">Jupiter</option>
+            <option value="Piramal Finance">Piramal Finance</option>
+            <option value="Kotak Mahindra Bank">Kotak Mahindra Bank</option>
+            <option value="IDFC First Bank">IDFC First Bank</option>
+            <option value="Tata Capital">Tata Capital</option>
+            <option value="AU SFB">AU SFB</option>
+            <option value="LIC Housing">LIC Housing</option>
+            <option value="Union Bank">Union Bank</option>
+            <option value="INDUSIND Bank">INDUSIND Bank</option>
+            <option value="BANK OF INDIA">BANK OF INDIA</option>
+            <option value="PNB">PNB</option>
+            <option value="CENTRAL BANK OF INDIA">CENTRAL BANK OF INDIA</option>
+            <option value="UCO BANK">UCO BANK</option>
+            <option value="IIFL Finance">IIFL Finance</option>
+            <option value="Poonawalla Fincorp">Poonawalla Fincorp</option>
+            <option value="Aditya Birla Finance Limited">Aditya Birla Finance Limited</option>
+            <option value="L&T Finance">L&T Finance</option>
+            <option value="TVS Credit">TVS Credit</option>
+            <option value="City Union Bank Limited">City Union Bank Limited</option>
+            <option value="Federal Bank">Federal Bank</option>
+          </select>
 
-        <div class="bg-[#F1F1F1] rounded-xl px-[12px] py-[20px] flex items-center justify-center h-[96px] gap-2"
-          id="client_logo">
-          <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M7.12501 17.9166H11.875C15.8333 17.9166 17.4167 16.3333 17.4167 12.3749V7.62492C17.4167 3.66659 15.8333 2.08325 11.875 2.08325H7.12501C3.16668 2.08325 1.58334 3.66659 1.58334 7.62492V12.3749C1.58334 16.3333 3.16668 17.9166 7.12501 17.9166Z"
-              stroke="#00A6CA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            <path
-              d="M7.12499 8.41667C7.99944 8.41667 8.70832 7.70778 8.70832 6.83333C8.70832 5.95888 7.99944 5.25 7.12499 5.25C6.25054 5.25 5.54166 5.95888 5.54166 6.83333C5.54166 7.70778 6.25054 8.41667 7.12499 8.41667Z"
-              stroke="#00A6CA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            <path
-              d="M2.11374 15.5021L6.01666 12.8817C6.64207 12.4621 7.54457 12.5096 8.10666 12.9925L8.36791 13.2221C8.98541 13.7525 9.98291 13.7525 10.6004 13.2221L13.8937 10.3959C14.5112 9.86544 15.5087 9.86544 16.1262 10.3959L17.4167 11.5042"
-              stroke="#00A6CA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
+          <div class="bg-[#F1F1F1] rounded-xl px-[12px] py-[20px] flex items-center justify-center h-[96px] gap-2"
+            id="client_logo">
+            <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M7.12501 17.9166H11.875C15.8333 17.9166 17.4167 16.3333 17.4167 12.3749V7.62492C17.4167 3.66659 15.8333 2.08325 11.875 2.08325H7.12501C3.16668 2.08325 1.58334 3.66659 1.58334 7.62492V12.3749C1.58334 16.3333 3.16668 17.9166 7.12501 17.9166Z"
+                stroke="#00A6CA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path
+                d="M7.12499 8.41667C7.99944 8.41667 8.70832 7.70778 8.70832 6.83333C8.70832 5.95888 7.99944 5.25 7.12499 5.25C6.25054 5.25 5.54166 5.95888 5.54166 6.83333C5.54166 7.70778 6.25054 8.41667 7.12499 8.41667Z"
+                stroke="#00A6CA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path
+                d="M2.11374 15.5021L6.01666 12.8817C6.64207 12.4621 7.54457 12.5096 8.10666 12.9925L8.36791 13.2221C8.98541 13.7525 9.98291 13.7525 10.6004 13.2221L13.8937 10.3959C14.5112 9.86544 15.5087 9.86544 16.1262 10.3959L17.4167 11.5042"
+                stroke="#00A6CA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
 
-          <p class="text-dark_grey mb-0">Client's logo</p>
-        </div>
+            <p class="text-dark_grey mb-0">Client's logo</p>
+          </div>
 
-        <div>
-          <p class="text-[12px] text-dark_grey font-bold">Select primary colour</p>
-          <div class="flex justify-between mt-16">
-            <div class="flex custom-radio">
-              <input type="radio" name="theme-select" id="orange" onclick="onColorSelection('F26842')">
-              <label class="w-[48px] h-[48px] rounded-lg bg-orange" for="orange"></label>
-            </div>
-            <div class="flex custom-radio">
-              <input type="radio" name="theme-select" id="pink" onclick="onColorSelection('D92B7B')">
-              <label class="w-[48px] h-[48px] rounded-lg bg-pink" for="pink"></label>
-            </div>
-            <div class="flex custom-radio">
-              <input type="radio" name="theme-select" id="dark-yellow" onclick="onColorSelection('B36200')">
-              <label class="w-[48px] h-[48px] rounded-lg bg-dark-yellow" for="dark-yellow"></label>
-            </div>
-            <div class="flex custom-radio">
-              <input type="radio" name="theme-select" id="green" onclick="onColorSelection('098543')">
-              <label class="block w-[48px] h-[48px] rounded-lg bg-green" for="green"></label>
-            </div>
-            <div class="flex custom-radio">
-              <input type="radio" name="theme-select" id="purple" onclick="onColorSelection('5A5AC7')">
-              <label class="w-[48px] h-[48px] rounded-lg bg-purple" for="purple"></label>
+          <div>
+            <p class="text-[12px] text-dark_grey font-bold">Select primary colour</p>
+            <div class="flex justify-between mt-16">
+              <div class="flex custom-radio">
+                <input type="radio" name="theme-select" id="orange" onclick="onColorSelection('F26842')">
+                <label class="w-[48px] h-[48px] rounded-lg bg-orange" for="orange"></label>
+              </div>
+              <div class="flex custom-radio">
+                <input type="radio" name="theme-select" id="pink" onclick="onColorSelection('D92B7B')">
+                <label class="w-[48px] h-[48px] rounded-lg bg-pink" for="pink"></label>
+              </div>
+              <div class="flex custom-radio">
+                <input type="radio" name="theme-select" id="dark-yellow" onclick="onColorSelection('B36200')">
+                <label class="w-[48px] h-[48px] rounded-lg bg-dark-yellow" for="dark-yellow"></label>
+              </div>
+              <div class="flex custom-radio">
+                <input type="radio" name="theme-select" id="green" onclick="onColorSelection('098543')">
+                <label class="block w-[48px] h-[48px] rounded-lg bg-green" for="green"></label>
+              </div>
+              <div class="flex custom-radio">
+                <input type="radio" name="theme-select" id="purple" onclick="onColorSelection('5A5AC7')">
+                <label class="w-[48px] h-[48px] rounded-lg bg-purple" for="purple"></label>
+              </div>
             </div>
           </div>
-        </div>
-        <p class="text-dark_grey text-center mb-0">or</p>
-        <input type="text" class="form-control border px-[12px] py-[10px] rounded-lg" id="color"
-          placeholder="Enter HEX code (Ex. 5968696)" onchange="onColorSelection(event.target.value)">
-        <button type="submit" class="bg-orange text-[white] py-[12px] px-[24px] rounded-[40px] w-full">Start
-          Demo</button>
-      </form>
-      <!-- <img src="./Assets/Mobile Preview.svg" /> -->
+          <p class="text-dark_grey text-center mb-0">or</p>
+          <input type="text" class="form-control border px-[12px] py-[10px] rounded-lg" id="color"
+            placeholder="Enter HEX code (Ex. 5968696)" onchange="onColorSelection(event.target.value)">
+          <button type="submit" class="bg-orange text-[white] py-[12px] px-[24px] rounded-[40px] w-full">Start
+            Demo</button>
+        </form>
+        <!-- <img src="./Assets/Mobile Preview.svg" /> -->
+      </div>
     </div>
   </body>
 
