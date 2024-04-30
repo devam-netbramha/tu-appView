@@ -14,15 +14,17 @@
       function onSubmit(e) {
         e.preventDefault()
         localStorage.setItem('logo', document.getElementById("client_logo_image").getAttribute('src'))
-        window.location.replace('./dashboard_preview.html')
+        window.location.replace('./message.html')
       }
 
       function onClientSelection(e) {
         document.getElementById("client_logo").innerHTML = `<img id='client_logo_image' src="./Assets/Logos/${e.target.value}.png" alt="client_logo" style="max-width:200px;max-height:80px" />`
+        localStorage.setItem('client', e.target.value)
       }
 
       function onColorSelection(color) {
         localStorage.setItem('color', `#${color}`)
+        document.getElementById("start_demo").style.backgroundColor = `#${color}`
       }
     </script>
     <title>Client Selection</title>
@@ -148,7 +150,7 @@
               </div>
               <div class="flex custom-radio">
                 <input type="radio" name="theme-select" id="dark-yellow" onclick="onColorSelection('B36200')">
-                <label class="w-[48px] h-[48px] rounded-lg bg-dark-yellow" for="dark-yellow"></label>
+                <label class="w-[48px] h-[48px] rounded-lg bg-dark_yellow" for="dark-yellow"></label>
               </div>
               <div class="flex custom-radio">
                 <input type="radio" name="theme-select" id="green" onclick="onColorSelection('098543')">
@@ -163,10 +165,10 @@
           <p class="text-dark_grey text-center mb-0">or</p>
           <input type="text" class="form-control border px-[12px] py-[10px] rounded-lg" id="color"
             placeholder="Enter HEX code (Ex. 5968696)" onchange="onColorSelection(event.target.value)">
-          <button type="submit" class="bg-orange text-[white] py-[12px] px-[24px] rounded-[40px] w-full">Start
+          <button type="submit" class="bg-orange text-[white] py-[12px] px-[24px] rounded-[40px] w-full"
+            id="start_demo">Start
             Demo</button>
         </form>
-        <!-- <img src="./Assets/Mobile Preview.svg" /> -->
       </div>
     </div>
   </body>
