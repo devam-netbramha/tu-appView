@@ -47,6 +47,18 @@ p {
   header {
     display: none !important;
   }
+
+  .desktop_view {
+    display: none
+  }
+
+  .form_wrapper {
+    padding: 0 16px;
+  }
+
+  .mobile_frame {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 414px) {
@@ -55,6 +67,10 @@ p {
     border: 16px solid #000;
     max-height: 88vh;
     overflow: auto;
+  }
+
+  .mobile_view {
+    display: none
   }
 
   ::-webkit-scrollbar {
@@ -70,5 +86,20 @@ p {
 
   ::-webkit-scrollbar-thumb:hover {
     background: #737373;
+  }
+
+  .form_wrapper {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    padding: 0 60px;
+  }
+
+  .mobile_frame {
+    width: 35%;
+  }
+
+  .form_container {
+    width: 80%;
   }
 }
