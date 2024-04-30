@@ -23,6 +23,8 @@
 
       function onColorSelection(color) {
         localStorage.setItem('color', `#${color}`)
+        document.getElementById("start_demo").style.backgroundColor = `#${color}`
+
       }
     </script>
     <title>Client Selection</title>
@@ -163,10 +165,9 @@
           <p class="text-dark_grey text-center mb-0">or</p>
           <input type="text" class="form-control border px-[12px] py-[10px] rounded-lg" id="color"
             placeholder="Enter HEX code (Ex. 5968696)" onchange="onColorSelection(event.target.value)">
-          <button type="submit" class="bg-orange text-[white] py-[12px] px-[24px] rounded-[40px] w-full">Start
+          <button type="submit" class="text-[white] py-[12px] px-[24px] rounded-[40px] w-full" id="start_demo">Start
             Demo</button>
         </form>
-        <!-- <img src="./Assets/Mobile Preview.svg" /> -->
       </div>
     </div>
   </body>
