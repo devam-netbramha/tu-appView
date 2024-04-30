@@ -587,8 +587,16 @@ video {
   margin-bottom: 0.5rem;
 }
 
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
 .mb-\[12px\] {
   margin-bottom: 12px;
+}
+
+.mb-\[24px\] {
+  margin-bottom: 24px;
 }
 
 .mb-\[4px\] {
@@ -623,6 +631,10 @@ video {
   margin-top: 1rem;
 }
 
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
 .mt-\[21px\] {
   margin-top: 21px;
 }
@@ -655,6 +667,10 @@ video {
   height: 48px;
 }
 
+.h-\[60vh\] {
+  height: 60vh;
+}
+
 .h-\[70vh\] {
   height: 70vh;
 }
@@ -665,10 +681,6 @@ video {
 
 .h-\[96px\] {
   height: 96px;
-}
-
-.h-\[60vh\] {
-  height: 60vh;
 }
 
 .w-\[114px\] {
@@ -746,10 +758,6 @@ video {
 
 .gap-3 {
   gap: 0.75rem;
-}
-
-.gap-6 {
-  gap: 1.5rem;
 }
 
 .gap-\[100px\] {
@@ -1000,8 +1008,16 @@ video {
   font-size: 16px;
 }
 
+.text-\[20px\] {
+  font-size: 20px;
+}
+
 .text-\[28px\] {
   font-size: 28px;
+}
+
+.text-\[40px\] {
+  font-size: 40px;
 }
 
 .text-\[48px\] {
@@ -1166,6 +1182,18 @@ p {
   header {
     display: none !important;
   }
+
+  .desktop_view {
+    display: none
+  }
+
+  .form_wrapper {
+    padding: 0 16px;
+  }
+
+  .mobile_frame {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 414px) {
@@ -1174,6 +1202,10 @@ p {
     border: 16px solid #000;
     max-height: 88vh;
     overflow: auto;
+  }
+
+  .mobile_view {
+    display: none
   }
 
   ::-webkit-scrollbar {
@@ -1189,5 +1221,20 @@ p {
 
   ::-webkit-scrollbar-thumb:hover {
     background: #737373;
+  }
+
+  .form_wrapper {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    padding: 0 60px;
+  }
+
+  .mobile_frame {
+    width: 35%;
+  }
+
+  .form_container {
+    width: 80%;
   }
 }

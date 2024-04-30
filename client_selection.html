@@ -70,18 +70,24 @@
         <p class="text-dark_grey text-[15px] leading-none mb-0">Part of TransUnion</p>
       </div>
     </header>
-    <div class="max-w-[414px] m-auto mobile-frame pb-16">
-      <div class="rounded-3xl shadow-md p-4">
-        <p style="font-feature-settings: 'ss01'" class="text-cibil text-[28px] leading-none font-bold mb-0">CIBIL</p>
-        <p class="text-dark_grey text-[9px] leading-none mb-0">Part of TransUnion</p>
-        <h3 class="font-bold text-lg mt-3 mb-0">Personalise Your Experience</h3>
-        <p class="text-dark_grey text-[14px] mb-0">Please fill the following details to personalise the walkthrough
-          experience
-        </p>
-      </div>
+    <div class="rounded-3xl shadow-md p-4 mobile_view">
+      <p style="font-feature-settings: 'ss01'" class="text-cibil text-[28px] leading-none font-bold mb-0">CIBIL</p>
+      <p class="text-dark_grey text-[9px] leading-none mb-0">Part of TransUnion</p>
+      <h3 class="font-bold text-lg mt-3 mb-0">Personalise Your Experience</h3>
+      <p class="text-dark_grey text-[14px] mb-0">Please fill the following details to personalise the walkthrough
+        experience
+      </p>
+    </div>
+    <div class="form_wrapper">
       <div>
-        <form class="mt-[24px] px-16 grid gap-6" onsubmit="onSubmit(event)">
-          <select required class="form-select px-[12px] py-[10px] border rounded-lg w-full"
+        <div class="desktop_view">
+          <h3 class="font-bold text-[40px] mt-3 mb-[24px]">Personalise Your Experience</h3>
+          <p class="text-dark_grey text-[20px]">Please fill the following details to personalise the walkthrough
+            experience
+          </p>
+        </div>
+        <form class="mt-[24px] form_container" onsubmit="onSubmit(event)">
+          <select required class="form-select px-[12px] py-[10px] border rounded-lg w-full mb-6"
             onchange="onClientSelection(event)" aria-placeholder="sddsc">
             <option disabled selected value="">Select client name</option>
             <option value="SBI Bank">SBI Bank</option>
@@ -120,7 +126,7 @@
             <option value="Federal Bank">Federal Bank</option>
           </select>
 
-          <div class="bg-[#F1F1F1] rounded-xl px-[12px] py-[20px] flex items-center justify-center h-[96px] gap-2"
+          <div class="bg-[#F1F1F1] rounded-xl px-[12px] py-[20px] flex items-center justify-center h-[96px] gap-2 mb-6"
             id="client_logo">
             <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -137,39 +143,39 @@
             <p class="text-dark_grey mb-0">Client's logo</p>
           </div>
 
-          <div>
-            <p class="text-[12px] text-dark_grey font-bold">Select primary colour</p>
-            <div class="flex justify-between mt-16">
-              <div class="flex custom-radio">
-                <input type="radio" name="theme-select" id="orange" onclick="onColorSelection('F26842')">
-                <label class="w-[48px] h-[48px] rounded-lg bg-orange" for="orange"></label>
-              </div>
-              <div class="flex custom-radio">
-                <input type="radio" name="theme-select" id="pink" onclick="onColorSelection('D92B7B')">
-                <label class="w-[48px] h-[48px] rounded-lg bg-pink" for="pink"></label>
-              </div>
-              <div class="flex custom-radio">
-                <input type="radio" name="theme-select" id="dark-yellow" onclick="onColorSelection('B36200')">
-                <label class="w-[48px] h-[48px] rounded-lg bg-dark_yellow" for="dark-yellow"></label>
-              </div>
-              <div class="flex custom-radio">
-                <input type="radio" name="theme-select" id="green" onclick="onColorSelection('098543')">
-                <label class="block w-[48px] h-[48px] rounded-lg bg-green" for="green"></label>
-              </div>
-              <div class="flex custom-radio">
-                <input type="radio" name="theme-select" id="purple" onclick="onColorSelection('5A5AC7')">
-                <label class="w-[48px] h-[48px] rounded-lg bg-purple" for="purple"></label>
-              </div>
+          <p class="text-[12px] text-dark_grey font-bold">Select primary colour</p>
+          <div class="flex justify-between mt-16">
+            <div class="flex custom-radio">
+              <input type="radio" name="theme-select" id="orange" onclick="onColorSelection('F26842')">
+              <label class="w-[48px] h-[48px] rounded-lg bg-orange" for="orange"></label>
+            </div>
+            <div class="flex custom-radio">
+              <input type="radio" name="theme-select" id="pink" onclick="onColorSelection('D92B7B')">
+              <label class="w-[48px] h-[48px] rounded-lg bg-pink" for="pink"></label>
+            </div>
+            <div class="flex custom-radio">
+              <input type="radio" name="theme-select" id="dark-yellow" onclick="onColorSelection('B36200')">
+              <label class="w-[48px] h-[48px] rounded-lg bg-dark_yellow" for="dark-yellow"></label>
+            </div>
+            <div class="flex custom-radio">
+              <input type="radio" name="theme-select" id="green" onclick="onColorSelection('098543')">
+              <label class="block w-[48px] h-[48px] rounded-lg bg-green" for="green"></label>
+            </div>
+            <div class="flex custom-radio">
+              <input type="radio" name="theme-select" id="purple" onclick="onColorSelection('5A5AC7')">
+              <label class="w-[48px] h-[48px] rounded-lg bg-purple" for="purple"></label>
             </div>
           </div>
-          <p class="text-dark_grey text-center mb-0">or</p>
+          <p class="text-dark_grey text-center mb-6 mt-6">or</p>
           <input type="text" class="form-control border px-[12px] py-[10px] rounded-lg" id="color"
             placeholder="Enter HEX code (Ex. 5968696)" onkeypress="onColorSelection(event.target.value)">
-          <button type="submit" class="bg-orange text-[white] py-[12px] px-[24px] rounded-[40px] w-full"
+          <button type="submit" class="text-[white] py-[12px] px-[24px] rounded-[40px] w-full mt-6"
             id="start_demo">Start
             Demo</button>
         </form>
       </div>
+
+      <img src="./Assets/mobile_frame.svg" class="mobile_frame" />
     </div>
   </body>
 
