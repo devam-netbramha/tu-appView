@@ -1201,6 +1201,7 @@ p {
     border-radius: 36px;
     border: 16px solid #000;
     max-height: 88vh;
+    min-height: 88vh;
     overflow: auto;
   }
 
