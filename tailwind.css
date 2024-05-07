@@ -650,13 +650,17 @@ video {
   height: 96px;
 }
 
+.h-fit {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
 .h-full {
   height: 100%;
 }
 
-.h-fit {
-  height: -moz-fit-content;
-  height: fit-content;
+.h-\[93vh\] {
+  height: 93vh;
 }
 
 .w-\[137px\] {
@@ -1099,14 +1103,6 @@ video {
 
 .no-underline {
   text-decoration-line: none;
-}
-
-.opacity-5 {
-  opacity: 0.05;
-}
-
-.opacity-\[5\] {
-  opacity: 5;
 }
 
 .opacity-\[0\.5\] {
