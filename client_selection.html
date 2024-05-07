@@ -19,6 +19,7 @@
 
       function onClientSelection(e) {
         document.getElementById("client_logo").innerHTML = `<img id='client_logo_image' src="./Assets/Logos/${e.target.value}.png" alt="client_logo" style="max-width:200px;max-height:80px" />`
+        localStorage.setItem('client', e.target.value)
       }
 
       function onColorSelection(color) {
@@ -88,7 +89,7 @@
         </div>
         <form class="mt-[24px] form_container" onsubmit="onSubmit(event)">
           <select required class="form-select px-[12px] py-[10px] border rounded-lg w-full mb-6"
-            onchange="onClientSelection(event)" aria-placeholder="sddsc">
+            onchange="onClientSelection(event)">
             <option disabled selected value="">Select client name</option>
             <option value="SBI Bank">SBI Bank</option>
             <option value="Axis Bank">Axis Bank</option>

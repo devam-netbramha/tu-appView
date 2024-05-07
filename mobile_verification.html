@@ -13,6 +13,7 @@
     <script>
       const logo = localStorage.getItem('logo')
       const color = localStorage.getItem('color')
+      const client = localStorage.getItem('client')
       document.addEventListener('DOMContentLoaded', () => {
         const imgElement = document.getElementById('client_logo');
         if (imgElement && logo) {
@@ -24,6 +25,9 @@
         document.getElementById('toggleButton').style.color = color
         document.getElementById('privacy').style.color = color
         document.getElementById('tnc_text').style.color = color
+        document.getElementById('client').innerText = client
+        document.getElementById('clients_name').innerText = client
+        document.getElementById('client_name').innerText = client
       });
 
       function moveToNext(currentInput, nextInputId) {
@@ -56,16 +60,14 @@
 
       function toggleContent() {
         if (isOpen) {
-          document.getElementById('tnc').innerHTML = `I hereby declare that I am Indian National. I agree to Piramal Finance’s ,<span style='color:${color}' >Privacy
+          document.getElementById('tnc').innerHTML = `I hereby declare that I am Indian National. I agree to ${client}’s ,<span style='color:${color}' >Privacy
           Policy</span> and <span style='color:${color}'>T&Cs</span> and authorize
-        Piramal Finance to receive my credit information from Credit Bureaus on my behalf.I also authorize Piramal
-        Finance to <span style='color:${color}' type="button" onclick="toggleContent()"
+        ${client} to receive my credit information from Credit Bureaus on my behalf. I also authorize ${client} to <span style='color:${color}' type="button" onclick="toggleContent()"
             class="text-[12px]">View More</span>`
         } else {
-          document.getElementById('tnc').innerHTML = `I hereby declare that I am Indian National. I agree to Piramal Finance’s ,<span style='color:${color}' >Privacy
+          document.getElementById('tnc').innerHTML = `I hereby declare that I am Indian National. I agree to ${client}’s ,<span style='color:${color}' >Privacy
           Policy</span> and <span style='color:${color}'>T&Cs</span> and authorize
-        Piramal Finance to receive my credit information from Credit Bureaus on my behalf. I also authorize Piramal
-        Finance to
+        ${client} to receive my credit information from Credit Bureaus on my behalf. I also authorize ${client} to
         retrieve credit report on my behalf from CRIF Highmark Private Limited, Experian Credit Information Company of
         India
         Private Limited T&Cs or Transunion CIBIL Limited. By clicking on verify, you consent to receiving communications
@@ -140,10 +142,12 @@
           <input required class="form-check-input p-2 bg-[red] checked:bg-[red]" type="checkbox" value=""
             id="flexCheckDefault">
           <p class="form-check-label text-[12px] text-dark_grey" for="flexCheckDefault" id="tnc">
-            I hereby declare that I am Indian National. I agree to Piramal Finance’s ,<span id='privacy'>Privacy
+            I hereby declare that I am Indian National. I agree to <span id="client"></span>’s ,<span
+              id='privacy'>Privacy
               Policy</span> and <span id='tnc_text'>T&Cs</span> and authorize
-            Piramal Finance to receive my credit information from Credit Bureaus on my behalf. I also authorize Piramal
-            Finance to <span type="button" onclick="toggleContent()" id="toggleButton" class="text-[12px]">View
+            <span id="clients_name"></span> to receive my credit information from Credit Bureaus on my behalf. I also
+            authorize <span id="client_name"></span> to <span type="button" onclick="toggleContent()" id="toggleButton"
+              class="text-[12px]">View
               More</span>
           </p>
         </div>

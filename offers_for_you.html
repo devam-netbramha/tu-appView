@@ -13,7 +13,9 @@
     <script>
       document.addEventListener('DOMContentLoaded', () => {
         const color = localStorage.getItem('color')
+        const client = localStorage.getItem('client')
         document.getElementById('submit_button').style.backgroundColor = color
+        document.getElementById('tnc').innerText = `I authorize ${client} to send this information to TUCIBIL via a private and secured service to fetch my credit report and agree to TUCIBIL User Consent Terms, and ${client}'s Terms and Conditions`
       })
     </script>
     <title>Offers For You</title>
@@ -89,9 +91,6 @@
                 <input required class="form-check-input p-2 bg-[red] checked:bg-[red]" type="checkbox" value=""
                   id="flexCheckDefault">
                 <label class="form-check-label text-[12px] text-dark_grey" for="flexCheckDefault" id="tnc">
-                  I authorize Piramal Finance to send this information to TUCIBIL via a private and secured service to
-                  fetch my credit
-                  report and agree to TUCIBIL User Consent Terms, and Piramal Finance's Terms and Conditions
                 </label>
               </div>
             </form>
