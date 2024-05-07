@@ -35,14 +35,15 @@
 }
 
 ul {
-  list-style:none;
+  list-style: none;
   padding-left: 0 !important;
   line-height: 28px;
 
 }
-    li {
-      font-size: 14px;
-    }
+
+li {
+  font-size: 14px;
+}
 
 p {
   font-size: 14px
@@ -73,6 +74,10 @@ p {
     max-height: 88vh;
     min-height: 88vh;
     overflow: auto;
+  }
+
+  .mobile_view {
+    display: none
   }
 
   ::-webkit-scrollbar {
