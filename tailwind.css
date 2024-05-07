@@ -626,6 +626,10 @@ video {
   display: flex;
 }
 
+.grid {
+  display: grid;
+}
+
 .h-\[100vh\] {
   height: 100vh;
 }
@@ -648,6 +652,11 @@ video {
 
 .h-full {
   height: 100%;
+}
+
+.h-fit {
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .w-\[137px\] {
@@ -1090,6 +1099,18 @@ video {
 
 .no-underline {
   text-decoration-line: none;
+}
+
+.opacity-5 {
+  opacity: 0.05;
+}
+
+.opacity-\[5\] {
+  opacity: 5;
+}
+
+.opacity-\[0\.5\] {
+  opacity: 0.5;
 }
 
 .shadow-md {
