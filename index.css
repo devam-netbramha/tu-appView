@@ -35,6 +35,12 @@
 }
 
 ul {
+  list-style: none;
+  padding-left: 0 !important;
+  line-height: 28px;
+}
+
+.profile_ul_image {
   list-style-image: url('./Assets/check.svg');
   padding-left: 25px !important;
 }

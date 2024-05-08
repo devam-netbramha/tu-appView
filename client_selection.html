@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +13,7 @@
       function onSubmit(e) {
         e.preventDefault()
         localStorage.setItem('logo', document.getElementById("client_logo_image").getAttribute('src'))
-        window.location.replace('./dashboard_preview.html')
+        window.location.replace('./platform_selection.html')
       }
 
       function onClientSelection(e) {
