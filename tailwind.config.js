@@ -35,7 +35,8 @@ module.exports = {
       greyish_blue: '#F2F2FC ',
       light_grey: '#F2F2F2',
       pale_rose: '#FBE8EC',
-      soft_sky_blue: '#E6EDF1'
+      soft_sky_blue: '#E6EDF1',
+      very_dark_charcoal: '#262629',
     },
     extend: {
       spacing: {
@@ -43,9 +44,6 @@ module.exports = {
         144: '36rem',
         16: '16px',
       },
-      // borderRadius: {
-      //   '4xl': '2rem',
-      // },
     },
   },
   plugins: [],

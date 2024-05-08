@@ -38,7 +38,7 @@
     </header>
     <div class="max-w-[414px] m-auto mobile-frame">
       <div class="bg-[white] flex items-center px-16 py-[12px]">
-        <a href="./mobile_verification.html" class="no-underline">
+        <a href="./details.html" class="no-underline">
           <img class="w-[32px]" src="./Assets/back.svg" alt="back" />
         </a>
         <p class="text-dark_charcoal mb-0">Credit Score</p>
@@ -174,57 +174,23 @@
           <b class="text-dim_grey">15%</b> in India
           <br /> as per <span style="font-feature-settings: 'ss01'" class="text-cibil font-bold">CIBIL</span>
         </p>
-        <p class="font-bold mt-4">Exclusive Offers for you!</p>
-        <div id="carouselExampleDark" class="carousel carousel-dark slide">
-          <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="10000">
-              <a href="./offers_for_you.html"
-                class="text-black no-underline px-16 rounded-lg shadow-md flex justify-between bg-[white]">
-                <div>
-                  <p class="font-bold mt-4 mb-3">Instant loans without any <br /> paperwork</p>
-                  <p class="text-dark_grey text-[12px] mb-1">Credit Limit</p>
-                  <p class="font-bold">₹6,00,000</p>
-                </div>
-                <img src="./Assets/loan.svg" alt="loan" />
-              </a>
-            </div>
-            <div class="carousel-item" data-bs-interval="2000">
-              <a href="./offers_for_you.html"
-                class="text-black	no-underline px-16 rounded-lg shadow-md flex justify-between bg-[white]">
-                <div>
-                  <p class="font-bold mt-4 mb-3">Get your credit card now <br /> for free!</p>
-                  <p class="text-dark_grey text-[12px] mb-1">Credit Limit</p>
-                  <p class="font-bold">₹12,00,000</p>
-                </div>
-                <img src="./Assets/Card.svg" alt="credit card" />
-              </a>
-            </div>
-            <div class="carousel-item">
-              <a href="./offers_for_you.html"
-                class="text-black no-underline px-16 rounded-lg shadow-md flex justify-between bg-[white]">
-                <div>
-                  <p class="font-bold mt-4 mb-3">Instant house loan in a<br /> single click</p>
-                  <p class="text-dark_grey text-[12px] mb-1">Credit Limit</p>
-                  <p class="font-bold">₹12,00,000</p>
-                </div>
-                <img src="./Assets/home_loan.svg" alt="home loan" />
-              </a>
-            </div>
-          </div>
-          <div class="carousel-indicators" style="position: unset;">
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0"
-              class="active w-[12px] h-[6px] rounded-lg" aria-current="true" aria-label="Slide 1"
-              style="width:12px; height: 6px;border-radius: 44%;" id="carousel_button"></button>
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"
-              style="width:12px; height: 6px;border-radius: 44%;" id="carousel_button"></button>
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"
-              style="width:12px; height: 6px;border-radius: 44%;" id="carousel_button"></button>
-          </div>
+        <p class="font-bold mt-4">See how your score changes</p>
+        <div class="flex gap-3">
+          <a href="./second_predict_score.html"
+            class="text-black bg-greyish_blue px-[12px] pt-16 rounded-lg  grid gap-2 justify-items-center no-underline">
+            <img src="./Assets/bill.svg" />
+            <p class="font-bold text-center text-[14px]">Miss an EMI or credit card bill payment</p>
+          </a>
+          <a href="./simulator.html"
+            class="text-black bg-light_sky_blue px-[12px] pt-16 rounded-lg  grid gap-2 justify-items-center no-underline">
+            <img src="./Assets/fund.svg" />
+            <p class="font-bold text-center text-[14px]">Repay loans or clear credit card bills</p>
+          </a>
         </div>
         <p class="font-bold mt-4">What’s impacting your score</p>
 
         <div class="bg-[white] px-[12px] py-16 rounded-lg">
-          <a href="./payment_history.html" class="text-black flex justify-between no-underline">
+          <div class="text-black flex justify-between no-underline">
             <div class="flex gap-2">
               <img src="./Assets/time.svg" />
               <div>
@@ -239,9 +205,9 @@
               </div>
               <img src="./Assets/right_arrow.svg" />
             </div>
-          </a>
+          </div>
           <hr class="border-[#E5E5E5]" />
-          <a href="./payment_history.html" class="text-black flex justify-between no-underline">
+          <div class="text-black flex justify-between no-underline">
             <div class="flex gap-2">
               <img src="./Assets/credit.svg" />
               <div>
@@ -256,9 +222,9 @@
               </div>
               <img src="./Assets/right_arrow.svg" />
             </div>
-          </a>
+          </div>
           <hr class="border-[#E5E5E5]" />
-          <a href="./payment_history.html" class="text-black flex justify-between no-underline">
+          <div class="text-black flex justify-between no-underline">
             <div class="flex gap-2">
               <img src="./Assets/wallet.svg" />
               <div class="mr-11">
@@ -273,9 +239,9 @@
               </div>
               <img src="./Assets/right_arrow.svg" />
             </div>
-          </a>
+          </div>
           <hr class="border-[#E5E5E5]" />
-          <a href="./payment_history.html" class="text-black flex justify-between no-underline">
+          <div class="text-black flex justify-between no-underline">
             <div class="flex gap-2">
               <img src="./Assets/headset.svg" />
               <div class="mr-6">
@@ -290,28 +256,9 @@
               </div>
               <img src="./Assets/right_arrow.svg" />
             </div>
-          </a>
-        </div>
-        <p class="font-bold mt-4">See how your score changes</p>
-        <div class="overflow-auto">
-          <div class="inline-flex gap-3 ">
-            <a href="./predict_score.html"
-              class="text-black bg-light_sky_blue px-[12px] pt-16 rounded-lg w-[150px] grid gap-2 justify-items-center no-underline">
-              <img src="./Assets/fund.svg" />
-              <p class="font-bold text-center text-[14px]">Add a new loan or credit card</p>
-            </a>
-            <a href="./predict_score.html"
-              class="text-black bg-greyish_blue px-[12px] pt-16 rounded-lg w-[150px] grid gap-2 justify-items-center no-underline">
-              <img src="./Assets/bill.svg" />
-              <p class="font-bold text-center text-[14px]">Miss a payment</p>
-            </a>
-            <a href="./predict_score.html"
-              class="text-black bg-light_grey px-[12px] pt-16 rounded-lg w-[150px] grid gap-2 justify-items-center no-underline">
-              <img src="./Assets/card_board.svg" />
-              <p class="font-bold text-center text-[14px]">Add a new enquiry</p>
-            </a>
           </div>
         </div>
+
       </div>
       <div class="bg-pale_rose px-16 py-[24px] mt-[32px] flex justify-between">
         <div>
