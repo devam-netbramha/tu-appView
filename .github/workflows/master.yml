@@ -15,6 +15,6 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
         server: vps56780.dreamhostps.com
-        username: ${{ secrets.ftp_username }}
-        password: ${{ secrets.ftp_password }}
+        username: dh_jsbaw2
+        password: Samsung3132@
         server-dir: /home/dh_jsbaw2/cibilsalesdemo.com/
