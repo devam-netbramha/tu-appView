@@ -22,6 +22,15 @@
         document.getElementById('submit_button').style.backgroundColor = color
         document.getElementById('singe_click_text').style.color = color
       });
+
+      function fillForm() {
+        document.getElementById('First name').value='Anant'
+        document.getElementById('Last Name').value = 'Kishore'
+        document.getElementById('Mobile Number').value = '9867425896'
+        document.getElementById('Email').value = 'somemail@domain.com'
+        document.getElementById('Date of Birth').value = '2000-04-06'
+        document.getElementById('PAN Number').value = 'UBLKU8765A'
+      }
     </script>
     <title>Profile</title>
   </head>
@@ -82,13 +91,13 @@
         <p>Get instant detailed <b>CIBIL Score and Report</b> now</p>
         <form class="grid gap-4" action="./mobile_verification.html">
           <div class="flex gap-4">
-            <input required type="text" class="form-control" placeholder="First name" aria-label="First name">
-            <input required type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+            <input required type="text" class="form-control" placeholder="First name" id="First name" aria-label="First name" onfocus="fillForm()">
+            <input required type="text" class="form-control" placeholder="Last name" id="Last Name" aria-label="Last name">
           </div>
-          <input required type="number" class="form-control" placeholder="Mobile Number" aria-label="Mobile Number">
-          <input required type="email" class="form-control" placeholder="Email" aria-label="Email">
-          <input required type="date" class="form-control" placeholder="Date of Birth" aria-label="Date of Birth">
-          <input required type="text" class="form-control" placeholder="PAN Number" aria-label="PAN Number">
+          <input required type="number" class="form-control" placeholder="Mobile Number" id="Mobile Number" aria-label="Mobile Number">
+          <input required type="email" class="form-control" placeholder="Email" id="Email" aria-label="Email">
+          <input required type="date" class="form-control" placeholder="Date of Birth" id="Date of Birth" aria-label="Date of Birth">
+          <input required type="text" class="form-control" placeholder="PAN Number" id="PAN Number" aria-label="PAN Number">
 
           <button type="submit" class="bg-orange text-[white] py-[12px] px-[24px] rounded-[40px] w-full"
             id="submit_button">Submit</button>
