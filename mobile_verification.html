@@ -20,7 +20,6 @@
           imgElement.src = logo;
         }
 
-        document.getElementById('submit_button').style.backgroundColor = color
         document.getElementById('singe_click_text').style.color = color
         document.getElementById('toggleButton').style.color = color
         document.getElementById('privacy').style.color = color
@@ -80,30 +79,35 @@
         isOpen = !isOpen;
       }
 
-        function fillForm() {
-            document.getElementById('1').value = 1
-            document.getElementById('2').value = 2
-            document.getElementById('3').value = 3
-            document.getElementById('4').value = 4
-            document.getElementById('5').value = 5
-            document.getElementById('6').value = 6
-          document.getElementById('flexCheckDefault').checked = true
-          }
+      function fillForm() {
+        document.getElementById('1').value = 1
+        document.getElementById('2').value = 2
+        document.getElementById('3').value = 3
+        document.getElementById('4').value = 4
+        document.getElementById('5').value = 5
+        document.getElementById('6').value = 6
+      }
+
+      function enableButton() {
+        document.getElementById('submit_button').disabled = false
+        document.getElementById('submit_button').style.backgroundColor = color
+      }
+
     </script>
     <title>Mobile Verification</title>
   </head>
 
   <body class="bg-background py-[15px]">
-  <header class="py-[13px] px-[80px] border-b-[5px] border-b-[#FCD833] flex justify-between items-center mb-10">
-    <div>
-      <p style="font-feature-settings: 'ss01'" class="text-cibil text-[25px] leading-none font-semibold mb-0">CIBIL
-      </p>
-      <p class="text-dark_grey text-[8px] leading-none mb-0">Part of TransUnion</p>
-    </div>
-    <a href="./platform_selection.html">
-      <img src="./Assets/cross.svg" />
-    </a>
-  </header>
+    <header class="py-[13px] px-[80px] border-b-[5px] border-b-[#FCD833] flex justify-between items-center mb-10">
+      <div>
+        <p style="font-feature-settings: 'ss01'" class="text-cibil text-[25px] leading-none font-semibold mb-0">CIBIL
+        </p>
+        <p class="text-dark_grey text-[8px] leading-none mb-0">Part of TransUnion</p>
+      </div>
+      <a href="./platform_selection.html">
+        <img src="./Assets/cross.svg" />
+      </a>
+    </header>
     <div class="max-w-[414px] m-auto mobile-frame py-16">
       <a href="./profile.html">
         <img class="w-[32px]" src="./Assets/back.svg" alt="back" />
@@ -129,8 +133,8 @@
         </div>
         <div class="flex justify-center items-center">
           <input required type="text" maxlength="1"
-            class="w-[40px] h-[40px] rounded-lg mx-[10px] text-center border outline-none" id="1"
-           onfocus="fillForm()" onkeyup="moveToNext(this, '2')" />
+            class="w-[40px] h-[40px] rounded-lg mx-[10px] text-center border outline-none" id="1" onfocus="fillForm()"
+            onkeyup="moveToNext(this, '2')" />
           <input required type="text" maxlength="1"
             class="w-[40px] h-[40px] rounded-lg mx-[10px] text-center border outline-none" id="2"
             onkeyup="moveToNext(this, '3')" />
@@ -150,8 +154,8 @@
           00:<span id="timer">60</span></p>
 
         <div class="flex gap-2">
-          <input required class="form-check-input p-2 bg-[red] checked:bg-[red]" type="checkbox" value=""
-            id="flexCheckDefault">
+          <input required class="form-check-input p-2 bg-[red] checked:bg-[red]" type="checkbox"
+            onchange="enableButton()" id="flexCheckDefault">
           <p class="form-check-label text-[12px] text-dark_grey" for="flexCheckDefault" id="tnc">
             I hereby declare that I am Indian National. I agree to <span id="client"></span>’s ,<span
               id='privacy'>Privacy
@@ -163,7 +167,7 @@
           </p>
         </div>
 
-        <button id="submit_button" type="submit"
+        <button id="submit_button" type="submit" disabled
           class="text-[white] py-[12px] px-[24px] rounded-[40px] w-full">Verify</button>
       </form>
     </div>
