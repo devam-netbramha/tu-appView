@@ -1200,6 +1200,11 @@ video {
   padding-bottom: 10px;
 }
 
+.py-\[11px\] {
+  padding-top: 11px;
+  padding-bottom: 11px;
+}
+
 .py-\[12px\] {
   padding-top: 12px;
   padding-bottom: 12px;
@@ -1391,6 +1396,11 @@ video {
   color: rgb(126 121 208 / var(--tw-text-opacity));
 }
 
+.text-\[black\] {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
 .text-\[white\] {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -1434,15 +1444,6 @@ video {
 .text-orange_peel {
   --tw-text-opacity: 1;
   color: rgb(255 135 31 / var(--tw-text-opacity));
-}
-
-.text-\[bla\] {
-  color: bla;
-}
-
-.text-\[black\] {
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 .no-underline {
