@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
+    <title>Cibil Sales Demo</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./tailwind.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script>
       function onSubmit(e) {
         e.preventDefault()
@@ -87,8 +86,7 @@
             client.</p>
         </div>
         <form class="mt-[24px] form_container" onsubmit="onSubmit(event)">
-          <select required class="form-select px-[12px] py-[10px] border rounded-lg w-full mb-6"
-            onchange="onClientSelection(event)">
+          <select required class="form-select px-[12px] py-[10px] border rounded-lg w-full mb-6" onchange="onClientSelection(event)">
             <option disabled selected value="">Select client name</option>
             <option value="SBI Bank">SBI Bank</option>
             <option value="Axis Bank">Axis Bank</option>
@@ -126,18 +124,11 @@
             <option value="Federal Bank">Federal Bank</option>
           </select>
 
-          <div class="bg-[#F1F1F1] rounded-xl px-[12px] py-[20px] flex items-center justify-center h-[96px] gap-2 mb-6"
-            id="client_logo">
+          <div class="bg-[#F1F1F1] rounded-xl px-[12px] py-[20px] flex items-center justify-center h-[96px] gap-2 mb-6" id="client_logo">
             <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M7.12501 17.9166H11.875C15.8333 17.9166 17.4167 16.3333 17.4167 12.3749V7.62492C17.4167 3.66659 15.8333 2.08325 11.875 2.08325H7.12501C3.16668 2.08325 1.58334 3.66659 1.58334 7.62492V12.3749C1.58334 16.3333 3.16668 17.9166 7.12501 17.9166Z"
-                stroke="#00A6CA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-              <path
-                d="M7.12499 8.41667C7.99944 8.41667 8.70832 7.70778 8.70832 6.83333C8.70832 5.95888 7.99944 5.25 7.12499 5.25C6.25054 5.25 5.54166 5.95888 5.54166 6.83333C5.54166 7.70778 6.25054 8.41667 7.12499 8.41667Z"
-                stroke="#00A6CA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-              <path
-                d="M2.11374 15.5021L6.01666 12.8817C6.64207 12.4621 7.54457 12.5096 8.10666 12.9925L8.36791 13.2221C8.98541 13.7525 9.98291 13.7525 10.6004 13.2221L13.8937 10.3959C14.5112 9.86544 15.5087 9.86544 16.1262 10.3959L17.4167 11.5042"
-                stroke="#00A6CA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M7.12501 17.9166H11.875C15.8333 17.9166 17.4167 16.3333 17.4167 12.3749V7.62492C17.4167 3.66659 15.8333 2.08325 11.875 2.08325H7.12501C3.16668 2.08325 1.58334 3.66659 1.58334 7.62492V12.3749C1.58334 16.3333 3.16668 17.9166 7.12501 17.9166Z" stroke="#00A6CA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M7.12499 8.41667C7.99944 8.41667 8.70832 7.70778 8.70832 6.83333C8.70832 5.95888 7.99944 5.25 7.12499 5.25C6.25054 5.25 5.54166 5.95888 5.54166 6.83333C5.54166 7.70778 6.25054 8.41667 7.12499 8.41667Z" stroke="#00A6CA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M2.11374 15.5021L6.01666 12.8817C6.64207 12.4621 7.54457 12.5096 8.10666 12.9925L8.36791 13.2221C8.98541 13.7525 9.98291 13.7525 10.6004 13.2221L13.8937 10.3959C14.5112 9.86544 15.5087 9.86544 16.1262 10.3959L17.4167 11.5042" stroke="#00A6CA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
 
             <p class="text-dark_grey mb-0">Client's logo</p>
@@ -175,10 +166,8 @@
             </div>
           </div>
           <p class="text-dark_grey text-center mb-6 mt-6">or</p>
-          <input type="text" class="form-control border px-[12px] py-[10px] rounded-lg" id="color"
-            placeholder="Enter HEX code (Ex. 5968696)" onkeypress="onColorSelection(event.target.value)">
-          <button type="submit" disabled class="text-[white] py-[12px] px-[24px] rounded-[40px] w-full mt-6"
-            id="start_demo">Start
+          <input type="text" class="form-control border px-[12px] py-[10px] rounded-lg" id="color" placeholder="Enter HEX code (Ex. 5968696)" onkeypress="onColorSelection(event.target.value)">
+          <button type="submit" disabled class="text-[white] py-[12px] px-[24px] rounded-[40px] w-full mt-6" id="start_demo">Start
             Demo</button>
         </form>
       </div>
