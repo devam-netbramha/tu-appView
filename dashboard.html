@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="./tailwind.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
+    <script>
+      const logo = localStorage.getItem('logo')
+      const color = localStorage.getItem('color')
+      document.addEventListener('DOMContentLoaded', () => {
+        const imgElement = document.getElementById('client_logo');
+        if (imgElement && logo) {
+          imgElement.src = logo;
+        }
+        document.getElementById('profile').style.fill = color
+        document.getElementById('logout').style.fill = color
+      });
+    </script>
+  </head>
+  <body class="py-[24px] px-[80px]">
+    <header class="flex justify-between items-center flex-wrap">
+      <div class="flex gap-[24px] items-center">
+        <img src="./Assets/crash_course.svg" />
+        <p><b>Home</b></p>
+        <p>Modules</p>
+        <p>Videos</p>
+        <p>Blog</p>
+        <p>Certification</p>
+      </div>
+      <div class="flex gap-[32px] items-center">
+        <div class="flex items-center gap-[9px]">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+            <rect y="0.5" width="20" height="20" rx="2" id="profile" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M9.1565 3.60175C7.90528 3.91026 6.8323 5.03702 6.57244 6.3152C6.11962 8.54255 7.77889 10.6324 10 10.6324C11.9286 10.6324 13.5 9.03229 13.5 7.06841C13.5 4.76407 11.3622 3.0578 9.1565 3.60175ZM6.12669 12.2439C4.9392 12.5644 3.97551 13.3608 3.42271 14.4785C3.07634 15.179 3.00211 15.6124 3.00099 16.9417L3 18.1069L3.19303 18.3034L3.38606 18.5H10H16.6139L16.807 18.3034L17 18.1069L16.999 16.9417C16.9979 15.5687 16.9217 15.1574 16.5244 14.3798C16.0416 13.4349 15.133 12.6556 14.0943 12.2957C13.6749 12.1504 13.5843 12.1466 10.1321 12.1317C6.84577 12.1174 6.5661 12.1253 6.12669 12.2439Z"
+              fill="white" />
+          </svg>
+          <p class="mb-0">Profile</p>
+        </div>
+        <div class="flex items-center gap-[9px]">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+            <rect y="0.5" width="20" height="20" rx="2" id="logout" />
+            <path
+              d="M9.99961 9.1C10.7696 9.1 11.3996 8.47 11.3996 7.7V4.9C11.3996 4.13 10.7696 3.5 9.99961 3.5C9.22961 3.5 8.59961 4.13 8.59961 4.9V7.7C8.59961 8.47 9.22961 9.1 9.99961 9.1Z"
+              fill="white" />
+            <path
+              d="M14.97 5.53C14.76 5.32 14.55 5.25 14.2 5.25C13.64 5.25 13.15 5.74 13.15 6.3C13.15 6.58 13.29 6.86 13.43 7.07C14.34 7.98 14.83 9.17 14.83 10.5C14.83 13.23 12.66 15.4 9.93 15.4C7.2 15.4 5.03 13.23 5.03 10.5C5.03 9.17 5.59 7.91 6.5 7.07C6.71 6.86 6.85 6.58 6.85 6.3C6.85 5.74 6.36 5.25 5.8 5.25C5.52 5.25 5.24 5.39 5.03 5.53C3.77 6.79 3 8.54 3 10.5C3 14.35 6.15 17.5 10 17.5C13.85 17.5 17 14.35 17 10.5C17 8.54 16.23 6.79 14.97 5.53Z"
+              fill="white" />
+          </svg>
+          <p class="mb-0">Logout</p>
+        </div>
+        <img id="client_logo" class="w-[137px]" />
+      </div>
+      </div>
+    </header>
+
+    <div class="flex justify-end">
+      <div class="p-[8px] bg-[#FFF1F1] flex gap-[8px] items-center rounded-xl">
+        <img src="./Assets/score.svg" />
+
+        <div>
+          <p class="mb-1"><b>Chapter 2</b></p>
+          <p class="mb-0">Finance Overview</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex justify-between items-center">
+      <div>
+        <p class="text-[64px] font-bold text-[#4C4C4C] mb-0">Free and Open</p>
+        <p class="text-[32px] font-bold text-[#4C4C4C]">Credit Education For All</p>
+        <p class="text-[18px]">
+          TransUnion CIBIL brings you extensive and free credit education platform.<br /> This course will aim to
+          empower you with the necessary credit related information <br /> for stepping up their overall financial
+          game.<br /> It is free and openly accessible to everyone.
+        </p>
+      </div>
+
+      <img src="./Assets/dashboard_bg.svg" />
+    </div>
+  </body>
+</html>
