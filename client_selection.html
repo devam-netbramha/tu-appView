@@ -24,6 +24,8 @@
       function onColorSelection(color) {
         localStorage.setItem('color', `#${color}`)
         document.getElementById("start_demo").style.backgroundColor = `#${color}`
+        document.getElementById("start_demo").style.color = `#ffffff`
+        document.getElementById("start_demo").disabled = false
 
       }
     </script>
@@ -63,13 +65,13 @@
   </head>
 
   <body class="bg-background">
-    <header class="flex justify-between items-center py-16 px-[60px] header-desktop">
-      <div>
-        <p style="font-feature-settings: 'ss01'" class="text-cibil text-[48px] leading-none font-semibold mb-0">CIBIL
-        </p>
-        <p class="text-dark_grey text-[15px] leading-none mb-0">Part of TransUnion</p>
-      </div>
-    </header>
+  <header class="py-[13px] px-[80px] border-b-[5px] border-b-[#FCD833] header-desktop">
+    <div>
+      <p style="font-feature-settings: 'ss01'" class="text-cibil text-[25px] leading-none font-semibold mb-0">CIBIL
+      </p>
+      <p class="text-dark_grey text-[8px] leading-none mb-0">Part of TransUnion</p>
+    </div>
+  </header>
     <div class="rounded-3xl shadow-md p-4 mobile_view">
       <p style="font-feature-settings: 'ss01'" class="text-cibil text-[28px] leading-none font-bold mb-0">CIBIL</p>
       <p class="text-dark_grey text-[9px] leading-none mb-0">Part of TransUnion</p>
@@ -79,7 +81,7 @@
       </p>
     </div>
     <div class="form_wrapper">
-      <div>
+      <div class="mb-[130px]">
         <div class="desktop_view">
           <h3 class="font-bold text-[40px] mt-3 mb-[24px]">Personalise Your Experience</h3>
           <p class="text-dark_grey text-[20px]">Please fill the following details to personalise the walkthrough
@@ -144,7 +146,15 @@
           </div>
 
           <p class="text-[12px] text-dark_grey font-bold">Select primary colour</p>
-          <div class="flex justify-between mt-16">
+          <div class="flex justify-between mt-16 flex-wrap">
+            <div class="flex custom-radio">
+              <input type="radio" name="theme-select" id="orange" onclick="onColorSelection('F26842')">
+              <label class="w-[48px] h-[48px] rounded-lg bg-orange" for="orange"></label>
+            </div>
+            <div class="flex custom-radio">
+              <input type="radio" name="theme-select" id="orange" onclick="onColorSelection('F26842')">
+              <label class="w-[48px] h-[48px] rounded-lg bg-orange" for="orange"></label>
+            </div>
             <div class="flex custom-radio">
               <input type="radio" name="theme-select" id="orange" onclick="onColorSelection('F26842')">
               <label class="w-[48px] h-[48px] rounded-lg bg-orange" for="orange"></label>
@@ -169,7 +179,7 @@
           <p class="text-dark_grey text-center mb-6 mt-6">or</p>
           <input type="text" class="form-control border px-[12px] py-[10px] rounded-lg" id="color"
             placeholder="Enter HEX code (Ex. 5968696)" onkeypress="onColorSelection(event.target.value)">
-          <button type="submit" class="text-[white] py-[12px] px-[24px] rounded-[40px] w-full mt-6"
+          <button type="submit" disabled class="text-[white] py-[12px] px-[24px] rounded-[40px] w-full mt-6"
             id="start_demo">Start
             Demo</button>
         </form>

@@ -99,14 +99,22 @@ p {
     display: flex;
     gap: 30px;
     justify-content: space-between;
-    padding: 0 60px;
+    padding-left: 60px;
+    height: calc(100vh - 65px);
+    align-items: end;
   }
 
   .mobile_frame {
-    max-width: 35%;
+    width: 45%;
   }
 
   .form_container {
     width: 80%;
   }
+}
+
+button:disabled {
+  background-color: #BFBFBF;
+  color: #595959;
+  cursor: not-allowed;
 }

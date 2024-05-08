@@ -613,6 +613,10 @@ video {
   margin-bottom: 12px;
 }
 
+.mb-\[130px\] {
+  margin-bottom: 130px;
+}
+
 .mb-\[14px\] {
   margin-bottom: 14px;
 }
@@ -691,6 +695,26 @@ video {
 
 .mt-\[32px\] {
   margin-top: 32px;
+}
+
+.mb-\[\] {
+  margin-bottom: ;
+}
+
+.mb-\[10\] {
+  margin-bottom: 10;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.mb-5 {
+  margin-bottom: 1.25rem;
 }
 
 .block {
@@ -798,12 +822,12 @@ video {
   width: 27px;
 }
 
-.w-\[310px\] {
-  width: 310px;
-}
-
 .w-\[32px\] {
   width: 32px;
+}
+
+.w-\[330px\] {
+  width: 330px;
 }
 
 .w-\[40px\] {
@@ -833,10 +857,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-\[330px\] {
-  width: 330px;
 }
 
 .max-w-\[182px\] {
@@ -1600,16 +1620,24 @@ p {
     display: flex;
     gap: 30px;
     justify-content: space-between;
-    padding: 0 60px;
+    padding-left: 60px;
+    height: calc(100vh - 65px);
+    align-items: end;
   }
 
   .mobile_frame {
-    max-width: 35%;
+    width: 45%;
   }
 
   .form_container {
     width: 80%;
   }
+}
+
+button:disabled {
+  background-color: #BFBFBF;
+  color: #595959;
+  cursor: not-allowed;
 }
 
 .checked\:bg-\[red\]:checked {
