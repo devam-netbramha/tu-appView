@@ -609,10 +609,6 @@ video {
   margin-bottom: 1.5rem;
 }
 
-.mb-\[12px\] {
-  margin-bottom: 12px;
-}
-
 .mb-\[130px\] {
   margin-bottom: 130px;
 }
@@ -697,6 +693,10 @@ video {
   margin-top: 32px;
 }
 
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
 .block {
   display: block;
 }
@@ -760,6 +760,22 @@ video {
 
 .h-full {
   height: 100%;
+}
+
+.h-\[74vh\] {
+  height: 74vh;
+}
+
+.h-\[75vh\] {
+  height: 75vh;
+}
+
+.h-\[77vh\] {
+  height: 77vh;
+}
+
+.h-\[92vh\] {
+  height: 92vh;
 }
 
 .w-\[100px\] {
