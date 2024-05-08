@@ -21,6 +21,11 @@
         }
         document.getElementById('submit_button').style.backgroundColor = color
       });
+
+        function fillForm() {
+            document.getElementById('Employee ID').value = 'AB1234'
+            document.getElementById('Password').value = 'Kishore'
+          }
     </script>
   </head>
   <body class="flex">
@@ -34,7 +39,7 @@
 
         <form action="./dashboard.html">
           <label for="Employee ID" class="mb-[8px]">Employee ID</label>
-          <input type="text" required class="form-control border px-[12px] py-[10px] rounded-lg mb-[24px]"
+          <input onfocus="fillForm()" type="text" required class="form-control border px-[12px] py-[10px] rounded-lg mb-[24px]"
             id="Employee ID" placeholder="Enter your employee ID">
           <label for="Password" class="mb-[8px]">Password</label>
           <input type="password" required class="form-control border px-[12px] py-[10px] rounded-lg mb-[24px]"
