@@ -554,10 +554,6 @@ video {
   --tw-contain-style:  ;
 }
 
-.absolute {
-  position: absolute;
-}
-
 .relative {
   position: relative;
 }
@@ -733,10 +729,6 @@ video {
   height: 40vh;
 }
 
-.h-\[48px\] {
-  height: 48px;
-}
-
 .h-\[60vh\] {
   height: 60vh;
 }
@@ -818,10 +810,6 @@ video {
   width: 40px;
 }
 
-.w-\[48px\] {
-  width: 48px;
-}
-
 .w-\[50\%\] {
   width: 50%;
 }
@@ -853,10 +841,6 @@ video {
 
 .flex-1 {
   flex: 1 1 0%;
-}
-
-.transform {
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .flex-col {
@@ -1554,6 +1538,11 @@ p {
   .mobile_frame {
     display: none;
   }
+
+  .color_selection {
+    width: 32px;
+    height: 32px;
+  }
 }
 
 @media screen and (min-width: 414px) {
@@ -1600,12 +1589,48 @@ p {
   .form_container {
     width: 80%;
   }
+
+  .color_selection {
+    width: 42px;
+    height: 42px;
+  }
 }
 
 button:disabled {
   background-color: #BFBFBF;
   color: #595959;
   cursor: not-allowed;
+}
+
+.custom-radio input {
+  display: none;
+}
+
+input[type="radio"]:checked+label {
+  outline: 3px solid #006df580;
+}
+
+input[type="radio"]:checked+label:before {
+  display: block;
+}
+
+.custom-radio label {
+  position: relative;
+}
+
+.custom-radio label:before {
+  display: none;
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 8px;
+  background-image: url('./Assets/white-tick.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .checked\:bg-\[red\]:checked {

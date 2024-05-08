@@ -65,6 +65,11 @@ p {
   .mobile_frame {
     display: none;
   }
+
+  .color_selection {
+    width: 32px;
+    height: 32px;
+  }
 }
 
 @media screen and (min-width: 414px) {
@@ -111,10 +116,46 @@ p {
   .form_container {
     width: 80%;
   }
+
+  .color_selection {
+    width: 42px;
+    height: 42px;
+  }
 }
 
 button:disabled {
   background-color: #BFBFBF;
   color: #595959;
   cursor: not-allowed;
+}
+
+.custom-radio input {
+  display: none;
+}
+
+input[type="radio"]:checked+label {
+  outline: 3px solid #006df580;
+}
+
+input[type="radio"]:checked+label:before {
+  display: block;
+}
+
+.custom-radio label {
+  position: relative;
+}
+
+.custom-radio label:before {
+  display: none;
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 8px;
+  background-image: url('./Assets/white-tick.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
