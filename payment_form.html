@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link href="./tailwind.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const color = localStorage.getItem('color')
+        document.getElementById('submit_button').style.backgroundColor = color
+      })
+
+      function fillForm() {
+        document.getElementById('Card Number').value = '7464 6753 7858 6833'
+        document.getElementById('Valid Thru').value = '2025-08'
+        document.getElementById('CVV').value = '123'
+      }
+    </script>
+  </head>
+  <body class="bg-background">
+    <header class="py-[13px] px-[80px] border-b-[5px] border-b-[#FCD833] flex justify-between items-center mb-10">
+      <div>
+        <p style="font-feature-settings: 'ss01'" class="text-cibil text-[25px] leading-none font-semibold mb-0">CIBIL
+        </p>
+        <p class="text-dark_grey text-[8px] leading-none mb-0">Part of TransUnion</p>
+      </div>
+      <a href="./platform_selection.html">
+        <img src="./Assets/cross.svg" />
+      </a>
+    </header>
+    <div class="max-w-[414px] m-auto mobile-frame">
+      <div class="bg-[white] flex items-center px-16 py-[12px]">
+        <a href="./compare_excellent.html">
+          <img class="w-[32px]" src="./Assets/back.svg" alt="back" />
+        </a>
+        <div>
+          <p class="text-dark_charcoal mb-0">Payments</p>
+        </div>
+      </div>
+      <div class="px-16 py-[12px]">
+        <div class="p-[10px] bg-light_sky_blue mt-[12px] rounded-lg">
+          <div class="flex gap-2 items-center">
+            <img src="./Assets/Card.svg" class="w-[20px] h-[12px]" />
+            <p class="mb-0 font-bold text-[14px]">Piramal Finance Credit card **04</p>
+          </div>
+          <hr class="my-[10px] border-[#E7E7E7]" />
+          <div class="flex gap-4 justify-between">
+            <p class="mb-0">Total due amount</p>
+            <p class="mb-0 font-bold">₹34,000</p>
+          </div>
+        </div>
+        <p class="font-bold mt-[12px]">Payment methods</p>
+      </div>
+      <div class="bg-[white] py-[12px]">
+        <div class="flex justify-between items-center px-16">
+          <div class="flex gap-2 items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M9.94411 3.25H14.0561C15.8941 3.25 17.3501 3.25 18.4891 3.403C19.6611 3.561 20.6101 3.893 21.3591 4.641C22.1071 5.39 22.4391 6.339 22.5971 7.511C22.6871 8.184 22.7241 8.967 22.7391 9.874C22.7522 9.95001 22.7535 10.0276 22.7431 10.104C22.7501 10.67 22.7501 11.282 22.7501 11.944V12.056C22.7501 13.894 22.7501 15.35 22.5971 16.489C22.4391 17.661 22.1071 18.61 21.3591 19.359C20.6101 20.107 19.6611 20.439 18.4891 20.597C17.3491 20.75 15.8941 20.75 14.0561 20.75H9.94411C8.10611 20.75 6.65011 20.75 5.51111 20.597C4.33911 20.439 3.39011 20.107 2.64111 19.359C1.89311 18.61 1.56111 17.661 1.40311 16.489C1.25011 15.349 1.25011 13.894 1.25011 12.056V11.944C1.25011 11.282 1.25011 10.67 1.25711 10.104C1.24639 10.0276 1.2474 9.95007 1.26011 9.874C1.27611 8.967 1.31311 8.184 1.40311 7.511C1.56111 6.339 1.89311 5.39 2.64111 4.641C3.39011 3.893 4.33911 3.561 5.51111 3.403C6.65111 3.25 8.10611 3.25 9.94411 3.25ZM2.75211 10.75C2.75011 11.138 2.75011 11.554 2.75011 12C2.75011 13.907 2.75211 15.262 2.89011 16.29C3.02511 17.295 3.27911 17.875 3.70211 18.298C4.12511 18.721 4.70511 18.975 5.71111 19.11C6.73911 19.248 8.09311 19.25 10.0001 19.25H14.0001C15.9071 19.25 17.2621 19.248 18.2901 19.11C19.2951 18.975 19.8751 18.721 20.2981 18.298C20.7211 17.875 20.9751 17.295 21.1101 16.289C21.2481 15.261 21.2501 13.907 21.2501 12C21.2501 11.554 21.2501 11.138 21.2481 10.75H2.75211ZM21.2241 9.25H2.77611C2.79611 8.663 2.83011 8.156 2.89011 7.71C3.02511 6.705 3.27911 6.125 3.70211 5.702C4.12511 5.279 4.70511 5.025 5.71111 4.89C6.73911 4.752 8.09311 4.75 10.0001 4.75H14.0001C15.9071 4.75 17.2621 4.752 18.2901 4.89C19.2951 5.025 19.8751 5.279 20.2981 5.702C20.7211 6.125 20.9751 6.705 21.1101 7.711C21.1701 8.156 21.2041 8.663 21.2241 9.25ZM5.25011 16C5.25011 15.8011 5.32912 15.6103 5.46978 15.4697C5.61043 15.329 5.8012 15.25 6.00011 15.25H10.0001C10.199 15.25 10.3898 15.329 10.5304 15.4697C10.6711 15.6103 10.7501 15.8011 10.7501 16C10.7501 16.1989 10.6711 16.3897 10.5304 16.5303C10.3898 16.671 10.199 16.75 10.0001 16.75H6.00011C5.8012 16.75 5.61043 16.671 5.46978 16.5303C5.32912 16.3897 5.25011 16.1989 5.25011 16ZM11.7501 16C11.7501 15.8011 11.8291 15.6103 11.9698 15.4697C12.1104 15.329 12.3012 15.25 12.5001 15.25H14.0001C14.199 15.25 14.3898 15.329 14.5304 15.4697C14.6711 15.6103 14.7501 15.8011 14.7501 16C14.7501 16.1989 14.6711 16.3897 14.5304 16.5303C14.3898 16.671 14.199 16.75 14.0001 16.75H12.5001C12.3012 16.75 12.1104 16.671 11.9698 16.5303C11.8291 16.3897 11.7501 16.1989 11.7501 16Z"
+                fill="black" />
+            </svg>
+            <p class="text-[#3B3B3B] mb-0">Debit / ATM Card</p>
+          </div>
+          <img src="./Assets/up_arrow.svg" />
+        </div>
+        <form class="grid gap-4 mt-16 px-16" action="./payment_verification.html">
+          <input required type="tel" class="form-control" placeholder="Card Number" id="Card Number"
+            aria-label="Card Number" onfocus="fillForm()">
+          <input required type="month" class="form-control" placeholder="Valid Thru" id="Valid Thru"
+            aria-label="Valid Thru" pattern="\d{2}/\d{2}">
+          <input required type="password" class="form-control" placeholder="CVV" id="CVV" aria-label="CVV">
+          <button type="submit" class="bg-orange text-[white] py-[12px] px-[24px] rounded-[40px] w-full"
+            id="submit_button">Pay ₹34,000</button>
+        </form>
+        <hr class="my-[20px] border-[#E7E7E7]" />
+        <div class="px-16 py-12px flex justify-between items-center">
+          <div class="flex gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="28" viewBox="0 0 26 28" fill="none">
+              <path
+                d="M2.4375 11.2578H5.07812V18.4296H3.25C3.08838 18.4296 2.93339 18.4963 2.81911 18.615C2.70483 18.7337 2.64062 18.8946 2.64062 19.0625C2.64062 19.2303 2.70483 19.3912 2.81911 19.5099C2.93339 19.6286 3.08838 19.6953 3.25 19.6953H22.75C22.9116 19.6953 23.0666 19.6286 23.1809 19.5099C23.2952 19.3912 23.3594 19.2303 23.3594 19.0625C23.3594 18.8946 23.2952 18.7337 23.1809 18.615C23.0666 18.4963 22.9116 18.4296 22.75 18.4296H20.9219V11.2578H23.5625C23.6951 11.2577 23.8241 11.2126 23.9299 11.1295C24.0356 11.0463 24.1124 10.9296 24.1484 10.7971C24.1845 10.6645 24.178 10.5234 24.1298 10.395C24.0816 10.2667 23.9944 10.1582 23.8814 10.086L13.3189 3.33601C13.223 3.27482 13.1126 3.24243 13 3.24243C12.8874 3.24243 12.777 3.27482 12.6811 3.33601L2.11859 10.086C2.00563 10.1582 1.91843 10.2667 1.87023 10.395C1.82204 10.5234 1.81548 10.6645 1.85155 10.7971C1.88763 10.9296 1.96437 11.0463 2.07012 11.1295C2.17587 11.2126 2.30486 11.2577 2.4375 11.2578ZM6.29688 11.2578H9.95312V18.4296H6.29688V11.2578ZM14.8281 11.2578V18.4296H11.1719V11.2578H14.8281ZM19.7031 18.4296H16.0469V11.2578H19.7031V18.4296ZM13 4.61323L21.4094 9.99214H4.59063L13 4.61323ZM24.9844 22.4375C24.9844 22.6053 24.9202 22.7662 24.8059 22.8849C24.6916 23.0036 24.5366 23.0703 24.375 23.0703H1.625C1.46338 23.0703 1.30839 23.0036 1.19411 22.8849C1.07983 22.7662 1.01562 22.6053 1.01562 22.4375C1.01562 22.2696 1.07983 22.1087 1.19411 21.99C1.30839 21.8713 1.46338 21.8046 1.625 21.8046H24.375C24.5366 21.8046 24.6916 21.8713 24.8059 21.99C24.9202 22.1087 24.9844 22.2696 24.9844 22.4375Z"
+                fill="black" />
+            </svg>
+            <p class="text-[#3B3B3B] mb-0">Net Banking</p>
+          </div>
+          <img src="./Assets/down_arrow.svg" />
+        </div>
+        <hr class="my-[20px] border-[#E7E7E7]" />
+        <div class="px-16 py-12px flex justify-between items-center">
+          <div class="flex gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="26" viewBox="0 0 25 26" fill="none">
+              <g clip-path="url(#clip0_918_4702)">
+                <path
+                  d="M17.3611 3.27783H7.63889C7.27053 3.27783 6.91726 3.42416 6.6568 3.68463C6.39633 3.9451 6.25 4.29836 6.25 4.66672V21.3334C6.25 21.7017 6.39633 22.055 6.6568 22.3155C6.91726 22.5759 7.27053 22.7223 7.63889 22.7223H17.3611C17.7295 22.7223 18.0827 22.5759 18.3432 22.3155C18.6037 22.055 18.75 21.7017 18.75 21.3334V4.66672C18.75 4.29836 18.6037 3.9451 18.3432 3.68463C18.0827 3.42416 17.7295 3.27783 17.3611 3.27783ZM7.63889 4.66672H17.3611V17.1667H7.63889V4.66672ZM7.63889 21.3334V18.5556H17.3611V21.3334H7.63889Z"
+                  fill="black" />
+                <path d="M11.8057 19.25H13.1946V20.6389H11.8057V19.25Z" fill="black" />
+              </g>
+              <defs>
+                <clipPath id="clip0_918_4702">
+                  <rect width="25" height="25" fill="white" transform="translate(0 0.5)" />
+                </clipPath>
+              </defs>
+            </svg>
+            <p class="text-[#3B3B3B] mb-0">UPI</p>
+          </div>
+          <img src="./Assets/down_arrow.svg" />
+        </div>
+      </div>
+    </div>
+    </div>
+  </body>
+</html>
