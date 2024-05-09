@@ -727,6 +727,10 @@ video {
   margin-top: 32px;
 }
 
+.mt-\[20px\] {
+  margin-top: 20px;
+}
+
 .block {
   display: block;
 }
@@ -1148,6 +1152,11 @@ video {
   background-color: rgb(38 38 41 / var(--tw-bg-opacity));
 }
 
+.bg-orange_peel {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 135 31 / var(--tw-bg-opacity));
+}
+
 .bg-cover {
   background-size: cover;
 }
@@ -1514,6 +1523,10 @@ video {
 .text-orange_peel {
   --tw-text-opacity: 1;
   color: rgb(255 135 31 / var(--tw-text-opacity));
+}
+
+.text-\[\] {
+  color: ;
 }
 
 .no-underline {
