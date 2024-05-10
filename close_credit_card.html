@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>close Credit Card</title>
+    <link href="./tailwind.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const color = localStorage.getItem('color')
+        document.getElementById('submit_button').style.backgroundColor = color
+      })
+    </script>
+  </head>
+  <body class="bg-background">
+    <header class="py-[13px] px-[80px] border-b-[5px] border-b-[#FCD833] flex justify-between items-center mb-10">
+      <div>
+        <p style="font-feature-settings: 'ss01'" class="text-cibil text-[25px] leading-none font-semibold mb-0">CIBIL
+        </p>
+        <p class="text-dark_grey text-[8px] leading-none mb-0">Part of TransUnion</p>
+      </div>
+      <a href="./platform_selection.html">
+        <img src="./Assets/cross.svg" />
+      </a>
+    </header>
+    <div class="max-w-[414px] m-auto mobile-frame">
+      <div class="bg-[white] flex items-center px-16 py-[12px]">
+        <a href="#" onclick="window.history.back()">
+          <img class="w-[32px]" src="./Assets/back.svg" alt="back" />
+        </a>
+        <div>
+          <p class="text-dark_charcoal mb-0">Predict Score</p>
+          <p class="text-dark_grey mb-0 text-[12px]">Powered by TUCIBIL Score Simulator</p>
+        </div>
+      </div>
+
+      <div class="px-16 h-[75vh] flex flex-col justify-between">
+        <div>
+          <div class="flex justify-between items-center mt-16">
+            <div>
+              <p class="text-dark_grey mb-0">What happens to your CIBIL<br />Score if you close your oldest
+                <br />credit card?
+              </p>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="59" height="75" viewBox="0 0 59 75" fill="none">
+              <path
+                d="M2.50734 11.6406L42.9126 51.8062L41.6887 54.1643L29.6153 46.3062C20.3968 39.0667 6.0247 24.5107 2.72706 19.2784C0.0889506 15.0924 1.48136 12.4424 2.50734 11.6406Z"
+                fill="#47447C" />
+              <path
+                d="M4.90801 18.1019C3.21543 16.3116 3.9735 14.4182 4.56411 13.6953L29.5819 38.6913C18.3561 34.2943 7.02372 20.3398 4.90801 18.1019Z"
+                fill="#7E79D0" />
+              <path d="M38.6887 52.1218L41.0869 53.8225L42.6741 51.6211L37.4736 46.3721L38.6887 52.1218Z"
+                fill="#5F5BA9" />
+              <path
+                d="M44.4003 6.44898L2.11773 6.46068C1.59751 6.46082 1.1759 6.88873 1.17604 7.41644L1.18317 33.9561C1.18332 34.4838 1.60516 34.9115 2.12538 34.9114L44.4079 34.8997C44.9281 34.8995 45.3497 34.4716 45.3496 33.9439L45.3425 7.40422C45.3423 6.87651 44.9205 6.44883 44.4003 6.44898Z"
+                fill="#FF7171" />
+              <path d="M4.34473 27.8354L13.1035 27.833" stroke="#004364" stroke-width="1.26126" />
+              <path d="M15.9033 27.8311L30.2674 27.8271" stroke="#004364" stroke-width="1.26126" />
+              <path
+                d="M11.4732 18.5419L4.7073 18.5438C4.44719 18.5439 4.23639 18.7578 4.23646 19.0217L4.23744 22.6859C4.23751 22.9498 4.44843 23.1636 4.70855 23.1636L11.4745 23.1617C11.7346 23.1616 11.9454 22.9477 11.9453 22.6838L11.9443 19.0196C11.9443 18.7557 11.7333 18.5419 11.4732 18.5419Z"
+                fill="#FFEDA0" />
+              <path
+                d="M39.4379 1.25391L25.1875 56.7894L27.4337 58.1718L33.795 45.1295C38.023 34.1087 42.9553 14.124 43.1263 7.91617C43.2632 2.94991 40.7244 1.40539 39.4379 1.25391Z"
+                fill="#5F5BA9" />
+              <path
+                d="M40.6581 8.04902C41.2004 5.63023 39.5895 4.40305 38.7162 4.0918L29.957 38.5864C37.3487 28.9539 39.9803 11.0724 40.6581 8.04902Z"
+                fill="#B2AFEB" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M25.2766 72.4172C20.8953 73.6493 16.3588 71.0452 15.1441 66.6006C13.9294 62.1562 16.4966 57.5543 20.8779 56.3222C25.2592 55.0901 29.7957 57.6943 31.0104 62.1388C32.2251 66.5833 29.658 71.1851 25.2766 72.4172ZM24.6397 70.0847C21.5281 70.9597 18.3062 69.1102 17.4435 65.9537C16.5809 62.7972 18.404 59.529 21.5157 58.654C24.6273 57.7789 27.8492 59.6284 28.7119 62.7849C29.5745 65.9414 27.7514 69.2096 24.6397 70.0847Z"
+                fill="#7E79D0" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M49.6379 66.4006C45.2566 67.6327 40.7201 65.0286 39.5054 60.584C38.2907 56.1396 40.8579 51.5377 45.2392 50.3056C49.6206 49.0735 54.1571 51.6777 55.3717 56.1222C56.5864 60.5667 54.0193 65.1685 49.6379 66.4006ZM49.001 64.068C45.8894 64.943 42.6675 63.0936 41.8049 59.9371C40.9422 56.7806 42.7654 53.5124 45.8771 52.6374C48.9887 51.7623 52.2105 53.6118 53.0732 56.7683C53.9359 59.9248 52.1127 63.193 49.001 64.068Z"
+                fill="#7E79D0" />
+              <path d="M28.9675 54.8556L27.7749 57.5661L25.2969 56.5078L27.0907 49.292L28.9675 54.8556Z"
+                fill="#7E79D0" />
+              <path
+                d="M31.6299 44.706C30.9629 44.8936 30.2722 44.4971 30.0873 43.8205C29.9024 43.1438 30.2932 42.4432 30.9602 42.2557C31.6272 42.0681 32.3179 42.4645 32.5028 43.1412C32.6877 43.8178 32.2969 44.5184 31.6299 44.706Z"
+                fill="#47447C" />
+            </svg>
+          </div>
+
+          <div class="bg-[white] px-16 py-[12px] rounded-xl shadow-sm mt-[32px]">
+            <p class="font-bold mb-16">Your oldest credit card account</p>
+
+            <div class="flex justify-between items-center p-[12px] bg-light_sky_blue rounded-xl">
+              <div class="flex gap-3 items-start">
+                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="15" viewBox="0 0 23 15" fill="none">
+                  <rect width="23" height="14.6056" rx="1.70271" fill="#FF7171" />
+                  <path d="M1.64746 10.9736H6.20866" stroke="#004364" stroke-width="1.70271" />
+                  <path d="M7.66602 10.9727H15.1462" stroke="#004364" stroke-width="1.70271" />
+                  <rect x="1.5918" y="6.20312" width="4.01393" height="2.37162" rx="0.851353" fill="#FFEDA0" />
+                </svg>
+                <div>
+                  <p class="font-bold mb-1">AXIS BANK</p>
+                  <p class="text-[12px] text-dim_grey mb-0">Credit card: ****2634</p>
+                </div>
+              </div>
+
+              <p class="font-bold text-office_green mb-0">1y 9m</p>
+            </div>
+          </div>
+        </div>
+        <a href="./excellent_score_close_credit_card.html">
+          <button id="submit_button" class="bg-orange text-[white] py-[12px] px-[24px] rounded-[40px] w-full">Predict New
+            Score</button>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
