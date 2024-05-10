@@ -120,24 +120,28 @@ p {
     text-align: center;
   }
 
+  .dashboard_header {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 414px) {
 
-  header{
+  header {
     z-index: 1;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
   }
+
   .mobile-frame {
     border-radius: 36px;
     border: 16px solid #000;
     max-height: 88vh;
     min-height: 88vh;
     overflow: auto;
-    margin:90px auto 0 auto;
+    margin: 90px auto 0 auto;
   }
 
   .mobile_view {
@@ -168,7 +172,7 @@ p {
     max-height: 720px;
     align-items: end;
     overflow: auto;
-    margin-top: 65px;
+    margin-top: 80px;
   }
 
   .mobile_frame {
@@ -194,6 +198,7 @@ p {
 
   .desktop_breadcrumb {
     display: flex;
+    margin-top: 20px;
   }
 
   .mobile_breadcrumb {
@@ -225,6 +230,17 @@ p {
 
   .dashboard_content {
     font-size: 18px;
+  }
+
+  .mobile_signin {
+    display: none
+  }
+
+  .dashboard_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
   }
 }
 
