@@ -15,35 +15,96 @@
       const color = localStorage.getItem('color')
       document.addEventListener('DOMContentLoaded', () => {
         const imgElement = document.getElementById('client_logo');
+        const mobileImgElement = document.getElementById('client_logo_mobile');
         const pElement = document.getElementById('client_name');
-        if (imgElement && logo) {
+        if (imgElement && mobileImgElement && logo) {
           imgElement.src = logo;
+          mobileImgElement.src = logo
         }
         document.getElementById('submit_button').style.backgroundColor = color
+        document.getElementById('mobile_submit_button').style.backgroundColor = color
       });
 
-        function fillForm() {
-            document.getElementById('Employee ID').value = 'TU67848496'
-            document.getElementById('Password').value = 'Kishore'
-          }
+      function fillForm() {
+        document.getElementById('Employee ID').value = 'TU67848496'
+        document.getElementById('Password').value = 'Kishore'
+         document.getElementById('mobile_Employee ID').value = 'TU67848496'
+        document.getElementById('mobile_Password').value = 'Kishore'
+      }
     </script>
   </head>
-  <body class="flex">
-    <div class="h-[100vh] bg-no-repeat w-[50%] pt-[24px] px-[90px] flex flex-col justify-between">
-      <img id="client_logo" class="w-[180px]" />
+  <body>
+    <div class="desktop_breadcrumb">
+      <div class="h-[100vh] bg-no-repeat w-[50%] pt-[24px] px-[90px] flex flex-col justify-between">
+        <img id="client_logo" class="w-[180px]" />
 
-      <div>
-        <a href="./home.html"><img src="./Assets/signin_back.svg" /></a>
+        <div>
+          <a href="./home.html"><img src="./Assets/signin_back.svg" /></a>
+          <p class="text-[32px] font-bold">Sign In</p>
+          <p class="mb-[56px]">Use your official email ID and Password to signin</span></p>
+
+          <form action="./dashboard.html">
+            <label for="Employee ID" class="mb-[8px]">Employee ID</label>
+            <input onfocus="fillForm()" type="text" required
+              class="form-control border px-[12px] py-[10px] rounded-lg mb-[24px]" id="Employee ID"
+              placeholder="Enter your employee ID">
+            <label for="Password" class="mb-[8px]">Password</label>
+            <input type="password" required class="form-control border px-[12px] py-[10px] rounded-lg mb-[24px]"
+              id="Password" placeholder="Enter your Password">
+
+            <div class="flex justify-between items-center mb-[56px]">
+              <div>
+                <input class="form-check-input p-2" type="checkbox" id="clear">
+                <label for="clear" class="text-dark_grey ml-1 text-[12px]">Keep me sign in</label>
+              </div>
+              <p class="font-bold text-orange mb-0">Forgot password?</p>
+            </div>
+            <button type="submit" class="text-[white] py-[12px] px-[24px] rounded-[40px] w-full mt-6"
+              id="submit_button">Sign In</button>
+          </form>
+        </div>
+        <div></div>
+      </div>
+
+      <div style="background-image: url(./Assets/signin_background.svg);"
+        class="h-[100vh] bg-no-repeat flex-1 bg-cover">
+        <p class="text-center text-[#666869] text-[40px] mt-[170px]">Empowering All with</p>
+        <p class="text-center text-[#222D39] text-[40px] font-bold">Free Credit Education</p>
+        <div class="flex justify-center">
+          <img src="./Assets/signin_image.svg" class="w-[80%] mt-20" />
+        </div>
+      </div>
+    </div>
+
+    <div class="mobile_signin">
+      <div class="flex justify-between">
+        <a href="./home.html" class="left_arrow"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+            viewBox="0 0 32 32" fill="none">
+            <mask id="mask0_962_10988" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="32"
+              height="32">
+              <rect width="32" height="32" fill="#D9D9D9" />
+            </mask>
+            <g mask="url(#mask0_962_10988)">
+              <path
+                d="M18.6664 23.5385L11.1279 16.0001L18.6664 8.46167L20.0715 9.86677L13.9381 16.0001L20.0715 22.1334L18.6664 23.5385Z"
+                fill="#004364" />
+            </g>
+          </svg></a>
+        <img alt="logo" id="client_logo_mobile" class='max-w-[114px]' />
+        <div></div>
+      </div>
+      <div class="mt-10">
         <p class="text-[32px] font-bold">Sign In</p>
-        <p class="mb-[56px]">Use your official email ID and Password to signin</span></p>
+        <p class="mb-10">Use your official email ID and Password to signin</span></p>
 
         <form action="./dashboard.html">
           <label for="Employee ID" class="mb-[8px]">Employee ID</label>
-          <input onfocus="fillForm()" type="text" required class="form-control border px-[12px] py-[10px] rounded-lg mb-[24px]"
-            id="Employee ID" placeholder="Enter your employee ID">
+          <input onfocus="fillForm()" type="text" required
+            class="form-control border px-[12px] py-[10px] rounded-lg mb-[24px]" id="mobile_Employee ID"
+            placeholder="Enter your employee ID">
           <label for="Password" class="mb-[8px]">Password</label>
           <input type="password" required class="form-control border px-[12px] py-[10px] rounded-lg mb-[24px]"
-            id="Password" placeholder="Enter your Password">
+            id="mobile_Password" placeholder="Enter your Password">
 
           <div class="flex justify-between items-center mb-[56px]">
             <div>
@@ -53,18 +114,10 @@
             <p class="font-bold text-orange mb-0">Forgot password?</p>
           </div>
           <button type="submit" class="text-[white] py-[12px] px-[24px] rounded-[40px] w-full mt-6"
-            id="submit_button">Sign In</button>
+            id="mobile_submit_button">Sign
+            In</button>
         </form>
       </div>
-      <div></div>
-    </div>
-
-    <div style="background-image: url(./Assets/signin_background.svg);" class="h-[100vh] bg-no-repeat flex-1 bg-cover">
-      <p class="text-center text-[#666869] text-[40px] mt-[170px]">Empowering All with</p>
-      <p class="text-center text-[#222D39] text-[40px] font-bold">Free Credit Education</p>
-    <div class="flex justify-center">
-      <img src="./Assets/signin_image.svg" class="w-[80%] mt-20"/>
-    </div>
     </div>
   </body>
 </html>

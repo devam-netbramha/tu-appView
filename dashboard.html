@@ -15,15 +15,18 @@
       const color = localStorage.getItem('color')
       document.addEventListener('DOMContentLoaded', () => {
         const imgElement = document.getElementById('client_logo');
-        if (imgElement && logo) {
+         const mobileImgElement = document.getElementById('client_logo_mobile');
+        if (imgElement && mobileImgElement && logo) {
           imgElement.src = logo;
+          mobileImgElement.src = logo
         }
         document.getElementById('profile').style.fill = color
+        document.getElementById('mobile_profile').style.fill = color
         document.getElementById('logout').style.fill = color
       });
     </script>
   </head>
-  <body class="py-[24px] px-[80px]">
+  <body class="dashboard_container">
     <header class="flex justify-between items-center flex-wrap">
       <div class="flex gap-[24px] items-center">
         <img src="./Assets/crash_course.svg" />
@@ -59,8 +62,22 @@
       </div>
       </div>
     </header>
-
-    <div class="flex justify-end">
+      <div class="mobile_breadcrumb items-center">
+        <img src="./Assets/crash_course.svg" class="w-[85px]" />
+        <img alt="logo" id="client_logo_mobile" class='max-w-[114px]' />
+        <a href="./home.html">
+          <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
+            <rect y="0.5" width="26.5" height="26.5" rx="2" fill="#F26842" id="mobile_profile" />
+            <path
+              d="M13.2495 11.8951C14.2698 11.8951 15.1045 11.0603 15.1045 10.0401V6.3301C15.1045 5.30985 14.2698 4.4751 13.2495 4.4751C12.2293 4.4751 11.3945 5.30985 11.3945 6.3301V10.0401C11.3945 11.0603 12.2293 11.8951 13.2495 11.8951Z"
+              fill="white" />
+            <path
+              d="M19.8349 7.1647C19.5566 6.88645 19.2784 6.7937 18.8146 6.7937C18.0726 6.7937 17.4234 7.44295 17.4234 8.18495C17.4234 8.55595 17.6089 8.92695 17.7944 9.2052C19.0001 10.411 19.6494 11.9877 19.6494 13.75C19.6494 17.3672 16.7741 20.2425 13.1569 20.2425C9.53961 20.2425 6.66436 17.3672 6.66436 13.75C6.66436 11.9877 7.40636 10.3182 8.61211 9.2052C8.89036 8.92695 9.07586 8.55595 9.07586 8.18495C9.07586 7.44295 8.42661 6.7937 7.68461 6.7937C7.31361 6.7937 6.94261 6.9792 6.66436 7.1647C4.99486 8.8342 3.97461 11.153 3.97461 13.75C3.97461 18.8512 8.14836 23.025 13.2496 23.025C18.3509 23.025 22.5246 18.8512 22.5246 13.75C22.5246 11.153 21.5044 8.8342 19.8349 7.1647Z"
+              fill="white" />
+          </svg>
+        </a>
+    </div>
+    <div class="dashboard_score">
       <div class="p-[8px] bg-[#FFF1F1] flex gap-[8px] items-center rounded-xl">
         <img src="./Assets/score.svg" />
 
@@ -71,14 +88,14 @@
       </div>
     </div>
 
-    <div class="flex justify-between items-center">
+    <div class="desktop_home_content">
       <div>
-        <p class="text-[64px] font-bold text-[#4C4C4C] mb-0">Free and Open</p>
-        <p class="text-[32px] font-bold text-[#4C4C4C]">Credit Education For All</p>
-        <p class="text-[18px]">
-          TransUnion CIBIL brings you extensive and free credit education platform.<br /> This course will aim to
-          empower you with the necessary credit related information <br /> for stepping up their overall financial
-          game.<br /> It is free and openly accessible to everyone.
+        <p class="text-[64px] mb-0 dashboard_heading">Free and Open</p>
+        <p class="text-[32px] dashboard_sub_heading">Credit Education For All</p>
+        <p class="text-[18px] dashboard_content">
+          TransUnion CIBIL brings you extensive and free credit education platform. This course will aim to
+          empower you with the necessary credit related information  for stepping up their overall financial
+          game. It is free and openly accessible to everyone.
         </p>
       </div>
 

@@ -16,11 +16,14 @@
       const client_name = localStorage.getItem('client')
       document.addEventListener('DOMContentLoaded', () => {
         const imgElement = document.getElementById('client_logo');
+        const mobileImgElement = document.getElementById('client_logo_mobile');
         const pElement = document.getElementById('client_name');
-        if (imgElement && logo) {
+        if (imgElement && mobileImgElement && logo) {
           imgElement.src = logo;
+          mobileImgElement.src = logo
         }
         document.getElementById('submit_button').style.backgroundColor = color
+        document.getElementById('submit_button_mobile').style.backgroundColor = color
         pElement.innerHTML = `Explore Life at ${client_name}`
       });
     </script>
@@ -40,8 +43,8 @@
       </div>
     </header>
 
-    <div class="px-[81px] py-[40px]">
-      <div class="flex gap-[14px] items-center">
+    <div class="home_wrapper">
+      <div class="desktop_breadcrumb flex gap-[14px] items-center">
         <a href="./platform_selection.html" class="no-underline">
           <p class="mb-0 text-[#707070]">Platform Selection</p>
         </a>
@@ -50,7 +53,28 @@
         </svg>
         <p class="mb-0">Credit Education</p>
       </div>
-      <p class="mt-[18px] text-lg font-bold mb-[24px]">I Want to...</p>
+
+      <div class="mobile_breadcrumb">
+        <img alt="logo" id="client_logo_mobile" class='max-w-[114px]' />
+        <a href="./signin.html"><button class="px-[30px] py-[8px] text-[white] rounded-3xl ml-[16px]"
+            id="submit_button_mobile">Sign
+            In</button></a>
+      </div>
+      <div class="flex items-center mt-[18px] mb-[24px]">
+        <a href="./platform_selection.html" class="left_arrow"><svg xmlns="http://www.w3.org/2000/svg" width="32"
+            height="32" viewBox="0 0 32 32" fill="none">
+            <mask id="mask0_962_10988" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="32"
+              height="32">
+              <rect width="32" height="32" fill="#D9D9D9" />
+            </mask>
+            <g mask="url(#mask0_962_10988)">
+              <path
+                d="M18.6664 23.5385L11.1279 16.0001L18.6664 8.46167L20.0715 9.86677L13.9381 16.0001L20.0715 22.1334L18.6664 23.5385Z"
+                fill="#004364" />
+            </g>
+          </svg></a>
+        <p class="text-lg font-bold mb-0">I Want to...</p>
+      </div>
 
       <div class="flex justify-between flex-wrap">
         <div>
