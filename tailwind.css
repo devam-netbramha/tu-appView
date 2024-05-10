@@ -873,6 +873,18 @@ video {
   width: 100%;
 }
 
+.w-\[\] {
+  width: ;
+}
+
+.w-\[50px\] {
+  width: 50px;
+}
+
+.w-\[130px\] {
+  width: 130px;
+}
+
 .max-w-\[182px\] {
   max-width: 182px;
 }
@@ -979,6 +991,10 @@ video {
 
 .gap-\[9px\] {
   gap: 9px;
+}
+
+.gap-5 {
+  gap: 1.25rem;
 }
 
 .overflow-auto {
