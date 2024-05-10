@@ -25,6 +25,28 @@
         }
       });
     </script>
+
+    <style>
+      .button_space_container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      @media screen and (min-width: 480px) {
+        .button_space_container {
+          height: calc(100vh - 212px);
+        }
+      }
+
+
+      @media screen and (max-width: 480px) {
+
+        .button_space_container {
+          height: 100vh;
+        }
+      }
+    </style>
   </head>
   <body class="bg-background">
     <header class="py-[13px] px-[80px] border-b-[5px] border-b-[#FCD833] flex justify-between items-center mb-10">
@@ -38,26 +60,29 @@
       </a>
     </header>
     <div class="mobile-frame">
-      <div class="bg-[white] py-[12px]">
-        <div class="flex gap-[100px]">
-          <a href="#" onclick="window.history.back()">
-            <img class="w-[32px]" src="./Assets/back.svg" alt="back" />
-          </a>
-          <img class="w-[114px] mb-2" id="client_logo" alt="logo" />
-        </div>
-        <p id="client_name" class="text-center"></p>
-      </div>
+      <div class="button_space_container">
+        <div>
+          <div class="bg-[white] py-[12px]">
+            <div class="flex gap-[100px]">
+              <a href="#" onclick="window.history.back()">
+                <img class="w-[32px]" src="./Assets/back.svg" alt="back" />
+              </a>
+              <img class="w-[114px] mb-2" id="client_logo" alt="logo" />
+            </div>
+            <p id="client_name" class="text-center"></p>
+          </div>
 
-      <div class="mt-[21px] mx-[15px] px-[14px] py-[12px] bg-very_dark_charcoal w-fit rounded-xl">
-        <p class="text-[white] text-[16px]">
-          “Hi Abhishek! Your account is <br /> at risk of being reported <br /> deliquent. Please clear <br />
-          outstanding balance <br /> immediately to avoid any <br /> adverse impact on your CIBIL <br /> Score. Thank
-          you”
-        </p>
-        <p class="text-[white] text-[16px]">Know more at</p>
-        <a href="./details.html" id="website">www.piramal.in/cibilscore</a>
-      </div>
-      <div class="flex items-end h-[40vh]">
+          <div class="mt-[21px] mx-[15px] px-[14px] py-[12px] bg-very_dark_charcoal w-fit rounded-xl">
+            <p class="text-[white] text-[16px]">
+              “Hi Abhishek! Your account is <br /> at risk of being reported <br /> deliquent. Please clear <br />
+              outstanding balance <br /> immediately to avoid any <br /> adverse impact on your CIBIL <br /> Score.
+              Thank
+              you”
+            </p>
+            <p class="text-[white] text-[16px]">Know more at</p>
+            <a href="./details.html" id="website">www.piramal.in/cibilscore</a>
+          </div>
+        </div>
         <img class="w-full pt-5" alt="message_nav" src="./Assets/message Bar.svg" />
       </div>
     </div>

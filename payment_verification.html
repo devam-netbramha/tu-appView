@@ -64,57 +64,66 @@
       </a>
     </header>
     <div class="mobile-frame">
-      <div class="bg-[white] flex items-center px-16 py-[12px]">
-        <a href="#" onclick="window.history.back()">
-          <img class="w-[32px]" src="./Assets/back.svg" alt="back" />
-        </a>
+      <form action="./payment_success.html" class="button_space_container">
         <div>
-          <p class="text-dark_charcoal mb-0">Payments</p>
-        </div>
-      </div>
-      <div class="p-16">
-        <div class="flex justify-between items-center mb-16">
-          <p class="font-bold text-lg mb-0">OTP Verification</p>
-          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="16" viewBox="0 0 48 16" fill="none">
-            <g clip-path="url(#clip0_918_4451)">
-              <path
-                d="M24.8244 5.27609C24.7971 7.35729 26.7488 8.51862 28.2189 9.20916C29.7294 9.91759 30.2368 10.3719 30.2308 11.0055C30.2196 11.9751 29.0259 12.4031 27.909 12.4197C25.9603 12.4488 24.8272 11.9126 23.9265 11.5071L23.2245 14.6731C24.1283 15.0745 25.8017 15.4246 27.537 15.4399C31.6104 15.4399 34.2754 13.5019 34.2898 10.497C34.3057 6.68338 28.8171 6.47229 28.8546 4.76771C28.8675 4.25084 29.3792 3.69928 30.5004 3.55904C31.0554 3.48819 32.5875 3.43398 34.3245 4.20494L35.0062 1.14169C34.0721 0.813858 32.8716 0.499942 31.3768 0.499942C27.5428 0.499942 24.8462 2.4644 24.8244 5.27609ZM41.5571 0.763797C40.8133 0.763797 40.1865 1.18199 39.9067 1.82374L34.0881 15.2149H38.1585L38.9685 13.0573H43.9425L44.4124 15.2149H48L44.8693 0.763797H41.5571ZM42.1266 4.66759L43.3013 10.0942H40.0841L42.1266 4.66759ZM19.8892 0.763977L16.6807 15.2148H20.5596L23.7666 0.763617L19.8892 0.763977ZM14.1512 0.763977L10.1139 10.5998L8.48081 2.23651C8.28919 1.30289 7.53244 0.763797 6.69206 0.763797H0.0924375L0 1.18344C1.35487 1.46681 2.89425 1.92386 3.82687 2.41289C4.39762 2.71163 4.56038 2.97277 4.74788 3.68265L7.84106 15.2149H11.94L18.2243 0.763797L14.1512 0.763977Z"
-                fill="#1657B8" />
-            </g>
-            <defs>
-              <clipPath id="clip0_918_4451">
-                <rect width="48" height="15" fill="white" transform="translate(0 0.5)" />
-              </clipPath>
-            </defs>
-          </svg>
-        </div>
-        <p>Card Number: <b class="ml-16">**** **** **** 2088</b></p>
-        <p>Amount<b class="ml-[60px]">₹34,000</b></p>
-        <hr class="my-16 border-[#E7E7E7]" />
-
-        <p class="text-dark_grey">OTP has been sent to your registered mobile <br /> number.</p>
-      </div>
-
-      <form class="mt-16 flex flex-col justify-between h-[60vh]" action="./payment_success.html">
-        <div>
-          <div class="flex gap-16 px-16">
-            <input required type="text" maxlength="1" class="w-[40px] h-[40px] rounded-lg text-center border outline-none"
-              id="1" onfocus="fillForm()" onkeyup="moveToNext(this, '2')" />
-            <input required type="text" maxlength="1" class="w-[40px] h-[40px] rounded-lg text-center border outline-none"
-              id="2" onkeyup="moveToNext(this, '3')" />
-            <input required type="text" maxlength="1" class="w-[40px] h-[40px] rounded-lg text-center border outline-none"
-              id="3" onkeyup="moveToNext(this, '4')" />
-            <input required type="text" maxlength="1" class="w-[40px] h-[40px] rounded-lg text-center border outline-none"
-              id="4" onkeyup="moveToNext(this, '5')" />
-            <input required type="text" maxlength="1" class="w-[40px] h-[40px] rounded-lg text-center border outline-none"
-              id="5" onkeyup="moveToNext(this, '6')" />
-            <input required type="text" maxlength="1" class="w-[40px] h-[40px] rounded-lg text-center border outline-none"
-              id="6" />
+          <div class="bg-[white] flex items-center px-16 py-[12px]">
+            <a href="#" onclick="window.history.back()">
+              <img class="w-[32px]" src="./Assets/back.svg" alt="back" />
+            </a>
+            <div>
+              <p class="text-dark_charcoal mb-0">Payments</p>
+            </div>
           </div>
-          <p id="resendButton" onclick="resendOTP()" class="text-dark_grey text-[14px] mt-16 px-16">Resend OTP in
-            00:<span id="timer">60</span></p>
+          <div class="p-16">
+            <div class="flex justify-between items-center mb-16">
+              <p class="font-bold text-lg mb-0">OTP Verification</p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="16" viewBox="0 0 48 16" fill="none">
+                <g clip-path="url(#clip0_918_4451)">
+                  <path
+                    d="M24.8244 5.27609C24.7971 7.35729 26.7488 8.51862 28.2189 9.20916C29.7294 9.91759 30.2368 10.3719 30.2308 11.0055C30.2196 11.9751 29.0259 12.4031 27.909 12.4197C25.9603 12.4488 24.8272 11.9126 23.9265 11.5071L23.2245 14.6731C24.1283 15.0745 25.8017 15.4246 27.537 15.4399C31.6104 15.4399 34.2754 13.5019 34.2898 10.497C34.3057 6.68338 28.8171 6.47229 28.8546 4.76771C28.8675 4.25084 29.3792 3.69928 30.5004 3.55904C31.0554 3.48819 32.5875 3.43398 34.3245 4.20494L35.0062 1.14169C34.0721 0.813858 32.8716 0.499942 31.3768 0.499942C27.5428 0.499942 24.8462 2.4644 24.8244 5.27609ZM41.5571 0.763797C40.8133 0.763797 40.1865 1.18199 39.9067 1.82374L34.0881 15.2149H38.1585L38.9685 13.0573H43.9425L44.4124 15.2149H48L44.8693 0.763797H41.5571ZM42.1266 4.66759L43.3013 10.0942H40.0841L42.1266 4.66759ZM19.8892 0.763977L16.6807 15.2148H20.5596L23.7666 0.763617L19.8892 0.763977ZM14.1512 0.763977L10.1139 10.5998L8.48081 2.23651C8.28919 1.30289 7.53244 0.763797 6.69206 0.763797H0.0924375L0 1.18344C1.35487 1.46681 2.89425 1.92386 3.82687 2.41289C4.39762 2.71163 4.56038 2.97277 4.74788 3.68265L7.84106 15.2149H11.94L18.2243 0.763797L14.1512 0.763977Z"
+                    fill="#1657B8" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_918_4451">
+                    <rect width="48" height="15" fill="white" transform="translate(0 0.5)" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+            <p>Card Number: <b class="ml-16">**** **** **** 2088</b></p>
+            <p>Amount<b class="ml-[60px]">₹34,000</b></p>
+            <hr class="my-16 border-[#E7E7E7]" />
+
+            <p class="text-dark_grey">OTP has been sent to your registered mobile <br /> number.</p>
+          </div>
+
+          <div class="mt-16">
+            <div>
+              <div class="flex justify-between gap-1 px-16">
+                <input required type="text" maxlength="1"
+                  class="w-[40px] h-[40px] rounded-lg text-center border outline-none" id="1" onfocus="fillForm()"
+                  onkeyup="moveToNext(this, '2')" />
+                <input required type="text" maxlength="1"
+                  class="w-[40px] h-[40px] rounded-lg text-center border outline-none" id="2"
+                  onkeyup="moveToNext(this, '3')" />
+                <input required type="text" maxlength="1"
+                  class="w-[40px] h-[40px] rounded-lg text-center border outline-none" id="3"
+                  onkeyup="moveToNext(this, '4')" />
+                <input required type="text" maxlength="1"
+                  class="w-[40px] h-[40px] rounded-lg text-center border outline-none" id="4"
+                  onkeyup="moveToNext(this, '5')" />
+                <input required type="text" maxlength="1"
+                  class="w-[40px] h-[40px] rounded-lg text-center border outline-none" id="5"
+                  onkeyup="moveToNext(this, '6')" />
+                <input required type="text" maxlength="1"
+                  class="w-[40px] h-[40px] rounded-lg text-center border outline-none" id="6" />
+              </div>
+              <p id="resendButton" onclick="resendOTP()" class="text-dark_grey text-[14px] mt-16 px-16">Resend OTP in
+                00:<span id="timer">60</span></p>
+            </div>
+          </div>
         </div>
-        <div class="bg-[white] px-[30px] py-[16px]">
+        <div class="bg-[white] px-16 py-[16px]">
           <p class="text-[12px] text-dark_grey">Your transaction is processed through a secure 128 <br /> bit https
             internet
             connection based on secure<br /> socket
@@ -125,7 +134,8 @@
             have been
             logged.</p>
           <button id="submit_button" type="submit" disabled
-            class="text-[white] py-[12px] px-[24px] rounded-[40px] w-full">Confirm & Pay ₹34,000</button>
+            class="text-[white] py-[12px] px-[24px] rounded-[40px] w-full">Confirm
+            & Pay ₹34,000</button>
         </div>
       </form>
     </div>

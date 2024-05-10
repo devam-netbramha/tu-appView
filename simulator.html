@@ -45,59 +45,61 @@
     <title>Simulator</title>
   </head>
   <body class="bg-background">
-  <header class="py-[13px] px-[80px] border-b-[5px] border-b-[#FCD833] flex justify-between items-center mb-10">
-    <div>
-      <p style="font-feature-settings: 'ss01'" class="text-cibil text-[25px] leading-none font-semibold mb-0">CIBIL
-      </p>
-      <p class="text-dark_grey text-[8px] leading-none mb-0">Part of TransUnion</p>
-    </div>
-    <a href="./platform_selection.html">
-      <img src="./Assets/cross.svg" />
-    </a>
-  </header>
-    <form class="mobile-frame" action="./compare_excellent.html">
-      <div class="bg-[white] flex items-center px-16 py-[12px]">
-        <a href="#" onclick="window.history.back()">
-          <img class="w-[32px]" src="./Assets/back.svg" alt="back" />
-        </a>
-        <div>
-          <p class="text-dark_charcoal mb-0">Predict Score</p>
-          <p class="text-dark_grey mb-0 text-[12px]">Powered by TUCIBIL Score Simulator</p>
-        </div>
+    <header class="py-[13px] px-[80px] border-b-[5px] border-b-[#FCD833] flex justify-between items-center mb-10">
+      <div>
+        <p style="font-feature-settings: 'ss01'" class="text-cibil text-[25px] leading-none font-semibold mb-0">CIBIL
+        </p>
+        <p class="text-dark_grey text-[8px] leading-none mb-0">Part of TransUnion</p>
       </div>
-      <div class="p-16">
-        <div class="flex justify-between">
-          <p class="text-dark_grey font-bold">What happens to your CIBIL Score <br /> when you clear the outstanding
-            <br />
-            balance
-          </p>
-          <img src="./Assets/fund.svg" class="w-[56px]" />
-        </div>
-        <div class="h-[60vh] flex flex-col justify-between">
-          <div class="bg-[white] px-[12px] py-[16px] rounded-lg">
-            <p class="font-bold">Choose an account</p>
-
-            <input onclick="onSelection(event)" class="form-check-input p-2" type="checkbox" id="clear">
-            <label for="clear" class="text-dark_grey ml-1 text-[12px]">Clear all outstanding balances</label>
-
-            <select class="form-select px-[12px] py-[10px] border rounded-2xl w-full mt-3"
-              onchange="onSelection(event)">
-              <option disabled selected value="">Choose an account</option>
-              <option value="option" style="background-image: url(./Assets/Card.svg);background-size: contain;">
-                Piramal Finance credit card-**04
-              </option>
-              <option value="option">
-                <div class="flex gap-2 items-center"><img src="./Assets/fund.svg" class="w-[20px]" />
-                  <p>Piramal Finance personal loan</p>
-                </div>
-              </option>
-            </select>
-            <div id="info"></div>
+      <a href="./platform_selection.html">
+        <img src="./Assets/cross.svg" />
+      </a>
+    </header>
+    <form class="mobile-frame px-16" action="./compare_excellent.html">
+      <div class="button_space_container">
+        <div>
+          <div class="bg-[white] flex items-center py-[12px]">
+            <a href="#" onclick="window.history.back()">
+              <img class="w-[32px]" src="./Assets/back.svg" alt="back" />
+            </a>
+            <div>
+              <p class="text-dark_charcoal mb-0">Predict Score</p>
+              <p class="text-dark_grey mb-0 text-[12px]">Powered by TUCIBIL Score Simulator</p>
+            </div>
           </div>
-          <button type="submit" id="submit_button"
-            class="bg-orange text-[white] py-[12px] px-[24px] rounded-[40px] w-full mt-4">Predict New
-            Score</button>
+          <div class="py-16">
+            <div class="flex justify-between">
+              <p class="text-dark_grey font-bold">What happens to your CIBIL Score <br /> when you clear the outstanding
+                <br />
+                balance
+              </p>
+              <img src="./Assets/fund.svg" class="w-[56px]" />
+            </div>
+            <div class="bg-[white] px-[12px] py-[16px] rounded-lg">
+              <p class="font-bold">Choose an account</p>
+
+              <input onclick="onSelection(event)" class="form-check-input p-2" type="checkbox" id="clear">
+              <label for="clear" class="text-dark_grey ml-1 text-[12px]">Clear all outstanding balances</label>
+
+              <select class="form-select px-[12px] py-[10px] border rounded-2xl w-full mt-3"
+                onchange="onSelection(event)">
+                <option disabled selected value="">Choose an account</option>
+                <option value="option" style="background-image: url(./Assets/Card.svg);background-size: contain;">
+                  Piramal Finance credit card-**04
+                </option>
+                <option value="option">
+                  <div class="flex gap-2 items-center"><img src="./Assets/fund.svg" class="w-[20px]" />
+                    <p>Piramal Finance personal loan</p>
+                  </div>
+                </option>
+              </select>
+              <div id="info"></div>
+            </div>
+          </div>
         </div>
+        <button type="submit" id="submit_button"
+          class="bg-orange text-[white] py-[12px] px-[24px] rounded-[40px] w-full mt-4">Predict New
+          Score</button>
       </div>
     </form>
   </body>

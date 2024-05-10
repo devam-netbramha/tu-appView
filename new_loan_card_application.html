@@ -68,77 +68,77 @@
       </a>
     </header>
     <div class="mobile-frame">
-      <div class="bg-[white] flex items-center px-16 py-[12px]">
-        <a href="#" onclick="window.history.back()">
-          <img class="w-[32px]" src="./Assets/back.svg" alt="back" />
-        </a>
+      <form action="./new_loan_score_prediction.html" class="button_space_container px-16">
         <div>
-          <p class="text-dark_charcoal mb-0">Predict Score</p>
-          <p class="text-dark_grey mb-0 text-[12px]">Powered by TUCIBIL Score Simulator</p>
-        </div>
-      </div>
-      <div class="p-16">
-        <div class="flex justify-between items-start">
-          <p class="text-dark_grey">What happens to your CIBIL <br />Score if you take a new loan or
-            <br />
-            get a new credit card?
-          </p>
-          <img src="./Assets/Card.svg" class="w-[56px]" />
-        </div>
-
-        <form action="./new_loan_score_prediction.html">
-          <div class="mt-[32px] py-16 px-[12px] bg-[white] rounded-xl shadow-sm">
-            <p class="mb-16 font-bold">Choose a credit product</p>
-            <div class="grid grid-cols-2 gap-16">
-              <div class="custom-radio">
-                <input type="radio" name="theme-select" id="Credit card" onclick="onProductSelection('Credit card')">
-                <label class="color_selection rounded-lg" for="Credit card">
-                  <div class="flex justify-center mb-2">
-                    <img src="./Assets/card_bw.svg" />
-                  </div>
-                  <p class="font-bold text-center mb-0">Credit card</p>
-                </label>
-              </div>
-              <div class="custom-radio">
-                <input required type="radio" name="theme-select" id="Vehicle loan"
-                  onclick="onProductSelection('Vehicle loan')">
-                <label class="color_selection rounded-lg" for="Vehicle loan">
-                  <div class="flex justify-center mb-2">
-                    <img src="./Assets/car_bw.svg" />
-                  </div>
-                  <p class="font-bold text-center mb-0">Vehicle loan</p>
-                </label>
-              </div>
-              <div class="custom-radio">
-                <input required type="radio" name="theme-select" id="Personal loan"
-                  onclick="onProductSelection('Personal loan')">
-                <label class="color_selection rounded-lg" for="Personal loan">
-                  <div class="flex justify-center mb-2">
-                    <img src="./Assets/user_bw.svg" />
-                  </div>
-                  <p class="font-bold text-center mb-0">Personal loan</p>
-                </label>
-              </div>
-              <div class="custom-radio">
-                <input required type="radio" name="theme-select" id="Home loan"
-                  onclick="onProductSelection('Home loan')">
-                <label class="color_selection rounded-lg" for="Home loan">
-                  <div class="flex justify-center mb-2">
-                    <img src="./Assets/home_bw.svg" />
-                  </div>
-                  <p class="font-bold text-center mb-0">Home loan</p>
-                </label>
-              </div>
-            </div>
-            <div id="input Field">
-
+          <div class="bg-[white] flex items-center py-[12px]">
+            <a href="#" onclick="window.history.back()">
+              <img class="w-[32px]" src="./Assets/back.svg" alt="back" />
+            </a>
+            <div>
+              <p class="text-dark_charcoal mb-0">Predict Score</p>
+              <p class="text-dark_grey mb-0 text-[12px]">Powered by TUCIBIL Score Simulator</p>
             </div>
           </div>
+          <div class="py-16">
+            <div class="flex justify-between items-start">
+              <p class="text-dark_grey">What happens to your CIBIL <br />Score if you take a new loan or
+                <br />
+                get a new credit card?
+              </p>
+              <img src="./Assets/Card.svg" class="w-[56px]" />
+            </div>
 
-          <button id="submit_button" type="submit" disabled
-            class="text-[white] py-[12px] px-[24px] rounded-[40px] w-full mt-[130px]">Predict New Score</button>
-        </form>
-      </div>
+            <div class="mt-[32px] py-16 px-[12px] bg-[white] rounded-xl shadow-sm">
+              <p class="mb-16 font-bold">Choose a credit product</p>
+              <div class="grid grid-cols-2 gap-16">
+                <div class="custom-radio">
+                  <input type="radio" name="theme-select" id="Credit card" onclick="onProductSelection('Credit card')">
+                  <label class="color_selection rounded-lg" for="Credit card">
+                    <div class="flex justify-center mb-2">
+                      <img src="./Assets/card_bw.svg" />
+                    </div>
+                    <p class="font-bold text-center mb-0">Credit card</p>
+                  </label>
+                </div>
+                <div class="custom-radio">
+                  <input required type="radio" name="theme-select" id="Vehicle loan"
+                    onclick="onProductSelection('Vehicle loan')">
+                  <label class="color_selection rounded-lg" for="Vehicle loan">
+                    <div class="flex justify-center mb-2">
+                      <img src="./Assets/car_bw.svg" />
+                    </div>
+                    <p class="font-bold text-center mb-0">Vehicle loan</p>
+                  </label>
+                </div>
+                <div class="custom-radio">
+                  <input required type="radio" name="theme-select" id="Personal loan"
+                    onclick="onProductSelection('Personal loan')">
+                  <label class="color_selection rounded-lg" for="Personal loan">
+                    <div class="flex justify-center mb-2">
+                      <img src="./Assets/user_bw.svg" />
+                    </div>
+                    <p class="font-bold text-center mb-0">Personal loan</p>
+                  </label>
+                </div>
+                <div class="custom-radio">
+                  <input required type="radio" name="theme-select" id="Home loan"
+                    onclick="onProductSelection('Home loan')">
+                  <label class="color_selection rounded-lg" for="Home loan">
+                    <div class="flex justify-center mb-2">
+                      <img src="./Assets/home_bw.svg" />
+                    </div>
+                    <p class="font-bold text-center mb-0">Home loan</p>
+                  </label>
+                </div>
+              </div>
+              <div id="input Field">
+              </div>
+            </div>
+          </div>
+        </div>
+        <button id="submit_button" type="submit" disabled
+          class="text-[white] py-[12px] px-[24px] rounded-[40px] w-full">Predict New Score</button>
+      </form>
     </div>
   </body>
 </html>

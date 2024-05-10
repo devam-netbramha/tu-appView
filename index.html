@@ -31,6 +31,39 @@
 
       }
     </script>
+
+    <style>
+      .custom-radio input {
+  display: none;
+}
+
+input[type="radio"]:checked+label {
+  outline: 3px solid #006df580;
+}
+
+input[type="radio"]:checked+label:before {
+  display: block;
+}
+
+.custom-radio label {
+  position: relative;
+}
+
+.custom-radio label:before {
+  display: none;
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 8px;
+  background-image: url('./Assets/white-tick.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+    </style>
     <title>Client Selection</title>
   </head>
 
