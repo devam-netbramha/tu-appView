@@ -906,10 +906,6 @@ video {
   max-width: 182px;
 }
 
-.max-w-\[480px\] {
-  max-width: 480px;
-}
-
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -1710,10 +1706,10 @@ p {
   .mobile-frame {
     border-radius: 36px;
     border: 16px solid #000;
-    max-height: 88vh;
-    min-height: 88vh;
     overflow: auto;
     margin: 90px auto 0 auto;
+    max-width: 350px;
+    height: 700px
   }
 
   .mobile_view {

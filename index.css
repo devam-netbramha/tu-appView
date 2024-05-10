@@ -123,6 +123,7 @@ p {
   .dashboard_header {
     display: none;
   }
+
 }
 
 @media screen and (min-width: 480px) {
@@ -138,10 +139,10 @@ p {
   .mobile-frame {
     border-radius: 36px;
     border: 16px solid #000;
-    max-height: 88vh;
-    min-height: 88vh;
     overflow: auto;
     margin: 90px auto 0 auto;
+    max-width: 350px;
+      height: 700px
   }
 
   .mobile_view {
