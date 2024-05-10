@@ -169,7 +169,6 @@ p {
     justify-content: space-between;
     padding-left: 60px;
     min-height: calc(100vh - 65px);
-    max-height: 720px;
     align-items: end;
     overflow: auto;
     margin-top: 80px;
