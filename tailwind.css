@@ -715,10 +715,6 @@ video {
   margin-top: 12px;
 }
 
-.mt-\[130px\] {
-  margin-top: 130px;
-}
-
 .mt-\[170px\] {
   margin-top: 170px;
 }
@@ -779,28 +775,12 @@ video {
   height: 40px;
 }
 
-.h-\[40vh\] {
-  height: 40vh;
-}
-
-.h-\[60vh\] {
-  height: 60vh;
-}
-
 .h-\[64px\] {
   height: 64px;
 }
 
 .h-\[6px\] {
   height: 6px;
-}
-
-.h-\[75vh\] {
-  height: 75vh;
-}
-
-.h-\[90vh\] {
-  height: 90vh;
 }
 
 .h-\[92vh\] {
@@ -1323,11 +1303,6 @@ video {
   padding-bottom: 8px;
 }
 
-.px-12 {
-  padding-left: 3rem;
-  padding-right: 3rem;
-}
-
 .pb-16 {
   padding-bottom: 16px;
 }
@@ -1720,7 +1695,7 @@ p {
 
 @media screen and (min-width: 480px) {
   .button_space_container {
-    height: calc(100vh - 220px);
+    height: 650px;
   }
 
   header {
@@ -1793,7 +1768,6 @@ p {
 
   .desktop_breadcrumb {
     display: flex;
-    margin-top: 20px;
   }
 
   .mobile_breadcrumb {

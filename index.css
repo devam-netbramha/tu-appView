@@ -139,7 +139,7 @@ p {
 
 @media screen and (min-width: 480px) {
   .button_space_container {
-    height: calc(100vh - 220px);
+    height: 650px;
   }
 
   header {
