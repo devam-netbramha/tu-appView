@@ -141,8 +141,8 @@ p {
     border: 16px solid #000;
     overflow: auto;
     margin: 90px auto 0 auto;
-    max-width: 350px;
-      height: 700px
+    max-width: 375px;
+    height: 700px;
   }
 
   .mobile_view {
