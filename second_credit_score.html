@@ -22,6 +22,10 @@
         document.getElementById('00').style.fill = color
 
       })
+
+            function saveUrl() {
+                localStorage.setItem('backURL', './second_credit_score.html')
+              }
     </script>
     <title>Credit Score</title>
   </head>
@@ -156,7 +160,7 @@
             <p class="font-bold text-center text-[14px]">Miss an EMI or credit card bill payment</p>
           </a>
           <a href="./simulator.html"
-            class="text-black bg-light_sky_blue px-[12px] pt-16 rounded-lg  grid gap-2 justify-items-center no-underline">
+            class="text-black bg-light_sky_blue px-[12px] pt-16 rounded-lg  grid gap-2 justify-items-center no-underline" onclick="saveUrl()">
             <img src="./Assets/fund.svg" />
             <p class="font-bold text-center text-[14px]">Repay loans or clear credit card bills</p>
           </a>

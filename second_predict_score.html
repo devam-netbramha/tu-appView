@@ -15,6 +15,10 @@
         const color = localStorage.getItem('color')
         document.getElementById('submit_button').style.backgroundColor = color
       })
+
+      function saveUrl() {
+        localStorage.setItem('backURL','./second_credit_score.html')
+      }
     </script>
     <style>
       .custom-radio input {
@@ -46,7 +50,7 @@
       </a>
     </header>
     <div class="mobile-frame">
-      <form action="./compare_score.html" class="button_space_container">
+      <form action="./compare_score.html" class="button_space_container" onsubmit="saveUrl()">
         <div>
           <div class="bg-[white] flex items-center px-16 py-[12px]">
             <a href="#" onclick="window.history.back()">

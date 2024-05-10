@@ -15,6 +15,11 @@
         const color = localStorage.getItem('color')
         document.getElementById('submit_button').style.backgroundColor = color
       })
+
+      function onClickBackToHome() {
+       const url= localStorage.getItem('backURL')
+        window.location.replace(url)
+      }
     </script>
   </head>
   <body class="bg-background">
@@ -65,7 +70,7 @@
           </div>
         </div>
         <div class="px-[8px] pb-16">
-          <a href="./first_credit_score.html">
+          <a href="#" onclick="onClickBackToHome()">
             <button id="submit_button" class="text-[white] py-[12px] px-[24px] rounded-[40px] w-full">Back to
               Home</button>
           </a>
