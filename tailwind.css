@@ -566,10 +566,6 @@ video {
   margin: 0px;
 }
 
-.m-auto {
-  margin: auto;
-}
-
 .mx-\[10px\] {
   margin-left: 10px;
   margin-right: 10px;
@@ -1695,12 +1691,21 @@ p {
 }
 
 @media screen and (min-width: 414px) {
+  header{
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+  }
+
   .mobile-frame {
     border-radius: 36px;
     border: 16px solid #000;
     max-height: 88vh;
     min-height: 88vh;
     overflow: auto;
+    margin:90px auto 0 auto;
   }
 
   .mobile_view {
@@ -1727,8 +1732,11 @@ p {
     gap: 30px;
     justify-content: space-between;
     padding-left: 60px;
-    height: calc(100vh - 65px);
+    min-height: calc(100vh - 65px);
+    max-height: 720px;
     align-items: end;
+    overflow: auto;
+    margin-top: 65px;
   }
 
   .mobile_frame {
