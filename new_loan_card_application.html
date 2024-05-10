@@ -32,10 +32,6 @@
         display: block;
       }
 
-      .custom-radio label {
-        position: relative;
-      }
-
       input[type="radio"]:checked+label {
         outline: none;
       }
@@ -51,24 +47,12 @@
       }
 
       .color_selection {
+        width: 100%;
+        height: auto;
         padding: 16px;
         border: 1px solid #D2D2D2;
         border-radius: 8px;
         cursor: pointer;
-      }
-
-      @media screen and (min-width: 414px) {
-        .color_selection {
-          width: 155px;
-          height: 80px;
-        }
-      }
-
-      @media screen and (max-width: 414px) {
-        .color_selection {
-          width: 135px;
-          height: 80px;
-        }
       }
     </style>
   </head>
@@ -105,36 +89,44 @@
         <form action="./new_loan_score_prediction.html">
           <div class="mt-[32px] py-16 px-[12px] bg-[white] rounded-xl shadow-sm">
             <p class="mb-16 font-bold">Choose a credit product</p>
-            <div class="flex gap-16 flex-wrap">
-              <div class="flex custom-radio">
+            <div class="grid grid-cols-2 gap-16">
+              <div class="custom-radio">
                 <input type="radio" name="theme-select" id="Credit card" onclick="onProductSelection('Credit card')">
-                <label class="color_selection rounded-lg flex flex-col items-center gap-[8px]" for="Credit card"><img
-                    src="./Assets/card_bw.svg" />
-                  <p class="font-bold">Credit card</p>
+                <label class="color_selection rounded-lg" for="Credit card">
+                  <div class="flex justify-center mb-2">
+                    <img src="./Assets/card_bw.svg" />
+                  </div>
+                  <p class="font-bold text-center mb-0">Credit card</p>
                 </label>
               </div>
-              <div class="flex custom-radio">
+              <div class="custom-radio">
                 <input required type="radio" name="theme-select" id="Vehicle loan"
                   onclick="onProductSelection('Vehicle loan')">
-                <label class="color_selection rounded-lg flex flex-col items-center gap-[8px]" for="Vehicle loan"><img
-                    src="./Assets/car_bw.svg" />
-                  <p class="font-bold">Vehicle loan</p>
+                <label class="color_selection rounded-lg" for="Vehicle loan">
+                  <div class="flex justify-center mb-2">
+                    <img src="./Assets/car_bw.svg" />
+                  </div>
+                  <p class="font-bold text-center mb-0">Vehicle loan</p>
                 </label>
               </div>
-              <div class="flex custom-radio">
+              <div class="custom-radio">
                 <input required type="radio" name="theme-select" id="Personal loan"
                   onclick="onProductSelection('Personal loan')">
-                <label class="color_selection rounded-lg flex flex-col items-center gap-[8px]" for="Personal loan"><img
-                    src="./Assets/user_bw.svg" />
-                  <p class="font-bold">Personal loan</p>
+                <label class="color_selection rounded-lg" for="Personal loan">
+                  <div class="flex justify-center mb-2">
+                    <img src="./Assets/user_bw.svg" />
+                  </div>
+                  <p class="font-bold text-center mb-0">Personal loan</p>
                 </label>
               </div>
-              <div class="flex custom-radio">
+              <div class="custom-radio">
                 <input required type="radio" name="theme-select" id="Home loan"
                   onclick="onProductSelection('Home loan')">
-                <label class="color_selection rounded-lg flex flex-col items-center gap-[8px]" for="Home loan"><img
-                    src="./Assets/home_bw.svg" />
-                  <p class="font-bold">Home loan</p>
+                <label class="color_selection rounded-lg" for="Home loan">
+                  <div class="flex justify-center mb-2">
+                    <img src="./Assets/home_bw.svg" />
+                  </div>
+                  <p class="font-bold text-center mb-0">Home loan</p>
                 </label>
               </div>
             </div>
