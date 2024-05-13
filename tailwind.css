@@ -743,14 +743,6 @@ video {
   margin-top: 65px;
 }
 
-.mt-\[p\] {
-  margin-top: p;
-}
-
-.mt-\[8\] {
-  margin-top: 8;
-}
-
 .mt-\[8px\] {
   margin-top: 8px;
 }
@@ -1341,10 +1333,6 @@ video {
 
 .pt-16 {
   padding-top: 16px;
-}
-
-.pt-5 {
-  padding-top: 1.25rem;
 }
 
 .pt-\[15px\] {
