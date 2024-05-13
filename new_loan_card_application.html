@@ -18,9 +18,13 @@
         document.getElementById('submit_button').disabled = false
         document.getElementById('submit_button').style.backgroundColor = color
         document.getElementById('input Field').innerHTML = `<hr class="my-[24px] border-[#E7E7E7]" />
-              <input required type="number" class="form-control" placeholder="Enter limit / loan amount"
+              <input onFocus='fillForm()' required type="number" class="form-control" placeholder="Enter limit / loan amount"
                 id="limit/loan amount" aria-label="limit/loan amount">
-              <label class="text-[12px]">Enter an amount between ₹20,000 and ₹15,00,000</label>`
+              <label class="text-[12px] mt-[8px]">Enter an amount between ₹20,000 and ₹15,00,000</label>`
+      }
+
+      function fillForm() {
+       document.getElementById('limit/loan amount').value=50000
       }
     </script>
     <style>
