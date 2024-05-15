@@ -45,7 +45,7 @@
     <title>Simulator</title>
   </head>
   <body class="bg-background">
-    <header class="py-[13px] px-[80px] border-b-[5px] border-b-[#FCD833] flex justify-between items-center mb-10">
+    <header class="py-[13px] px-[80px] border-b-[5px] border-b-[#FCD833] flex justify-between items-center">
       <div>
         <p style="font-feature-settings: 'ss01'" class="text-cibil text-[25px] leading-none font-semibold mb-0">CIBIL
         </p>
@@ -55,7 +55,7 @@
         <img src="./Assets/cross.svg" />
       </a>
     </header>
-    <form class="mobile-frame px-16" action="./compare_excellent.html">
+    <form class="mobile-frame" action="./compare_excellent.html">
       <div class="button_space_container">
         <div>
           <div class="bg-[white] flex items-center py-[12px]">
@@ -67,7 +67,7 @@
               <p class="text-dark_grey mb-0 text-[12px]">Powered by TUCIBIL Score Simulator</p>
             </div>
           </div>
-          <div class="py-16">
+          <div class="p-16">
             <div class="flex justify-between">
               <p class="text-dark_grey font-bold">What happens to your CIBIL Score <br /> when you clear the outstanding
                 <br />
@@ -97,9 +97,11 @@
             </div>
           </div>
         </div>
-        <button type="submit" id="submit_button"
-          class="bg-orange text-[white] py-[12px] px-[24px] rounded-[40px] w-full mt-4">Predict New
-          Score</button>
+        <div class="px-16">
+          <button type="submit" id="submit_button"
+            class="bg-orange text-[white] py-[12px] px-[24px] rounded-[40px] w-full mt-4">Predict New
+            Score</button>
+        </div>
       </div>
     </form>
   </body>
