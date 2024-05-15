@@ -11,14 +11,17 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"></script>
     <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const color = localStorage.getItem('color')
-        document.getElementById('submit_button').style.backgroundColor = color
-      })
+      const color = localStorage.getItem('color')
 
       function saveUrl() {
         localStorage.setItem('backURL','./second_credit_score.html')
       }
+
+            function onChangeDays(days) {
+                document.getElementById('submit_button').disabled = false
+                document.getElementById('submit_button').style.backgroundColor = color
+                localStorage.setItem('delay', days)
+              }
     </script>
     <style>
       .custom-radio input {
@@ -76,15 +79,15 @@
                 <div class="flex gap-3">
                   <div class="flex custom-radio">
                     <input type="radio" name="days_select" id="30">
-                    <label class="bg-soft_sky_blue px-[12px] py-[6px] rounded-3xl" for="30">30 days</label>
+                    <label class="bg-soft_sky_blue px-[12px] py-[6px] rounded-3xl" for="30" onclick="onChangeDays(30)">30 days</label>
                   </div>
                   <div class="flex custom-radio">
                     <input type="radio" name="days_select" id="60">
-                    <label class="bg-soft_sky_blue px-[12px] py-[6px] rounded-3xl" for="60">60 days</label>
+                    <label class="bg-soft_sky_blue px-[12px] py-[6px] rounded-3xl" for="60" onclick="onChangeDays(60)">60 days</label>
                   </div>
                   <div class="flex custom-radio">
                     <input type="radio" name="days_select" id="90">
-                    <label class="bg-soft_sky_blue px-[12px] py-[6px] rounded-3xl" for="90">90 days</label>
+                    <label class="bg-soft_sky_blue px-[12px] py-[6px] rounded-3xl" for="90" onclick="onChangeDays(90)">90 days</label>
                   </div>
                 </div>
               </div>
@@ -92,8 +95,8 @@
           </div>
         </div>
         <div class="px-16">
-          <button type="submit" id="submit_button"
-            class="bg-orange text-[white] py-[12px] px-[24px] rounded-[40px] w-full mt-4">Predict New
+          <button type="submit" id="submit_button" disabled
+            class="text-[white] py-[12px] px-[24px] rounded-[40px] w-full mt-4">Predict New
             Score</button>
         </div>
       </form>

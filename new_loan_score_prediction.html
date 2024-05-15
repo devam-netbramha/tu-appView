@@ -15,7 +15,7 @@
         const color = localStorage.getItem('color')
         const product = localStorage.getItem('product')
         document.getElementById('submit_button').style.backgroundColor = color
-        document.getElementById('note').innerText = `If you get a new ${product}, your CIBIL Score may drop by 194 points.`
+        document.getElementById('note').innerHTML = `If you get a new ${product}, your CIBIL Score may drop by <b class="text-orange">150</b> points.`
       })
     </script>
   </head>

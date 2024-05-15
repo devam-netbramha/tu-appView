@@ -12,7 +12,9 @@
     <script>
       document.addEventListener('DOMContentLoaded', () => {
         const color = localStorage.getItem('color')
+        const delay = localStorage.getItem('delay')
         document.getElementById('submit_button').style.backgroundColor = color
+        document.getElementById('delay_text').innerHTML = `If you delay your payments by ${delay} days, your <br /> CIBIL Score may drop by <b class="text-orange">150</b> points.`
       })
     </script>
     <title>Compare</title>
@@ -43,11 +45,7 @@
           <div class="px-16 pb-16">
             <div>
               <img src="./Assets/comapre_negative.svg" class="mt-[32px]" />
-              <p class="text-center font-semibold">
-                If you delay your payments by 90 days, your <br /> CIBIL Score may drop by <b
-                  class="text-orange">194</b>
-                points.
-              </p>
+              <p class="text-center font-semibold" id="delay_text"></p>
 
               <div class="bg-light_green p-[10px] rounded-lg">
                 <div class="flex gap-2 items-start">
@@ -72,7 +70,7 @@
             result.</p>
           <a href="./payment_form.html">
             <button type="submit" id="submit_button"
-              class="bg-orange text-[white] py-[12px] px-[24px] rounded-[40px] w-full">Clear Your Dues Now</button>
+              class="text-[white] py-[12px] px-[24px] rounded-[40px] w-full">Clear Your Dues Now</button>
           </a>
         </div>
       </div>
