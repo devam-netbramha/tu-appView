@@ -16,7 +16,8 @@
       function onChangeDays(days) {
         document.getElementById('submit_button').disabled = false
         document.getElementById('submit_button').style.backgroundColor = color
-        localStorage.setItem('delay', days)
+        localStorage.setItem('delay_text', `If you delay your payments by ${days} days, your <br /> CIBIL Score may drop by <b class="text-orange">150</b> points.`)
+        localStorage.setItem('credit_score_img', './Assets/comapre_negative.svg')
       }
     </script>
     <style>
@@ -89,7 +90,7 @@
           </div>
         </div>
         <div class="px-16">
-          <button type="submit" id="submit_button" disabled
+          <button type="submit" id="submit_button" disabled onclick="setImgAndDelayText()"
             class="text-[white] py-[12px] px-[24px] rounded-[40px] w-full">Predict New
             Score</button>
         </div>

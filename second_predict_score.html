@@ -18,9 +18,10 @@
       }
 
             function onChangeDays(days) {
-                document.getElementById('submit_button').disabled = false
-                document.getElementById('submit_button').style.backgroundColor = color
-                localStorage.setItem('delay', days)
+              document.getElementById('submit_button').disabled = false
+              document.getElementById('submit_button').style.backgroundColor = color
+              localStorage.setItem('delay_text', `If you delay your payments by ${days} days, your <br /> CIBIL Score may drop by <b class="text-orange">50</b> points.`)
+              localStorage.setItem('credit_score_img', './Assets/second_predict_score.svg')
               }
     </script>
     <style>

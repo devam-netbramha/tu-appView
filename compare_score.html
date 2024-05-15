@@ -13,8 +13,11 @@
       document.addEventListener('DOMContentLoaded', () => {
         const color = localStorage.getItem('color')
         const delay = localStorage.getItem('delay')
+        const creditScoreImg = localStorage.getItem('credit_score_img')
+        const delayText= localStorage.getItem('delay_text')
         document.getElementById('submit_button').style.backgroundColor = color
-        document.getElementById('delay_text').innerHTML = `If you delay your payments by ${delay} days, your <br /> CIBIL Score may drop by <b class="text-orange">150</b> points.`
+        document.getElementById('delay_text').innerHTML = delayText
+        document.getElementById('credit_score_img').src= creditScoreImg
       })
     </script>
     <title>Compare</title>
@@ -44,7 +47,7 @@
           </div>
           <div class="px-16 pb-16">
             <div>
-              <img src="./Assets/comapre_negative.svg" class="mt-[32px]" />
+              <img class="mt-[32px]" id="credit_score_img"/>
               <p class="text-center font-semibold" id="delay_text"></p>
 
               <div class="bg-light_green p-[10px] rounded-lg">
