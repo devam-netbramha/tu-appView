@@ -631,10 +631,6 @@ video {
   margin-bottom: 14px;
 }
 
-.mb-\[160px\] {
-  margin-bottom: 160px;
-}
-
 .mb-\[24px\] {
   margin-bottom: 24px;
 }
@@ -745,6 +741,10 @@ video {
 
 .mt-\[8px\] {
   margin-top: 8px;
+}
+
+.mb-\[calc\(100vh-740px\)\] {
+  margin-bottom: calc(100vh - 740px);
 }
 
 .block {
