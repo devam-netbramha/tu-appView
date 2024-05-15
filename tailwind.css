@@ -787,12 +787,12 @@ video {
   height: 6px;
 }
 
-.h-\[92vh\] {
-  height: 92vh;
-}
-
 .h-\[96px\] {
   height: 96px;
+}
+
+.h-\[calc\(100vh-65px\)\] {
+  height: calc(100vh - 65px);
 }
 
 .h-fit {
