@@ -647,6 +647,10 @@ video {
   margin-bottom: 8px;
 }
 
+.mb-\[calc\(100vh-740px\)\] {
+  margin-bottom: calc(100vh - 740px);
+}
+
 .ml-1 {
   margin-left: 0.25rem;
 }
@@ -741,10 +745,6 @@ video {
 
 .mt-\[8px\] {
   margin-top: 8px;
-}
-
-.mb-\[calc\(100vh-740px\)\] {
-  margin-bottom: calc(100vh - 740px);
 }
 
 .block {
@@ -1714,7 +1714,7 @@ p {
     border-radius: 36px;
     border: 16px solid #000;
     overflow: auto;
-    margin: 90px auto 0 auto;
+    margin: 80px auto 0 auto;
     max-width: 375px;
     height: 700px;
   }
