@@ -15,6 +15,12 @@
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script>
+      const clients = ["Aditya Birla Finance Limited", "Airtel", "AU SFB", "Axio", "Axis Bank", "BANK OF INDIA", "BharatPe", "Bajaj Finance", "CENTRAL BANK OF INDIA", "City Union Bank Limited", "Federal Bank", "Google", "HDFC Bank", "ICICI Bank", "IDFC First Bank", "IIFL Finance", "InCred", "IndiaLends", "IndiaMart", "INDUSIND Bank", "Jupiter", "Kotak Mahindra Bank", "Krazybee", "LIC Housing", "L&T Finance", "Mobikwik", "MoneyControl", "Mywish", "Navi Finserv", "Paytm", "PNB", "Poonawalla Fincorp", "Piramal Finance", "SBI Bank", "SBI Cards", "Tata Capital", "TVS Credit", "UCO BANK", "Union Bank", "Vodafone"].sort()
+
+      document.addEventListener('DOMContentLoaded', () => {
+        const options = clients.map((client) => `<option value="${client}">${client}</option>`)
+        document.getElementById('clientSelect').innerHTML = ['<option disabled selected value="">Select client name</option>', ...options]
+      })
       function onSubmit(e) {
         e.preventDefault()
         localStorage.setItem('logo', document.getElementById("client_logo_image").getAttribute('src'))
@@ -72,23 +78,23 @@
         transform: translate(-50%, -50%);
       }
 
-       .select2 {
-       margin-bottom:1.5rem;
-       width: 100% !important;
+      .select2 {
+        margin-bottom: 1.5rem;
+        width: 100% !important;
       }
 
-      .select2-container--default .select2-selection--single{
+      .select2-container--default .select2-selection--single {
         border-radius: 0.5rem;
         height: auto;
-         padding: 6px 0;
+        padding: 6px 0;
       }
 
-      .select2-container--default .select2-selection--single .select2-selection__arrow{
-        top:20%;
+      .select2-container--default .select2-selection--single .select2-selection__arrow {
+        top: 20%;
         right: 10px;
       }
 
-      .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable{
+      .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
         background-color: #ffbe72;
       }
     </style>
@@ -120,48 +126,6 @@
         <form class="mt-[24px] form_container" onsubmit="onSubmit(event)">
           <select required class="form-select px-[12px] py-[10px] border rounded-lg w-full mb-6"
             onchange="onClientSelection(event)" id="clientSelect">
-            <option disabled selected value="">Select client name</option>
-            <option value="Aditya Birla Finance Limited">Aditya Birla Finance Limited</option>
-            <option value="Airtel">Airtel</option>
-            <option value="AU SFB">AU SFB</option>
-            <option value="Axio">Axio</option>
-            <option value="Axis Bank">Axis Bank</option>
-            <option value="BANK OF INDIA">BANK OF INDIA</option>
-            <option value="BharatPe">BharatPe</option>
-            <option value="Bajaj Finance">Bajaj Finance</option>
-            <option value="CENTRAL BANK OF INDIA">CENTRAL BANK OF INDIA</option>
-            <option value="City Union Bank Limited">City Union Bank Limited</option>
-            <option value="Fibe">Fibe</option>
-            <option value="Federal Bank">Federal Bank</option>
-            <option value="Google">Google</option>
-            <option value="HDFC Bank">HDFC Bank</option>
-            <option value="ICICI Bank">ICICI Bank</option>
-            <option value="IDFC First Bank">IDFC First Bank</option>
-            <option value="IIFL Finance">IIFL Finance</option>
-            <option value="InCred">InCred</option>
-            <option value="IndiaLends">IndiaLends</option>
-            <option value="IndiaMart">IndiaMart</option>
-            <option value="INDUSIND Bank">INDUSIND Bank</option>
-            <option value="Jupiter">Jupiter</option>
-            <option value="Kotak Mahindra Bank">Kotak Mahindra Bank</option>
-            <option value="Krazybee">Krazybee</option>
-            <option value="LIC Housing">LIC Housing</option>
-            <option value="L&T Finance">L&T Finance</option>
-            <option value="Mobikwik">Mobikwik</option>
-            <option value="MoneyControl">MoneyControl</option>
-            <option value="Mywish">Mywish</option>
-            <option value="Navi Finserv">Navi Finserv</option>
-            <option value="Paytm">Paytm</option>
-            <option value="PNB">PNB</option>
-            <option value="Poonawalla Fincorp">Poonawalla Fincorp</option>
-            <option value="Piramal Finance">Piramal Finance</option>
-            <option value="SBI Bank">SBI Bank</option>
-            <option value="SBI Cards">SBI Cards</option>
-            <option value="Tata Capital">Tata Capital</option>
-            <option value="TVS Credit">TVS Credit</option>
-            <option value="UCO BANK">UCO BANK</option>
-            <option value="Union Bank">Union Bank</option>
-            <option value="Vodafone">Vodafone</option>
           </select>
 
           <div class="bg-[#F1F1F1] rounded-xl px-[12px] py-[20px] flex items-center justify-center h-[96px] gap-2 mb-6"
