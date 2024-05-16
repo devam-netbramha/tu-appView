@@ -1155,11 +1155,6 @@ video {
   background-color: rgb(230 246 250 / var(--tw-bg-opacity));
 }
 
-.bg-orange {
-  --tw-bg-opacity: 1;
-  background-color: rgb(242 104 66 / var(--tw-bg-opacity));
-}
-
 .bg-orange_peel {
   --tw-bg-opacity: 1;
   background-color: rgb(255 135 31 / var(--tw-bg-opacity));
