@@ -33,12 +33,16 @@
       }
 
       function onColorSelection(color) {
-        console.log(color.length)
-        localStorage.setItem('color', `#${color}`)
-        document.getElementById("start_demo").style.backgroundColor = `#${color}`
-        document.getElementById("start_demo").style.color = `#ffffff`
-        document.getElementById("start_demo").disabled = false
-
+        if (color.length) {
+          localStorage.setItem('color', `#${color}`)
+          document.getElementById("start_demo").style.backgroundColor = `#${color}`
+          document.getElementById("start_demo").style.color = `#ffffff`
+          document.getElementById("start_demo").disabled = false
+        }else{
+           document.getElementById("start_demo").disabled = true
+           document.getElementById("start_demo").style.backgroundColor='revert-layer'
+           document.getElementById("start_demo").style.color = 'revert-layer'
+        }
       }
       $(document).ready(function () {
         $('#clientSelect').select2({
@@ -175,7 +179,7 @@
           </div>
           <p class="text-dark_grey text-center mb-6 mt-6">or</p>
           <input type="text" class="form-control border px-[12px] py-[10px] rounded-lg" id="color"
-            placeholder="Enter HEX code (Ex. 5968696)" oninput="onColorSelection(event.target.value)">
+            placeholder="Enter HEX code (Ex. 596869)" oninput="onColorSelection(event.target.value)">
           <button type="submit" disabled class="text-[white] py-[12px] px-[24px] rounded-[40px] w-full mt-6"
             id="start_demo">Start
             Demo</button>
