@@ -19,9 +19,13 @@
         document.getElementById('Valid Thru').value = '2025-08'
         document.getElementById('CVV').value = '123'
       }
+
+      var clientType = localStorage.getItem('clientType');
       document.addEventListener('DOMContentLoaded', () => {
-        const clientName = localStorage.getItem('client')
-        document.getElementById('creditName').innerHTML = clientName + ' ' + 'Credit card **04'
+        if (clientType === 'member') {
+          const clientName = localStorage.getItem('client')
+          document.getElementById('creditName').innerHTML = clientName + ' ' + 'Credit card **04'
+        }
       });
     </script>
   </head>
@@ -50,7 +54,7 @@
         <div class="p-[10px] bg-light_sky_blue mt-[12px] rounded-lg">
           <div class="flex gap-2 items-center">
             <img src="./Assets/Card.svg" class="w-[20px] h-[12px]" />
-            <p class="mb-0 font-bold text-[14px]" id="creditName"> Credit card **04</p>
+            <p class="mb-0 font-bold text-[14px]" id="creditName"> Axis Bank Credit card **04</p>
           </div>
           <hr class="my-[10px] border-[#E7E7E7]" />
           <div class="flex gap-4 justify-between">
