@@ -5,38 +5,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./tailwind.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <title>Dashboard</title>
 
     <script>
-      const logo = localStorage.getItem('logo')
+      // const logo = localStorage.getItem('logo')
+      // document.addEventListener('DOMContentLoaded', () => {
+      //   const imgElement = document.getElementById('client_logo');
+      //   if (imgElement && logo) {
+      //     imgElement.src = logo;
+      //   }
+      // });
+
+      const clientName = localStorage.getItem('client')
       document.addEventListener('DOMContentLoaded', () => {
-        const imgElement = document.getElementById('client_logo');
-        if (imgElement && logo) {
-          imgElement.src = logo;
-        }
-      });
+        document.getElementById('client_name').innerHTML = clientName
+      })
     </script>
   </head>
 
   <body class="bg-background">
-  <header class="py-[13px] px-[80px] border-b-[5px] border-b-[#FCD833] flex justify-between items-center">
-    <div>
-      <p style="font-feature-settings: 'ss01'" class="text-cibil text-[25px] leading-none font-semibold mb-0">CIBIL
-      </p>
-      <p class="text-dark_grey text-[8px] leading-none mb-0">Part of TransUnion</p>
-    </div>
-    <a href="./platform_selection.html">
-      <img src="./Assets/cross.svg" />
-    </a>
-  </header>
+    <header class="py-[13px] px-[80px] border-b-[5px] border-b-[#FCD833] flex justify-between items-center">
+      <div>
+        <p style="font-feature-settings: 'ss01'" class="text-cibil text-[25px] leading-none font-semibold mb-0">CIBIL
+        </p>
+        <p class="text-dark_grey text-[8px] leading-none mb-0">Part of TransUnion</p>
+      </div>
+      <a href="./platform_selection.html">
+        <img src="./Assets/cross.svg" />
+      </a>
+    </header>
     <div class="mobile-frame p-16">
       <div class="flex justify-between">
-        <img class="w-[100px] mb-[14px]" id="client_logo" />
+        <!-- <img class="w-[100px] mb-[14px]" id="client_logo" /> -->
+        <p id="client_name" class="font-semibold"></p>
         <a href="./platform_selection.html" class="mobile_view">
           <img src="./Assets/cross.svg" />
         </a>
@@ -62,7 +65,7 @@
       <div class="w-full h-[135px] bg-silver rounded-xl mt-4">
       </div>
       <div class="mt-4">
-        <a href="./profile.html" >
+        <a href="./profile.html">
           <img src="./Assets/dashboard_img.svg" class="w-full" />
         </a>
       </div>

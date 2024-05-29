@@ -37,12 +37,12 @@
 
       function onSubmit(e) {
         e.preventDefault()
-        localStorage.setItem('logo', document.getElementById("client_logo_image").getAttribute('src'))
+        // localStorage.setItem('logo', document.getElementById("client_logo_image").getAttribute('src'))
         window.location.replace('./platform_selection.html')
       }
 
       function onClientSelection(e) {
-        document.getElementById("client_logo").innerHTML = `<img id='client_logo_image' src="./Assets/Logos/${e.target.value}.png" alt="client_logo" style="max-width:200px;max-height:80px" />`
+        // document.getElementById("client_logo").innerHTML = `<img id='client_logo_image' src="./Assets/Logos/${e.target.value}.png" alt="client_logo" style="max-width:200px;max-height:80px" />`
         localStorage.setItem('client', e.target.value)
       }
 
@@ -166,7 +166,7 @@
           <select required class="form-select px-[12px] py-[10px] border rounded-lg w-full mb-6" onchange="onClientSelection(event)" id="clientSelect">
           </select>
 
-          <div class="bg-[#F1F1F1] rounded-xl px-[12px] py-[20px] flex items-center justify-center h-[96px] gap-2 mb-6" id="client_logo">
+          <!-- <div class="bg-[#F1F1F1] rounded-xl px-[12px] py-[20px] flex items-center justify-center h-[96px] gap-2 mb-6" id="client_logo">
             <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M7.12501 17.9166H11.875C15.8333 17.9166 17.4167 16.3333 17.4167 12.3749V7.62492C17.4167 3.66659 15.8333 2.08325 11.875 2.08325H7.12501C3.16668 2.08325 1.58334 3.66659 1.58334 7.62492V12.3749C1.58334 16.3333 3.16668 17.9166 7.12501 17.9166Z" stroke="#00A6CA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
               <path d="M7.12499 8.41667C7.99944 8.41667 8.70832 7.70778 8.70832 6.83333C8.70832 5.95888 7.99944 5.25 7.12499 5.25C6.25054 5.25 5.54166 5.95888 5.54166 6.83333C5.54166 7.70778 6.25054 8.41667 7.12499 8.41667Z" stroke="#00A6CA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -174,7 +174,7 @@
             </svg>
 
             <p class="text-dark_grey mb-0">Client's logo</p>
-          </div>
+          </div> -->
 
           <p class="text-[12px] text-dark_grey font-bold">Select primary colour</p>
           <div class="flex justify-between mt-16 flex-wrap">
