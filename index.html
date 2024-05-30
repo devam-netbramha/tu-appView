@@ -12,8 +12,8 @@
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script>
-      const members = ["AU SFB", "Axis Bank", "BANK OF INDIA", "CENTRAL BANK OF INDIA", "City Union Bank Limited", "Federal Bank", "HDFC Bank", "ICICI Bank", "IDFC First Bank", "IIFL Finance", "INDUSIND Bank", "Kotak Mahindra Bank", "PNB", "SBI Bank", "SBI Cards", "UCO BANK", "Union Bank"].sort()
-      const partners = ["Aditya Birla Finance Limited", "Airtel", "Axio", "BharatPe", "Bajaj Finance", "Google", "InCred", "IndiaLends", "IndiaMart", "Jupiter", "Krazybee", "LIC Housing", "L&T Finance", "Mobikwik", "MoneyControl", "Mywish", "Navi Finserv", "Paytm", "Poonawalla Fincorp", "Piramal Finance", "Tata Capital", "TVS Credit", "Vodafone", "One Score", "CreditVidya", "CRED", "Tata Digital", "Tata Business Hub", "NoBroker", "MyGate", "Good Score", "Super.Money", "Ookla", "Tata Motors", "Andromeda", "NiYo", "GoKiwi", "OneMoney"].sort()
+      const members = ["Aditya Birla Finance Limited", "Airtel", "AU SFB", "Axio", "Axis Bank", "Bajaj Finance", "BANK OF INDIA", "BharatPe", "CENTRAL BANK OF INDIA", "City Union Bank Limited", "Federal Bank", "Fibe", "HDFC Bank", "ICICI Bank", "IDFC First Bank", "IIFL Finance", "InCred", "INDUSIND Bank", "Jupiter", "Kotak Mahindra Bank", "Krazybee", "L&T Finance", "LIC Housing", "Navi Finserv", "Piramal Finance", "PNB", "Poonawalla Fincorp", "SBI Bank", "SBI Cards", "Tata Capital", "TVS Credit", "UCO BANK", "Union Bank", "Vodafone"].sort()
+      const partners = ["Andromeda", "CRED", "CreditVidya", "GoKiwi", "Good Score", "Google", "IndiaLends", "IndiaMart", "Mobikwik", "MoneyControl", "MyGate", "Mywish", "NiYo", "NoBroker", "OneMoney", "Ookla", "PaisaBazaar", "Paytm", "Super.Money", "Tata Business Hub", "Tata Digital", "Tata Motors"].sort()
 
       $(function () {
 
@@ -24,11 +24,11 @@
         $('.custom-radio-chips input[type="radio"]').click(function () {
           if ($(this).val() === 'member') {
             const options = memberRadio.map((client) => `<option value="${client}">${client}</option>`)
-            document.getElementById('clientSelect').innerHTML = ['<option disabled selected value="">Select client name</option>', ...options]
+            document.getElementById('clientSelect').innerHTML = ['<option disabled selected value="">Select member name</option>', ...options]
           }
           else if ($(this).val() === 'partner') {
             const options = partnerRadio.map((client) => `<option value="${client}">${client}</option>`)
-            document.getElementById('clientSelect').innerHTML = ['<option disabled selected value="">Select client name</option>', ...options]
+            document.getElementById('clientSelect').innerHTML = ['<option disabled selected value="">Select partner name</option>', ...options]
           }
           localStorage.setItem('clientType', $(this).val())
         });
