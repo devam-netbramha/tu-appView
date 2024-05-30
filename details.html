@@ -21,6 +21,7 @@
       const clientName = localStorage.getItem('client')
       document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('client_name').innerHTML = clientName
+        document.getElementById('client_name').style.color = color
       })
     </script>
   </head>
@@ -40,7 +41,7 @@
       <div class="button_space_container">
         <div>
           <div class="bg-[white] py-[12px]">
-            <div class="flex gap-[50px] align-items-center">
+            <div class="flex align-items-center">
               <a href="#" onclick="window.history.back()">
                 <img class="w-[32px]" src="./Assets/back.svg" alt="back" />
               </a>

@@ -19,8 +19,10 @@
       // });
 
       const clientName = localStorage.getItem('client')
+      const color = localStorage.getItem('color')
       document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('client_name').innerHTML = clientName
+        document.getElementById('client_name').style.color = color
       })
     </script>
   </head>
