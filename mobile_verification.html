@@ -94,6 +94,13 @@
         document.getElementById('client_name').innerHTML = clientName
         document.getElementById('client_name').style.color = color
       })
+      var clientType = localStorage.getItem('clientType');
+      document.addEventListener('DOMContentLoaded', () => {
+        if (clientType === 'cibil') {
+          document.getElementById('submit_button').style.color = '#000'
+          document.getElementById('client_name').remove()
+        }
+      });
     </script>
     <title>Mobile Verification</title>
   </head>

@@ -15,25 +15,47 @@
       const members = ["Aditya Birla Finance Limited", "Airtel", "AU SFB", "Axio", "Axis Bank", "Bajaj Finance", "BANK OF INDIA", "BharatPe", "CENTRAL BANK OF INDIA", "City Union Bank Limited", "Federal Bank", "Fibe", "HDFC Bank", "ICICI Bank", "IDFC First Bank", "IIFL Finance", "InCred", "INDUSIND Bank", "Jupiter", "Kotak Mahindra Bank", "Krazybee", "L&T Finance", "LIC Housing", "Navi Finserv", "Piramal Finance", "PNB", "Poonawalla Fincorp", "SBI Bank", "SBI Cards", "Tata Capital", "TVS Credit", "UCO BANK", "Union Bank", "Vodafone"].sort()
       const partners = ["Andromeda", "CRED", "CreditVidya", "GoKiwi", "Good Score", "Google", "IndiaLends", "IndiaMart", "Mobikwik", "MoneyControl", "MyGate", "Mywish", "NiYo", "NoBroker", "OneMoney", "Ookla", "PaisaBazaar", "Paytm", "Super.Money", "Tata Business Hub", "Tata Digital", "Tata Motors"].sort()
 
-      $(function () {
+      document.addEventListener('DOMContentLoaded', function () {
+        $(function () {
 
-        var select = $('#Select1'),
-          memberRadio = members;
-        partnerRadio = partners;
+          var select = $('#Select1'),
+            memberRadio = members;
+          partnerRadio = partners;
 
-        $('.custom-radio-chips input[type="radio"]').click(function () {
-          if ($(this).val() === 'member') {
-            const options = memberRadio.map((client) => `<option value="${client}">${client}</option>`)
-            document.getElementById('clientSelect').innerHTML = ['<option disabled selected value="">Select member name</option>', ...options]
-          }
-          else if ($(this).val() === 'partner') {
-            const options = partnerRadio.map((client) => `<option value="${client}">${client}</option>`)
-            document.getElementById('clientSelect').innerHTML = ['<option disabled selected value="">Select partner name</option>', ...options]
-          }
-          localStorage.setItem('clientType', $(this).val())
+          $('.custom-radio-chips input[type="radio"]').click(function () {
+            console.log('hi')
+            if ($(this).val() === 'member') {
+              const options = memberRadio.map((client) => `<option value="${client}">${client}</option>`)
+              document.getElementById('clientSelect').innerHTML = ['<option disabled selected value="">Select member name</option>', ...options]
+              $('#clientSelect').add();
+              $('.bottom-action').show();
+              $('#clientSelect').select2({
+                placeholder: "Select client name",
+              });
+            }
+            else if ($(this).val() === 'partner') {
+              const options = partnerRadio.map((client) => `<option value="${client}">${client}</option>`)
+              document.getElementById('clientSelect').innerHTML = ['<option disabled selected value="">Select partner name</option>', ...options]
+              $('#clientSelect').add();
+              $('.bottom-action').show();
+              $('#clientSelect').select2({
+                placeholder: "Select client name",
+              });
+            }
+            else if ($(this).val() === 'cibil') {
+              document.getElementById("start_demo").disabled = false
+              document.getElementById("start_demo").style.backgroundColor = `#FCD800`
+              document.getElementById("start_demo").style.color = `#000`
+              // $("#clientSelect").select2('destroy');
+              // $("#clientSelect").remove();
+              $('.bottom-action').hide();
+              localStorage.setItem('color', '#fcd800')
+            }
+            localStorage.setItem('clientType', $(this).val())
+          });
+          document.getElementById('cibilRadio').click()
         });
-      });
-
+      })
 
       function onSubmit(e) {
         e.preventDefault()
@@ -153,6 +175,10 @@
           <p class="font-bold">Select Client Type:</p>
           <div class="flex gap-3 mb-6">
             <div class="custom-radio-chips">
+              <input id="cibilRadio" name="Radio1" type="radio" value="cibil" class="" />
+              <label class="bg-soft_sky_blue px-[12px] py-[6px] rounded-3xl" for="cibilRadio">CIBIL</label>
+            </div>
+            <div class="custom-radio-chips">
               <input id="memberRadio" name="Radio1" type="radio" value="member" class="" />
               <label class="bg-soft_sky_blue px-[12px] py-[6px] rounded-3xl" for="memberRadio">Members</label>
             </div>
@@ -162,11 +188,11 @@
             </div>
           </div>
 
+          <div class="bottom-action">
+            <select required class="form-select px-[12px] py-[10px] border rounded-lg w-full mb-6" onchange="onClientSelection(event)" id="clientSelect">
+            </select>
 
-          <select required class="form-select px-[12px] py-[10px] border rounded-lg w-full mb-6" onchange="onClientSelection(event)" id="clientSelect">
-          </select>
-
-          <!-- <div class="bg-[#F1F1F1] rounded-xl px-[12px] py-[20px] flex items-center justify-center h-[96px] gap-2 mb-6" id="client_logo">
+            <!-- <div class="bg-[#F1F1F1] rounded-xl px-[12px] py-[20px] flex items-center justify-center h-[96px] gap-2 mb-6" id="client_logo">
             <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M7.12501 17.9166H11.875C15.8333 17.9166 17.4167 16.3333 17.4167 12.3749V7.62492C17.4167 3.66659 15.8333 2.08325 11.875 2.08325H7.12501C3.16668 2.08325 1.58334 3.66659 1.58334 7.62492V12.3749C1.58334 16.3333 3.16668 17.9166 7.12501 17.9166Z" stroke="#00A6CA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
               <path d="M7.12499 8.41667C7.99944 8.41667 8.70832 7.70778 8.70832 6.83333C8.70832 5.95888 7.99944 5.25 7.12499 5.25C6.25054 5.25 5.54166 5.95888 5.54166 6.83333C5.54166 7.70778 6.25054 8.41667 7.12499 8.41667Z" stroke="#00A6CA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -176,36 +202,37 @@
             <p class="text-dark_grey mb-0">Client's logo</p>
           </div> -->
 
-          <p class="text-[12px] text-dark_grey font-bold">Select primary colour</p>
-          <div class="flex justify-between mt-16 flex-wrap">
-            <div class="flex custom-radio">
-              <input type="radio" name="theme-select" id="orange" onclick="onColorSelection('D00D0D')">
-              <label class="color_selection rounded-lg bg-[#D00D0D]" for="orange"></label>
+            <p class="text-[12px] text-dark_grey font-bold">Select primary colour</p>
+            <div class="flex justify-between mt-16 flex-wrap">
+              <div class="flex custom-radio">
+                <input type="radio" name="theme-select" id="orange" onclick="onColorSelection('D00D0D')">
+                <label class="color_selection rounded-lg bg-[#D00D0D]" for="orange"></label>
+              </div>
+              <div class="flex custom-radio">
+                <input type="radio" name="theme-select" id="red" onclick="onColorSelection('FF9921')">
+                <label class="color_selection rounded-lg bg-[#FF9921]" for="red"></label>
+              </div>
+              <div class="flex custom-radio">
+                <input type="radio" name="theme-select" id="pink" onclick="onColorSelection('098543')">
+                <label class="color_selection rounded-lg bg-[#098543]" for="pink"></label>
+              </div>
+              <div class="flex custom-radio">
+                <input type="radio" name="theme-select" id="dark_yellow" onclick="onColorSelection('0066FF')">
+                <label class="color_selection rounded-lg bg-[#0066FF]" for="dark_yellow"></label>
+              </div>
+              <div class="flex custom-radio">
+                <input type="radio" name="theme-select" id="green" onclick="onColorSelection('7031F4')">
+                <label class="block color_selection rounded-lg bg-[#7031F4]" for="green"></label>
+              </div>
+              <div class="flex custom-radio">
+                <input type="radio" name="theme-select" id="purple" onclick="onColorSelection('E41DAC')">
+                <label class="color_selection rounded-lg bg-[#E41DAC]" for="purple"></label>
+              </div>
             </div>
-            <div class="flex custom-radio">
-              <input type="radio" name="theme-select" id="red" onclick="onColorSelection('FF9921')">
-              <label class="color_selection rounded-lg bg-[#FF9921]" for="red"></label>
-            </div>
-            <div class="flex custom-radio">
-              <input type="radio" name="theme-select" id="pink" onclick="onColorSelection('098543')">
-              <label class="color_selection rounded-lg bg-[#098543]" for="pink"></label>
-            </div>
-            <div class="flex custom-radio">
-              <input type="radio" name="theme-select" id="dark_yellow" onclick="onColorSelection('0066FF')">
-              <label class="color_selection rounded-lg bg-[#0066FF]" for="dark_yellow"></label>
-            </div>
-            <div class="flex custom-radio">
-              <input type="radio" name="theme-select" id="green" onclick="onColorSelection('7031F4')">
-              <label class="block color_selection rounded-lg bg-[#7031F4]" for="green"></label>
-            </div>
-            <div class="flex custom-radio">
-              <input type="radio" name="theme-select" id="purple" onclick="onColorSelection('E41DAC')">
-              <label class="color_selection rounded-lg bg-[#E41DAC]" for="purple"></label>
-            </div>
+            <p class="text-dark_grey text-center mb-6 mt-6">or</p>
+            <input type="text" class="form-control border px-[12px] py-[10px] rounded-lg" id="color" placeholder="Enter HEX code (Ex. 596869)" oninput="onColorSelection(event.target.value)">
           </div>
-          <p class="text-dark_grey text-center mb-6 mt-6">or</p>
-          <input type="text" class="form-control border px-[12px] py-[10px] rounded-lg" id="color" placeholder="Enter HEX code (Ex. 596869)" oninput="onColorSelection(event.target.value)">
-          <button type="submit" disabled class="text-[white] py-[12px] px-[24px] rounded-[40px] w-full mt-6" id="start_demo">Start
+          <button type="button" disabled class="text-[white] py-[12px] px-[24px] rounded-[40px] w-full mt-6" onclick="onSubmit(event)" id="start_demo">Start
             Demo</button>
         </form>
       </div>

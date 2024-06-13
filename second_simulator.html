@@ -29,6 +29,12 @@
           const options = dropList.map((client) => `<option value="option">${client}</option>`)
           document.getElementById('accountSelect').innerHTML = ['<option disabled selected value="">Choose an account</option>', ...options]
         }
+        else if (clientType === 'cibil') {
+          const dropList = ['Axis Bank credit card-**04', 'HDFC Bank personal loan']
+
+          const options = dropList.map((client) => `<option value="option">${client}</option>`)
+          document.getElementById('accountSelect').innerHTML = ['<option disabled selected value="">Choose an account</option>', ...options]
+        }
       });
 
       function onSelection(event) {
@@ -57,6 +63,13 @@
           </div>`
         }
       }
+      var clientType = localStorage.getItem('clientType');
+      document.addEventListener('DOMContentLoaded', () => {
+        if (clientType === 'cibil') {
+          document.getElementById('submit_button').style.color = '#000'
+          // document.getElementById('client_name').remove()
+        }
+      });
     </script>
     <title>Simulator</title>
   </head>

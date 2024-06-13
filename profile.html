@@ -18,6 +18,13 @@
 
         document.getElementById('submit_button').style.backgroundColor = color
       });
+      var clientType = localStorage.getItem('clientType');
+      document.addEventListener('DOMContentLoaded', () => {
+        if (clientType === 'cibil') {
+          document.getElementById('submit_button').style.color = '#000'
+          document.getElementById('client_name').remove()
+        }
+      });
 
       function fillForm() {
         document.getElementById('First name').value = 'John'

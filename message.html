@@ -21,16 +21,22 @@
           pElement.innerHTML = `TM-${client_name.toUpperCase().replace(' ', '-')}-CIBIL`
           aElement.innerHTML = `www.${client_name.toLocaleLowerCase().replace(' ', '')}.in/cibilscore`
         }
+        const clientType = localStorage.getItem('clientType')
+        if (clientType === 'cibil') {
+          aElement.innerHTML = 'www.cibil.com/cibilscore'
+        }
       });
 
       const clientName = localStorage.getItem('client')
       const color = localStorage.getItem('color')
       document.addEventListener('DOMContentLoaded', () => {
-        document.getElementById('client_name').innerHTML = clientName
-        document.getElementById('clientNameLink').innerHTML = clientName
-        var customLink = clientName
-        var stringChange = customLink.replace(/\s/g, '').toLowerCase()
-        document.getElementById('clientNameLink').innerHTML = stringChange
+        if (clientName) {
+          document.getElementById('client_name').innerHTML = clientName
+          document.getElementById('clientNameLink').innerHTML = clientName
+          var customLink = clientName
+          var stringChange = customLink.replace(/\s/g, '').toLowerCase()
+          document.getElementById('clientNameLink').innerHTML = stringChange
+        }
         document.getElementById('client_name').style.color = color
       })
     </script>

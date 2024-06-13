@@ -27,6 +27,12 @@
           document.getElementById('creditName').innerHTML = clientName + ' ' + 'Credit card **04'
         }
       });
+      var clientType = localStorage.getItem('clientType');
+      document.addEventListener('DOMContentLoaded', () => {
+        if (clientType === 'cibil') {
+          document.getElementById('submit_button').style.color = '#000'
+        }
+      });
     </script>
   </head>
 
